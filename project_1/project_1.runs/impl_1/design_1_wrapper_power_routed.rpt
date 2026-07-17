@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Tue Jul 14 12:36:32 2026
+| Date             : Fri Jul 17 16:32:03 2026
 | Host             : emerald running 64-bit Ubuntu 26.04 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.205        |
+| Total On-Chip Power (W)  | 1.281        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.089        |
-| Device Static (W)        | 0.116        |
+| Dynamic (W)              | 1.189        |
+| Device Static (W)        | 0.092        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 79.1         |
-| Junction Temperature (C) | 30.9         |
+| Max Ambient (C)          | 81.6         |
+| Junction Temperature (C) | 28.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,27 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.194 |       42 |       --- |             --- |
-| Slice Logic              |     0.092 |    94005 |       --- |             --- |
-|   LUT as Logic           |     0.077 |    26607 |     63400 |           41.97 |
-|   Register               |     0.006 |    40407 |    126800 |           31.87 |
-|   LUT as Distributed RAM |     0.006 |     6092 |     19000 |           32.06 |
-|   CARRY4                 |     0.003 |     1652 |     15850 |           10.42 |
-|   LUT as Shift Register  |    <0.001 |     2677 |     19000 |           14.09 |
-|   F7/F8 Muxes            |    <0.001 |     1040 |     63400 |            1.64 |
-|   Others                 |     0.000 |     2826 |       --- |             --- |
-| Signals                  |     0.124 |    67124 |       --- |             --- |
-| Block RAM                |     0.109 |     68.5 |       135 |           50.74 |
-| MMCM                     |     0.308 |        3 |         6 |           50.00 |
+| Clocks                   |     0.053 |       34 |       --- |             --- |
+| Slice Logic              |     0.024 |    27846 |       --- |             --- |
+|   LUT as Logic           |     0.020 |     8192 |     63400 |           12.92 |
+|   LUT as Distributed RAM |     0.002 |     4102 |     19000 |           21.59 |
+|   Register               |     0.001 |    10309 |    126800 |            8.13 |
+|   CARRY4                 |    <0.001 |      190 |     15850 |            1.20 |
+|   F7/F8 Muxes            |    <0.001 |      448 |     63400 |            0.71 |
+|   LUT as Shift Register  |    <0.001 |      309 |     19000 |            1.63 |
+|   Others                 |     0.000 |      509 |       --- |             --- |
+| Signals                  |     0.037 |    20914 |       --- |             --- |
+| Block RAM                |     0.002 |        6 |       135 |            4.44 |
+| MMCM                     |     0.201 |        2 |         6 |           33.33 |
 | PLL                      |     0.092 |        1 |         6 |           16.67 |
-| I/O                      |     0.525 |       77 |       285 |           27.02 |
-| GTP                      |     0.343 |        2 |       --- |             --- |
+| I/O                      |     0.525 |       75 |       285 |           26.32 |
 | PHASER                   |     0.250 |       26 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
-| Hard IPs                 |     0.048 |        1 |       --- |             --- |
-|   PCIE                   |     0.048 |        1 |         1 |          100.00 |
-| Static Power             |     0.116 |          |           |                 |
-| Total                    |     2.205 |          |           |                 |
+| Static Power             |     0.092 |          |           |                 |
+| Total                    |     1.281 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -82,18 +79,18 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.697 |       0.677 |      0.020 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.449 |       0.431 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.206 |       0.189 |      0.017 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.390 |       0.372 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco15    |       1.500 |     0.221 |       0.217 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.222 |       0.218 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.008 |       0.006 |      0.002 |       NA    | Unspecified | NA         |
-| MGTAVcc   |       1.000 |     0.155 |       0.153 |      0.002 |       NA    | Unspecified | NA         |
-| MGTAVtt   |       1.200 |     0.125 |       0.123 |      0.003 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -138,10 +135,6 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | Clock                                                                                                                                                     | Domain                                                                                                                                                                                                                          | Constraint (ns) |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| clk_125mhz_mux_x0y0                                                                                                                                       | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1_0                                                           |             4.0 |
-| clk_125mhz_x0y0                                                                                                                                           | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz                                                                           |             8.0 |
-| clk_250mhz_mux_x0y0                                                                                                                                       | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1_0                                                           |             4.0 |
-| clk_250mhz_x0y0                                                                                                                                           | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz                                                                           |             4.0 |
 | clk_out1_design_1_clk_wiz_0_0                                                                                                                             | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0                                                                                                                                                                         |             5.0 |
 | clk_pll_i                                                                                                                                                 | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            10.0 |
 | clkfbout_design_1_clk_wiz_0_0                                                                                                                             | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0                                                                                                                                                                         |            20.0 |
@@ -152,7 +145,6 @@ Table of Contents
 | iserdes_clkdiv_2                                                                                                                                          | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            10.0 |
 | iserdes_clkdiv_3                                                                                                                                          | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv            |            10.0 |
 | mem_refclk                                                                                                                                                | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/mem_refclk                                                                                                                                        |             2.5 |
-| mmcm_fb                                                                                                                                                   | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb                                                                              |            10.0 |
 | oserdes_clk                                                                                                                                               | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk               |             2.5 |
 | oserdes_clk_1                                                                                                                                             | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk               |             2.5 |
 | oserdes_clk_2                                                                                                                                             | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             2.5 |
@@ -167,17 +159,14 @@ Table of Contents
 | oserdes_clkdiv_4                                                                                                                                          | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv            |            10.0 |
 | oserdes_clkdiv_5                                                                                                                                          | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |            10.0 |
 | oserdes_clkdiv_6                                                                                                                                          | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv            |            10.0 |
-| pcie_clk                                                                                                                                                  | pcie_clk_clk_p[0]                                                                                                                                                                                                               |            10.0 |
 | pll_clk3_out                                                                                                                                              | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out                                                                                                                                      |            10.0 |
 | pll_clkfbout                                                                                                                                              | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clkfbout                                                                                                                                      |             5.0 |
 | sync_pulse                                                                                                                                                | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/sync_pulse                                                                                                                                        |            40.0 |
 | sys_clk_clk_p                                                                                                                                             | sys_clk_clk_p                                                                                                                                                                                                                   |             6.7 |
-| txoutclk_x0y0                                                                                                                                             | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtp_channel.gtpe2_channel_i_3                                                          |            10.0 |
 | u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in_0 |             2.5 |
 | u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in_0 |             2.5 |
 | u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in_0 |             2.5 |
 | u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk | design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in_0 |             2.5 |
-| userclk1                                                                                                                                                  | design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1                                                                             |             8.0 |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -190,25 +179,19 @@ Table of Contents
 +--------------------------------------+-----------+
 | Name                                 | Power (W) |
 +--------------------------------------+-----------+
-| design_1_wrapper                     |     2.089 |
+| design_1_wrapper                     |     1.189 |
 |   dbg_hub                            |     0.003 |
 |     inst                             |     0.003 |
 |       BSCANID.u_xsdbm_id             |     0.003 |
-|   design_1_i                         |     2.085 |
-|     axi_smc                          |     0.003 |
-|       inst                           |     0.003 |
+|   design_1_i                         |     1.186 |
 |     axi_smc_1                        |     0.015 |
 |       inst                           |     0.015 |
 |     clk_wiz_0                        |     0.110 |
 |       inst                           |     0.110 |
-|     jtag_axi_0                       |     0.022 |
-|       inst                           |     0.022 |
+|     jtag_axi_0                       |     0.024 |
+|       inst                           |     0.024 |
 |     mig_7series_0                    |     1.037 |
 |       u_design_1_mig_7series_0_0_mig |     1.037 |
-|     system_ila_0                     |     0.104 |
-|       inst                           |     0.104 |
-|     xdma_0                           |     0.794 |
-|       inst                           |     0.794 |
 +--------------------------------------+-----------+
 
 

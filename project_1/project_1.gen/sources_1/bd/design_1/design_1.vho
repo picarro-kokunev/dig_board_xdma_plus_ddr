@@ -53,12 +53,6 @@
 -- COMP_TAG     ------ Begin cut for COMPONENT Declaration ------
 COMPONENT design_1
   PORT (
-    pcie_clk_clk_n : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    pcie_clk_clk_p : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    pcie_mgt_0_rxn : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_rxp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_txn : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_txp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     DDR3_0_dq : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     DDR3_0_dqs_p : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     DDR3_0_dqs_n : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -78,7 +72,6 @@ COMPONENT design_1
     sys_clk_clk_p : IN STD_LOGIC;
     pcie_reset_n : IN STD_LOGIC;
     led_green_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    unused_0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     led_red_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;
@@ -90,12 +83,6 @@ END COMPONENT;
 -- INST_TAG     ------ Begin cut for INSTANTIATION Template ------
 your_instance_name : design_1
   PORT MAP (
-    pcie_clk_clk_n => pcie_clk_clk_n,
-    pcie_clk_clk_p => pcie_clk_clk_p,
-    pcie_mgt_0_rxn => pcie_mgt_0_rxn,
-    pcie_mgt_0_rxp => pcie_mgt_0_rxp,
-    pcie_mgt_0_txn => pcie_mgt_0_txn,
-    pcie_mgt_0_txp => pcie_mgt_0_txp,
     DDR3_0_dq => DDR3_0_dq,
     DDR3_0_dqs_p => DDR3_0_dqs_p,
     DDR3_0_dqs_n => DDR3_0_dqs_n,
@@ -115,7 +102,6 @@ your_instance_name : design_1
     sys_clk_clk_p => sys_clk_clk_p,
     pcie_reset_n => pcie_reset_n,
     led_green_0 => led_green_0,
-    unused_0 => unused_0,
     led_red_0 => led_red_0
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
