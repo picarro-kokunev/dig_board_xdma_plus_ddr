@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/kokunev/data/git_root/dig_board_xdma_plus_ddr/project_1/project_1.runs/impl_1/design_1_wrapper.tcl"
+  variable script "/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -110,10 +110,10 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 5
   set_param general.usePosixSpawnForFork 1
-  set_param bd.open.in_stealth_mode 6
+  set_param bd.open.in_stealth_mode 3
   set_param runs.launchOptions { -jobs 10  }
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir /home/kokunev/data/git_root/dig_board_xdma_plus_ddr/project_1/project_1.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.cache/wt [current_project]
 set_property TOP design_1_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

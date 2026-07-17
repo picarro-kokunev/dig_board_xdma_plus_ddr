@@ -66,45 +66,9 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [1:0] pcie_mgt_0_txp,
   (* X_INTERFACE_IGNORE = "true" *)
-  inout wire [31:0] DDR3_0_dq,
-  (* X_INTERFACE_IGNORE = "true" *)
-  inout wire [3:0] DDR3_0_dqs_p,
-  (* X_INTERFACE_IGNORE = "true" *)
-  inout wire [3:0] DDR3_0_dqs_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [14:0] DDR3_0_addr,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [2:0] DDR3_0_ba,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire DDR3_0_ras_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire DDR3_0_cas_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire DDR3_0_we_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire DDR3_0_reset_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] DDR3_0_ck_p,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] DDR3_0_ck_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] DDR3_0_cke,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] DDR3_0_cs_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] DDR3_0_dm,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] DDR3_0_odt,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire sys_clk_clk_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire sys_clk_clk_p,
-  (* X_INTERFACE_IGNORE = "true" *)
   input wire pcie_reset_n,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] led_green_0,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire [0:0] unused_0,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] led_red_0
 );
@@ -116,26 +80,8 @@ module design_1_sv (
     .pcie_mgt_0_rxp(pcie_mgt_0_rxp),
     .pcie_mgt_0_txn(pcie_mgt_0_txn),
     .pcie_mgt_0_txp(pcie_mgt_0_txp),
-    .DDR3_0_dq(DDR3_0_dq),
-    .DDR3_0_dqs_p(DDR3_0_dqs_p),
-    .DDR3_0_dqs_n(DDR3_0_dqs_n),
-    .DDR3_0_addr(DDR3_0_addr),
-    .DDR3_0_ba(DDR3_0_ba),
-    .DDR3_0_ras_n(DDR3_0_ras_n),
-    .DDR3_0_cas_n(DDR3_0_cas_n),
-    .DDR3_0_we_n(DDR3_0_we_n),
-    .DDR3_0_reset_n(DDR3_0_reset_n),
-    .DDR3_0_ck_p(DDR3_0_ck_p),
-    .DDR3_0_ck_n(DDR3_0_ck_n),
-    .DDR3_0_cke(DDR3_0_cke),
-    .DDR3_0_cs_n(DDR3_0_cs_n),
-    .DDR3_0_dm(DDR3_0_dm),
-    .DDR3_0_odt(DDR3_0_odt),
-    .sys_clk_clk_n(sys_clk_clk_n),
-    .sys_clk_clk_p(sys_clk_clk_p),
     .pcie_reset_n(pcie_reset_n),
     .led_green_0(led_green_0),
-    .unused_0(unused_0),
     .led_red_0(led_red_0)
   );
 

@@ -11,8 +11,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led_green_0[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led_red_0[0]}]
 
 # Unused pin
-set_property PACKAGE_PIN A16 [get_ports {unused_0[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {unused_0[0]}]
+#set_property PACKAGE_PIN A16 [get_ports {unused_0[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {unused_0[0]}]
 
 
 set_property PACKAGE_PIN N17 [get_ports pcie_reset_n]
@@ -25,9 +25,9 @@ set_false_path -from [get_ports pcie_reset_n]
 #create_clock -period 8.000 -name sys_clk -waveform {0.000 4.000} [get_ports sys_clk_clk_p]
 # 125 Mhz oscillator connection
 # LVDS coupling onboard oscillator
-set_property PACKAGE_PIN V4 [get_ports sys_clk_clk_p]
-set_property PACKAGE_PIN W4 [get_ports sys_clk_clk_n]
-set_property IOSTANDARD LVDS_25 [get_ports sys_clk_clk_p]
+#set_property PACKAGE_PIN V4 [get_ports sys_clk_clk_p]
+#set_property PACKAGE_PIN W4 [get_ports sys_clk_clk_n]
+#set_property IOSTANDARD LVDS_25 [get_ports sys_clk_clk_p]
 
 # Serial flash
 
