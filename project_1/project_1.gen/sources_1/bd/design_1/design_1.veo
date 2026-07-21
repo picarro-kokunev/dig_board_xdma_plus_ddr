@@ -62,7 +62,11 @@ design_1 your_instance_name (
   .pcie_mgt_0_txp(pcie_mgt_0_txp), // output wire [1:0] pcie_mgt_0_txp
   .pcie_reset_n(pcie_reset_n), // input wire pcie_reset_n
   .led_green_0(led_green_0), // output wire [0:0] led_green_0
-  .led_red_0(led_red_0) // output wire [0:0] led_red_0
+  .led_red_0(led_red_0), // output wire [0:0] led_red_0
+  .sys_clk_clk_n(sys_clk_clk_n), // input wire sys_clk_clk_n
+  .sys_clk_clk_p(sys_clk_clk_p), // input wire sys_clk_clk_p
+  .adc_clk_0(adc_clk_0), // output wire adc_clk_0
+  .adc_data_a_0(adc_data_a_0) // input wire [13:0] adc_data_a_0
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

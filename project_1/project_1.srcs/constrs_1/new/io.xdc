@@ -21,13 +21,33 @@ set_property PULLTYPE PULLUP [get_ports pcie_reset_n]
 set_false_path -from [get_ports pcie_reset_n]
 
 
-# 125 MHz
-#create_clock -period 8.000 -name sys_clk -waveform {0.000 4.000} [get_ports sys_clk_clk_p]
-# 125 Mhz oscillator connection
-# LVDS coupling onboard oscillator
-#set_property PACKAGE_PIN V4 [get_ports sys_clk_clk_p]
-#set_property PACKAGE_PIN W4 [get_ports sys_clk_clk_n]
-#set_property IOSTANDARD LVDS_25 [get_ports sys_clk_clk_p]
+# 150 MHz
+#create_clock -period 6.666 -name sys_clk -waveform {0.000 3.333} [get_ports sys_clk_clk_p]
+set_property PACKAGE_PIN V4 [get_ports sys_clk_clk_p]
+set_property PACKAGE_PIN W4 [get_ports sys_clk_clk_n]
+set_property IOSTANDARD LVDS_25 [get_ports sys_clk_clk_p]
+
+# ADC
+set_property PACKAGE_PIN J22 [get_ports {adc_clk_0}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_clk_0}]
+set_property PACKAGE_PIN K22 [get_ports {adc_data_a_0[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[0]}]
+set_property PACKAGE_PIN L15 [get_ports {adc_data_a_0[13]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[13]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[12]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[11]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[10]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[9]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[8]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {adc_data_a_0[1]}]
+
 
 # Serial flash
 
@@ -52,3 +72,4 @@ set_property PACKAGE_PIN D11 [get_ports {pcie_mgt_0_rxp[1]}]
 # SSTL15 with VCCO = 1.5 V  ->  VREF = 0.75 V since no pin in bank34, bank35 is connected to VTT reference voltage
 set_property INTERNAL_VREF 0.75 [get_iobanks 34]
 set_property INTERNAL_VREF 0.75 [get_iobanks 35]
+

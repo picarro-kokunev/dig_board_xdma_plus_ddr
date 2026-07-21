@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA3F0E539614C5827",
+      "boundary_crc": "0xF649DE18B66C0DA0",
       "device": "xc7a100tfgg484-2",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -15,7 +15,9 @@
       "xdma_0": "",
       "axi_gpio_0": "",
       "axi_smc": "",
-      "ilvector_logic_1": ""
+      "ilvector_logic_1": "",
+      "clk_wiz_0": "",
+      "adc_ctrl_0": ""
     },
     "interface_ports": {
       "pcie_clk": {
@@ -108,6 +110,16 @@
             "value": "FALSE",
             "value_src": "default"
           }
+        },
+        "port_maps": {
+          "CLK_N": {
+            "physical_name": "sys_clk_clk_n",
+            "direction": "I"
+          },
+          "CLK_P": {
+            "physical_name": "sys_clk_clk_p",
+            "direction": "I"
+          }
         }
       }
     },
@@ -155,6 +167,37 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "adc_clk_0": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_adc_ctrl_0_1_adc_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "adc_data_a_0": {
+        "direction": "I",
+        "left": "13",
+        "right": "0"
       }
     },
     "components": {
@@ -356,9 +399,149 @@
             "value": "1"
           }
         }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_clk_wiz_0_1",
+        "xci_path": "ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "66.66000000000001"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "180.792"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "164.985"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "6.667"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "20.000"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "3"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "150"
+          },
+          "PRIM_SOURCE": {
+            "value": "Differential_clock_capable_pin"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          }
+        }
+      },
+      "adc_ctrl_0": {
+        "vlnv": "xilinx.com:module_ref:adc_ctrl:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_adc_ctrl_0_1",
+        "xci_path": "ip/design_1_adc_ctrl_0_1/design_1_adc_ctrl_0_1.xci",
+        "inst_hier_path": "adc_ctrl_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "adc_ctrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_wiz_0_1_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "adc_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "adc_data_a": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "adc_data_b": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "data_a": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "data_b": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
+      "CLK_IN1_D_0_1": {
+        "interface_ports": [
+          "sys_clk",
+          "clk_wiz_0/CLK_IN1_D"
+        ]
+      },
       "CLK_IN_D_0_1": {
         "interface_ports": [
           "pcie_clk",
@@ -385,10 +568,28 @@
       }
     },
     "nets": {
+      "adc_ctrl_0_adc_clk": {
+        "ports": [
+          "adc_ctrl_0/adc_clk",
+          "adc_clk_0"
+        ]
+      },
+      "adc_data_a_0_1": {
+        "ports": [
+          "adc_data_a_0",
+          "adc_ctrl_0/adc_data_a"
+        ]
+      },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
           "led_red_0"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "adc_ctrl_0/clk"
         ]
       },
       "ilvector_logic_1_Res": {
@@ -400,7 +601,9 @@
       "pcie_reset_n_1": {
         "ports": [
           "pcie_reset_n",
-          "xdma_0/sys_rst_n"
+          "xdma_0/sys_rst_n",
+          "clk_wiz_0/resetn",
+          "adc_ctrl_0/reset_n"
         ]
       },
       "util_ds_buf_0_IBUF_OUT": {

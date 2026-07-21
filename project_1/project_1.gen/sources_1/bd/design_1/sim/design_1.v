@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri Jul 17 15:24:29 2026
+//Date        : Mon Jul 20 20:40:41 2026
 //Host        : emerald running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,9 +10,11 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (led_green_0,
+   (adc_clk_0,
+    adc_data_a_0,
+    led_green_0,
     led_red_0,
     pcie_clk_clk_n,
     pcie_clk_clk_p,
@@ -20,7 +22,11 @@ module design_1
     pcie_mgt_0_rxp,
     pcie_mgt_0_txn,
     pcie_mgt_0_txp,
-    pcie_reset_n);
+    pcie_reset_n,
+    sys_clk_clk_n,
+    sys_clk_clk_p);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ADC_CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ADC_CLK_0, CLK_DOMAIN design_1_adc_ctrl_0_1_adc_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output adc_clk_0;
+  input [13:0]adc_data_a_0;
   output [0:0]led_green_0;
   output [0:0]led_red_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 pcie_clk CLK_N" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pcie_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]pcie_clk_clk_n;
@@ -30,7 +36,11 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txn" *) output [1:0]pcie_mgt_0_txn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txp" *) output [1:0]pcie_mgt_0_txp;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.PCIE_RESET_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.PCIE_RESET_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input pcie_reset_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_N" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk, CAN_DEBUG false, FREQ_HZ 150000000" *) input sys_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_P" *) input sys_clk_clk_p;
 
+  wire adc_clk_0;
+  wire [13:0]adc_data_a_0;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
   wire axi_smc_M00_AXI_ARVALID;
@@ -48,6 +58,7 @@ module design_1
   wire axi_smc_M00_AXI_WREADY;
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
+  wire clk_wiz_0_clk_out1;
   wire [0:0]led_green_0;
   wire [0:0]led_red_0;
   wire [0:0]pcie_clk_clk_n;
@@ -57,6 +68,8 @@ module design_1
   wire [1:0]pcie_mgt_0_txn;
   wire [1:0]pcie_mgt_0_txp;
   wire pcie_reset_n;
+  wire sys_clk_clk_n;
+  wire sys_clk_clk_p;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
   wire [63:0]xdma_0_M_AXI_ARADDR;
   wire [1:0]xdma_0_M_AXI_ARBURST;
@@ -97,6 +110,12 @@ module design_1
   wire xdma_0_axi_aresetn;
   wire xdma_0_user_lnk_up;
 
+  design_1_adc_ctrl_0_1 adc_ctrl_0
+       (.adc_clk(adc_clk_0),
+        .adc_data_a(adc_data_a_0),
+        .adc_data_b({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .clk(clk_wiz_0_clk_out1),
+        .reset_n(pcie_reset_n));
   design_1_axi_gpio_0_0 axi_gpio_0
        (.gpio_io_o(led_red_0),
         .s_axi_aclk(xdma_0_axi_aclk),
@@ -175,6 +194,11 @@ module design_1
         .S00_AXI_wvalid(xdma_0_M_AXI_WVALID),
         .aclk(xdma_0_axi_aclk),
         .aresetn(xdma_0_axi_aresetn));
+  design_1_clk_wiz_0_1 clk_wiz_0
+       (.clk_in1_n(sys_clk_clk_n),
+        .clk_in1_p(sys_clk_clk_p),
+        .clk_out1(clk_wiz_0_clk_out1),
+        .resetn(pcie_reset_n));
   assign led_green_0 = ~ xdma_0_user_lnk_up;
   design_1_util_ds_buf_0_0 util_ds_buf_0
        (.IBUF_DS_N(pcie_clk_clk_n),
