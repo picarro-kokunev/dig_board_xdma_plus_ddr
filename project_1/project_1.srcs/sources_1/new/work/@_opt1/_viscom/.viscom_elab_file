@@ -1,0 +1,1 @@
+/opt/altera/25.1std/questa_fse/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 934320 work.adc_ctrl_tb -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt1 -id 1-7cc255eca0fa-6a6001c0-4facd-3fc6cb

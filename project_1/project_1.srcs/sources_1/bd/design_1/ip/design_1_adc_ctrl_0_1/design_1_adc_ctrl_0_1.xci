@@ -44,9 +44,11 @@
         "reset_n": [ { "direction": "in" } ],
         "adc_clk": [ { "direction": "out" } ],
         "adc_data_a": [ { "direction": "in", "size_left": "13", "size_right": "0" } ],
-        "adc_data_b": [ { "direction": "in", "size_left": "13", "size_right": "0" } ],
+        "adc_ofa_a": [ { "direction": "in" } ],
         "data_a": [ { "direction": "out", "size_left": "13", "size_right": "0" } ],
-        "data_b": [ { "direction": "out", "size_left": "13", "size_right": "0" } ]
+        "ofa_a": [ { "direction": "out" } ],
+        "data_b": [ { "direction": "out", "size_left": "13", "size_right": "0" } ],
+        "ofa_b": [ { "direction": "out" } ]
       },
       "interfaces": {
         "reset_n": {
@@ -100,5 +102,5 @@
       }
     }
   },
-  "checksum": "c5bb0859"
+  "checksum": "cb8539b0"
 }

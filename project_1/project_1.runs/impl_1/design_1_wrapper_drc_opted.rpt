@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Jul 20 21:07:43 2026
+| Date         : Tue Jul 21 16:19:19 2026
 | Host         : emerald running 64-bit Ubuntu 26.04 LTS
 | Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 | Design       : design_1_wrapper
@@ -24,18 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 1
-+--------+----------+------------------------------------------------+--------+
-| Rule   | Severity | Description                                    | Checks |
-+--------+----------+------------------------------------------------+--------+
-| PLIO-3 | Warning  | Placement Constraints Check for IO constraints | 1      |
-+--------+----------+------------------------------------------------+--------+
+             Checks found: 0
++------+----------+-------------+--------+
+| Rule | Severity | Description | Checks |
++------+----------+-------------+--------+
++------+----------+-------------+--------+
 
 2. REPORT DETAILS
 -----------------
-PLIO-3#1 Warning
-Placement Constraints Check for IO constraints  
-Partially locked IO Bus is found. Following components of the IO Bus adc_data_a_0[13:0] are not locked:  adc_data_a_0[12] adc_data_a_0[11] adc_data_a_0[10] adc_data_a_0[9] adc_data_a_0[8] adc_data_a_0[7] adc_data_a_0[6] adc_data_a_0[5] adc_data_a_0[4] adc_data_a_0[3] adc_data_a_0[2] adc_data_a_0[1]
-Related violations: <none>
-
 

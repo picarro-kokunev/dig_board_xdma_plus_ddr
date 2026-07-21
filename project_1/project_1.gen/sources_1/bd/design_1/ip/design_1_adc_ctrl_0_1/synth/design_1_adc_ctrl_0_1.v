@@ -60,9 +60,11 @@ module design_1_adc_ctrl_0_1 (
   reset_n,
   adc_clk,
   adc_data_a,
-  adc_data_b,
+  adc_ofa_a,
   data_a,
-  data_b
+  ofa_a,
+  data_b,
+  ofa_b
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -78,9 +80,11 @@ input wire reset_n;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME adc_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_adc_ctrl_0_1_adc_clk, INSERT_VIP 0" *)
 output wire adc_clk;
 input wire [13 : 0] adc_data_a;
-input wire [13 : 0] adc_data_b;
+input wire adc_ofa_a;
 output wire [13 : 0] data_a;
+output wire ofa_a;
 output wire [13 : 0] data_b;
+output wire ofa_b;
 
   adc_ctrl #(
     .DATA_W(14)
@@ -89,8 +93,10 @@ output wire [13 : 0] data_b;
     .reset_n(reset_n),
     .adc_clk(adc_clk),
     .adc_data_a(adc_data_a),
-    .adc_data_b(adc_data_b),
+    .adc_ofa_a(adc_ofa_a),
     .data_a(data_a),
-    .data_b(data_b)
+    .ofa_a(ofa_a),
+    .data_b(data_b),
+    .ofa_b(ofa_b)
   );
 endmodule

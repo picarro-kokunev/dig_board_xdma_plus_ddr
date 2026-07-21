@@ -1,33 +1,99 @@
 m255
 K4
 z2
-Z0 !s12c _opt
+Z0 !s12c _opt1
 Z1 !s99 nomlopt
-R0
+Z2 !s12c _opt
+R1
+R2
 R1
 R0
 R1
-R0
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
 R1
 R0
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
 R1
 !s11f vlog 2025.2 2025.05, May 31 2025
 13
@@ -36,98 +102,114 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 d/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/new
+Z3 d/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/new
 T_opt
 !i145 1
 !i144 0
-!s110 1784604393
-VAn03:S^8<jMWD1K7773Wa1
+!s110 1784676782
+VS0]C<^A_f7N7j<UI[PQED3
 04 14 4 work adc_ad_ltc22xx fast 0
 04 8 4 work adc_ctrl fast 0
-04 11 4 work adc_ctrl_tb fast 0
-=2-7cc255eca0fa-6a5ee6e9-37373-370c17
+Z4 04 11 4 work adc_ctrl_tb fast 0
+=16-7cc255eca0fa-6a6001ae-c594-3ec5b1
 R1
-!s12f OEM100
-!s12b OEM100
+Z5 !s12f OEM100
+Z6 !s12b OEM100
 !s124 OEM10U5 
-!s135 nogc
+Z7 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
+Z8 tCvgOpt 0
 n@_opt
-OL;O;2025.2;82
-R2
+Z9 OL;O;2025.2;82
+R3
+T_opt1
+!i145 1
+!i144 0
+!s110 1784676800
+VCoEZ[Ka4d;3J1JPVnfd`H3
+R4
+=1-7cc255eca0fa-6a6001c0-4facd-3fc6cb
+R1
+R5
+R6
+!s124 OEM10U3 
+R7
+o-quiet -auto_acc_if_foreign -work work
+R8
+n@_opt1
+R9
 vadc_ad_ltc22xx
-Z4 2adc_ad_ltc22xx.sv|adc_ctrl.sv|adc_ctrl_tb.sv
-Z5 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z6 !s110 1784606943
+Z10 2adc_ad_ltc22xx.sv|adc_ctrl.v|adc_ctrl_tb.sv
+Z11 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z12 !s110 1784676799
 !i10b 1
-!s100 BFMNZhB_P2_jT0S1F`EQa2
-I8hE3<5>8a6iU295laLX`80
+!s100 6I_[ZQ3Y_=Yjn8l=OGT7[2
+I1h7QIHIbjNLV6V1Zk^YbX3
 S1
-R2
-w1784599823
+R3
+w1784671068
 8adc_ad_ltc22xx.sv
 Fadc_ad_ltc22xx.sv
-!i122 94
-L0 4 43
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OL;L;2025.2;82
+!i122 261
+L0 5 62
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z9 !s108 1784606943.000000
-!s107 adc_ctrl_tb.sv|adc_ctrl.sv|adc_ad_ltc22xx.sv|
-Z10 !s90 -sv|adc_ad_ltc22xx.sv|adc_ctrl.sv|adc_ctrl_tb.sv|
+Z15 !s108 1784676799.000000
+Z16 !s107 adc_ctrl_tb.sv|adc_ctrl.v|adc_ad_ltc22xx.sv|
+Z17 !s90 -sv|adc_ad_ltc22xx.sv|adc_ctrl.v|adc_ctrl_tb.sv|
 !i113 0
-Z11 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
-vadc_ctrl
-R4
-R5
-R6
-!i10b 1
-!s100 iMhRS21^1ZkddSeHk5L@j2
-Ia19]MJiHXf=?5lz=YgZGn2
-S1
-R2
-w1784602550
-8adc_ctrl.sv
-Fadc_ctrl.sv
-!i122 94
-L0 31 50
-R7
+Z18 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R8
+vadc_ctrl
+R10
+R11
+R12
+!i10b 1
+!s100 <QB0QD7K=ThX47fRB5d[Z3
+IP<c1fI:JW;^=TK2JQzkSz0
+S1
+R3
+w1784672175
+8adc_ctrl.v
+Fadc_ctrl.v
+!i122 261
+L0 11 62
+R13
+R14
 r1
 !s85 0
 31
-R9
-Z12 !s107 adc_ctrl_tb.sv|adc_ctrl.sv|adc_ad_ltc22xx.sv|
-R10
+R15
+R16
+R17
 !i113 0
-R11
-R3
+R18
+R8
 vadc_ctrl_tb
-R4
-R5
-R6
+R10
+R11
+R12
 !i10b 1
-!s100 oWCEEeAkj<H42iR0<::YY0
-IR=>Y2eKR?Yz1e^k=JGR>Q2
+!s100 Ql1U6iIUmJY7694W=Ce4E3
+IGJe134VmZJeI5HTYCH9Vo3
 S1
-R2
-w1784604344
+R3
+w1784676765
 8adc_ctrl_tb.sv
 Fadc_ctrl_tb.sv
-!i122 94
-L0 10 89
-R7
-R8
+!i122 261
+L0 10 151
+R13
+R14
 r1
 !s85 0
 31
-R9
-R12
-R10
+R15
+R16
+R17
 !i113 0
-R11
-R3
+R18
+R8

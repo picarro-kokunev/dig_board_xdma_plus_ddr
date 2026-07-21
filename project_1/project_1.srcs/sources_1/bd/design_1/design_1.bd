@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF649DE18B66C0DA0",
+      "boundary_crc": "0xE8F844C5F0EE344F",
       "device": "xc7a100tfgg484-2",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -198,6 +198,9 @@
         "direction": "I",
         "left": "13",
         "right": "0"
+      },
+      "adc_ofa_a_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -517,20 +520,24 @@
             "left": "13",
             "right": "0"
           },
-          "adc_data_b": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
+          "adc_ofa_a": {
+            "direction": "I"
           },
           "data_a": {
             "direction": "O",
             "left": "13",
             "right": "0"
           },
+          "ofa_a": {
+            "direction": "O"
+          },
           "data_b": {
             "direction": "O",
             "left": "13",
             "right": "0"
+          },
+          "ofa_b": {
+            "direction": "O"
           }
         }
       }
@@ -568,7 +575,7 @@
       }
     },
     "nets": {
-      "adc_ctrl_0_adc_clk": {
+      "adc_clk_0": {
         "ports": [
           "adc_ctrl_0/adc_clk",
           "adc_clk_0"
@@ -578,6 +585,12 @@
         "ports": [
           "adc_data_a_0",
           "adc_ctrl_0/adc_data_a"
+        ]
+      },
+      "adc_ofa_a_0": {
+        "ports": [
+          "adc_ofa_a_0",
+          "adc_ctrl_0/adc_ofa_a"
         ]
       },
       "axi_gpio_0_gpio_io_o": {

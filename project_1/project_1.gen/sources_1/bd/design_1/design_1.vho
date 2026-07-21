@@ -65,7 +65,8 @@ COMPONENT design_1
     sys_clk_clk_n : IN STD_LOGIC;
     sys_clk_clk_p : IN STD_LOGIC;
     adc_clk_0 : OUT STD_LOGIC;
-    adc_data_a_0 : IN STD_LOGIC_VECTOR(13 DOWNTO 0)
+    adc_data_a_0 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    adc_ofa_a_0 : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -88,7 +89,8 @@ your_instance_name : design_1
     sys_clk_clk_n => sys_clk_clk_n,
     sys_clk_clk_p => sys_clk_clk_p,
     adc_clk_0 => adc_clk_0,
-    adc_data_a_0 => adc_data_a_0
+    adc_data_a_0 => adc_data_a_0,
+    adc_ofa_a_0 => adc_ofa_a_0
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

@@ -66,7 +66,8 @@ design_1 your_instance_name (
   .sys_clk_clk_n(sys_clk_clk_n), // input wire sys_clk_clk_n
   .sys_clk_clk_p(sys_clk_clk_p), // input wire sys_clk_clk_p
   .adc_clk_0(adc_clk_0), // output wire adc_clk_0
-  .adc_data_a_0(adc_data_a_0) // input wire [13:0] adc_data_a_0
+  .adc_data_a_0(adc_data_a_0), // input wire [13:0] adc_data_a_0
+  .adc_ofa_a_0(adc_ofa_a_0) // input wire adc_ofa_a_0
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

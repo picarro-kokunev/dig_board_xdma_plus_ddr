@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 20 20:40:41 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 21 16:15:31 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -12,6 +12,11 @@
     <PORT DIR="I" LEFT="13" NAME="adc_data_a_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_adc_data_a_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="adc_ctrl_0" PORT="adc_data_a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="adc_ofa_a_0" SIGIS="undef" SIGNAME="External_Ports_adc_ofa_a_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="adc_ctrl_0" PORT="adc_ofa_a"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="led_green_0" RIGHT="0" SIGIS="undef" SIGNAME="ilvector_logic_1_Res">
@@ -119,7 +124,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="adc_data_a_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="adc_data_b" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="adc_ofa_a" SIGIS="undef" SIGNAME="External_Ports_adc_ofa_a_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_ofa_a_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
@@ -127,6 +136,8 @@
         </PORT>
         <PORT DIR="O" LEFT="13" NAME="data_a" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="data_b" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ofa_a" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ofa_b" SIGIS="undef"/>
         <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_pcie_reset_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="pcie_reset_n"/>
