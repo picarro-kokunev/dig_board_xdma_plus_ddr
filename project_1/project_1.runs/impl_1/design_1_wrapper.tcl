@@ -109,8 +109,9 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 5
+  set_param project.hsv.suppressChildGraphs 0
   set_param general.usePosixSpawnForFork 1
-  set_param bd.open.in_stealth_mode 2
+  set_param bd.open.in_stealth_mode 3
   set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3413880-emerald/incrSyn
   set_param runs.launchOptions { -jobs 10  }
 OPTRACE "create in-memory project" START { }

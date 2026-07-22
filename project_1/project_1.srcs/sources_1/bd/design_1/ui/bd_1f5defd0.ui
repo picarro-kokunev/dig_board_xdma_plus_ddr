@@ -1,46 +1,41 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.748157",
-   "Default View_TopLeft":"-207,-75",
+   "Default View_ScaleFactor":"0.730216",
+   "Default View_TopLeft":"-207,188",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port pcie_clk -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
-preplace port pcie_mgt_0 -pg 1 -lvl 5 -x 1290 -y 80 -defaultsOSRD
+preplace port pcie_mgt_0 -pg 1 -lvl 6 -x 1850 -y 80 -defaultsOSRD
 preplace port sys_clk -pg 1 -lvl 0 -x -30 -y 330 -defaultsOSRD
 preplace port port-id_pcie_reset_n -pg 1 -lvl 0 -x -30 -y 210 -defaultsOSRD
-preplace port port-id_adc_clk_0 -pg 1 -lvl 5 -x 1290 -y 400 -defaultsOSRD
-preplace port port-id_adc_ofa_a_0 -pg 1 -lvl 0 -x -30 -y 530 -defaultsOSRD
-preplace portBus led_green_0 -pg 1 -lvl 5 -x 1290 -y 140 -defaultsOSRD
-preplace portBus led_red_0 -pg 1 -lvl 5 -x 1290 -y 270 -defaultsOSRD
-preplace portBus adc_data_a_0 -pg 1 -lvl 0 -x -30 -y 500 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 150 -y 140 -defaultsOSRD
-preplace inst xdma_0 -pg 1 -lvl 2 -x 480 -y 130 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1120 -y 260 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 810 -y 200 -defaultsOSRD
-preplace inst ilvector_logic_1 -pg 1 -lvl 4 -x 1120 -y 140 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 150 -y 340 -defaultsOSRD
-preplace inst adc_ctrl_0 -pg 1 -lvl 1 -x 150 -y 500 -defaultsOSRD
-preplace netloc axi_gpio_0_gpio_io_o 1 4 1 NJ 270
-preplace netloc ilvector_logic_1_Res 1 4 1 NJ 140
-preplace netloc pcie_reset_n_1 1 0 2 -10J 210 300
+preplace port port-id_adc_clk_0 -pg 1 -lvl 6 -x 1850 -y 430 -defaultsOSRD
+preplace port port-id_adc_ofa_a_0 -pg 1 -lvl 0 -x -30 -y 500 -defaultsOSRD
+preplace portBus led_green_0 -pg 1 -lvl 6 -x 1850 -y 140 -defaultsOSRD
+preplace portBus led_red_0 -pg 1 -lvl 6 -x 1850 -y 270 -defaultsOSRD
+preplace portBus adc_data_a_0 -pg 1 -lvl 0 -x -30 -y 470 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 410 -y 140 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 740 -y 130 -defaultsOSRD
+preplace inst ilvector_logic_1 -pg 1 -lvl 5 -x 1680 -y 140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 410 -y 340 -defaultsOSRD
+preplace inst adc_ctrl_0 -pg 1 -lvl 2 -x 740 -y 470 -defaultsOSRD
+preplace netloc ilvector_logic_1_Res 1 5 1 NJ 140
+preplace netloc pcie_reset_n_1 1 0 2 270J 210 570
 preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 NJ 130
-preplace netloc xdma_0_axi_aclk 1 2 2 660 280 950
-preplace netloc xdma_0_axi_aresetn 1 2 2 650 290 960
-preplace netloc xdma_0_user_lnk_up 1 2 2 NJ 100 950J
-preplace netloc clk_wiz_0_clk_out1 1 0 2 0 270 300
-preplace netloc adc_clk_0 1 1 4 NJ 460 NJ 460 NJ 460 1270
-preplace netloc adc_data_a_0_1 1 0 1 0J 500n
-preplace netloc adc_ofa_a_0 1 0 1 N 530
-preplace netloc CLK_IN_D_0_1 1 0 1 NJ 140
-preplace netloc axi_smc_M00_AXI 1 3 1 950 200n
-preplace netloc xdma_0_M_AXI 1 2 1 670 60n
-preplace netloc xdma_0_pcie_mgt 1 2 3 NJ 80 NJ 80 NJ
+preplace netloc xdma_0_user_lnk_up 1 2 3 NJ 100 N 100 1380
+preplace netloc clk_wiz_0_clk_out1 1 1 1 550 330n
+preplace netloc adc_clk_0 1 2 4 NJ 420 N 420 N 420 1830
+preplace netloc adc_data_a_0 1 0 2 NJ 470 550
+preplace netloc adc_ofa_a_0 1 0 2 NJ 500 N
+preplace netloc adc_ctrl_0_tie_all 1 2 4 910 270 NJ 270 NJ 270 NJ
 preplace netloc CLK_IN1_D_0_1 1 0 1 NJ 330
-levelinfo -pg 1 -30 150 480 810 1120 1290
-pagesize -pg 1 -db -bbox -sgen -210 0 1450 600
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 140
+preplace netloc xdma_0_pcie_mgt 1 2 4 NJ 80 N 80 N 80 NJ
+levelinfo -pg 1 -30 410 740 1070 1360 1680 1850
+pagesize -pg 1 -db -bbox -sgen -210 -150 2010 850
 "
 }
 {
-   "da_axi4_cnt":"4"
+   "da_axi4_cnt":"4",
+   "da_clkrst_cnt":"1"
 }

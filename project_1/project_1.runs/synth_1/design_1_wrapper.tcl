@@ -58,8 +58,9 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
+set_param project.hsv.suppressChildGraphs 0
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 2
+set_param bd.open.in_stealth_mode 3
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3413880-emerald/incrSyn
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -97,18 +98,6 @@ set_property used_in_implementation false [get_files -all /home/kokunev/data/git
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_7vx_ip.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/synth/design_1_xdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_ooc.xdc]

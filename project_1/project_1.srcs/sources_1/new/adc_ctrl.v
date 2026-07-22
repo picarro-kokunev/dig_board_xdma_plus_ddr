@@ -27,7 +27,10 @@ module adc_ctrl #(parameter DATA_W = 14)
     output reg [DATA_W-1:0] data_a,
     output reg ofa_a,
     output reg [DATA_W-1:0] data_b,
-    output reg ofa_b    
+    output reg ofa_b,
+
+    // debug
+    output tie_all     
 );
     // generate adc_clk from clk so period(adc_clk) == 2 *period(clk)
     reg adc_clk_reg;
@@ -40,6 +43,9 @@ module adc_ctrl #(parameter DATA_W = 14)
         adc_clk_reg <= ~adc_clk_reg;
     end
     assign adc_clk = adc_clk_reg;    
+
+    // to force no pruning
+    assign tie_all = data_a | data_b | ofa_a | ofa_b;
 
     // convert DDR stream to 2 SDR streams
     // ADC is updating data_a after (posedge adc_clk) + adc_ad_ltc22xx.CLK_TO_DATA_DELAY

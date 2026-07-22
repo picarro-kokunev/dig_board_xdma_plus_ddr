@@ -27,56 +27,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xdma_v4_2_2
 # IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/design_1_xdma_0_0_pcie2_ip.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xdma_0_0_pcie2_ip || ORIG_REF_NAME==design_1_xdma_0_0_pcie2_ip} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_smc_0 || ORIG_REF_NAME==design_1_axi_smc_0} -quiet] -quiet
-
-# Block Designs: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/bd_afc3.bd
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_s00mmu_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_s00tr_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_s00sic_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_s00a2s_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sarn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_srn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sawn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_swn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_sbn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_m00s2a_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_m00e_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
 # IP: bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_1 || ORIG_REF_NAME==design_1_clk_wiz_0_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_adc_ctrl_0_1/design_1_adc_ctrl_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_adc_ctrl_0_1 || ORIG_REF_NAME==design_1_adc_ctrl_0_1} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_adc_ctrl_0_2/design_1_adc_ctrl_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_adc_ctrl_0_2 || ORIG_REF_NAME==design_1_adc_ctrl_0_2} -quiet] -quiet
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc
 
@@ -108,33 +63,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_xdma_0_0 || ORIG_REF_NAME==design_1_xdma_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/synth/design_1_xdma_0_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc
-# DONT_TOUCH constraint suppressed by parent sub-design file.
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_s00a2s_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sarn_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_srn_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sawn_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_swn_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_sbn_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_m00s2a_0_ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc
-
-# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_smc_0 || ORIG_REF_NAME==design_1_axi_smc_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_1 || ORIG_REF_NAME==design_1_clk_wiz_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet

@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Tue Jul 21 16:16:45 2026
+  **** Start of session at: Tue Jul 21 18:29:02 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -27,9 +27,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4129747
+INFO: [Synth 8-7075] Helper process launched with PID 33428
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2271.254 ; gain = 480.844 ; free physical = 7835 ; free virtual = 51706
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2261.250 ; gain = 478.047 ; free physical = 2280 ; free virtual = 46843
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'RdDeQ', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:179]
 INFO: [Synth 8-11241] undeclared symbol 'cfg_config_space_enable', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:4347]
@@ -37,154 +37,16 @@ INFO: [Synth 8-11241] undeclared symbol 'cfg_hot_reset_in', assumed default net 
 INFO: [Synth 8-11241] undeclared symbol 'usr_irq_fail', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:4838]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_adc_ctrl_0_1' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_ctrl_0_1/synth/design_1_adc_ctrl_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_adc_ctrl_0_2' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_ctrl_0_2/synth/design_1_adc_ctrl_0_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'adc_ctrl' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/new/adc_ctrl.v:11]
 	Parameter DATA_W bound to: 14 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'adc_ctrl' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/new/adc_ctrl.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_ctrl_0_1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_ctrl_0_1/synth/design_1_adc_ctrl_0_1.v:53]
-WARNING: [Synth 8-7071] port 'data_a' of module 'design_1_adc_ctrl_0_1' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:116]
-WARNING: [Synth 8-7071] port 'ofa_a' of module 'design_1_adc_ctrl_0_1' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:116]
-WARNING: [Synth 8-7071] port 'data_b' of module 'design_1_adc_ctrl_0_1' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:116]
-WARNING: [Synth 8-7071] port 'ofa_b' of module 'design_1_adc_ctrl_0_1' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:116]
-WARNING: [Synth 8-7023] instance 'adc_ctrl_0' of module 'design_1_adc_ctrl_0_1' has 9 connections declared, but only 5 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:116]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:84]
-	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
-	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
-	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
-	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
-	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
-	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
-	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
-	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
-	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
-	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
-	Parameter C_IS_DUAL bound to: 0 - type: integer 
-	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
-	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1255' bound to instance 'U0' of component 'axi_gpio' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:173]
-INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1341]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:182]
-INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:447]
-	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
-	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
-	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_array_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903' bound to instance 'INPUT_DOUBLE_REGS3' of component 'xpm_cdc_array_single' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:458]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:182]
-INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1341]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:84]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_5Y9LOC' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:656]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
-	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
-	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
-	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1243' bound to instance 'U0' of component 'proc_sys_reset' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1371]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1387]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1413]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1436]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1460]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
-INFO: [Synth 8-6157] synthesizing module 'SRL16' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
-	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
-	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
-	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_EXT' of component 'xpm_cdc_single' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:968]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
-	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
-	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_AUX' of component 'xpm_cdc_single' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1015]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:687]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:687]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:687]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:687]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' has 10 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:687]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_5Y9LOC' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:656]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:696]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00e_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_m00e_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00e_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_m00e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:696]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00s2a_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_m00s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00s2a_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_m00s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00a2s_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00a2s_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_USCCV8' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:938]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00mmu_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00mmu_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00sic_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00sic_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00tr_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00tr_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:53]
-WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_afc3_s00tr_0' is unconnected for instance 's00_transaction_regulator' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1417]
-WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_afc3_s00tr_0' is unconnected for instance 's00_transaction_regulator' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1417]
-WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' has 86 connections declared, but only 84 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1417]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:938]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_Y7M43I' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1504]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sarn_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sarn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sarn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sarn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sawn_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sawn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sawn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sawn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sbn_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_sbn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sbn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_sbn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_srn_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_srn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_srn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_srn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_swn_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_swn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_Y7M43I' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1504]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:143]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:143]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_0' has 58 connections declared, but only 56 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_ctrl_0_2' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_ctrl_0_2/synth/design_1_adc_ctrl_0_2.v:53]
+WARNING: [Synth 8-7071] port 'data_a' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
+WARNING: [Synth 8-7071] port 'ofa_a' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
+WARNING: [Synth 8-7071] port 'data_b' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
+WARNING: [Synth 8-7071] port 'ofa_b' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
+WARNING: [Synth 8-7023] instance 'adc_ctrl_0' of module 'design_1_adc_ctrl_0_2' has 10 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.v:65]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1_clk_wiz' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_clk_wiz.v:65]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82819]
@@ -208,8 +70,8 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/opt/Xilinx/2025.2/Vivado
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_1_clk_wiz' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_clk_wiz.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.v:65]
-WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_0_1' is unconnected for instance 'clk_wiz_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:200]
-WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_1' has 5 connections declared, but only 4 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:200]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_0_1' is unconnected for instance 'clk_wiz_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:70]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_1' has 5 connections declared, but only 4 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:70]
 INFO: [Synth 8-638] synthesizing module 'design_1_util_ds_buf_0_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:65]
 	Parameter C_SIZE bound to: 1 - type: integer 
 	Parameter C_BUF_TYPE bound to: ibufdsgte2 - type: string 
@@ -226,8 +88,8 @@ INFO: [Synth 8-113] binding component instance 'IBUF_N_I' to cell 'IBUF' [/home/
 INFO: [Synth 8-113] binding component instance 'IBUFDS_GTE2_I' to cell 'IBUFDS_GTE2' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/util_ds_buf.vhd:375]
 INFO: [Synth 8-256] done synthesizing module 'util_ds_buf' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/util_ds_buf.vhd:303]
 INFO: [Synth 8-256] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:65]
-WARNING: [Synth 8-7071] port 'IBUF_DS_ODIV2' of module 'design_1_util_ds_buf_0_0' is unconnected for instance 'util_ds_buf_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:206]
-WARNING: [Synth 8-7023] instance 'util_ds_buf_0' of module 'design_1_util_ds_buf_0_0' has 4 connections declared, but only 3 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:206]
+WARNING: [Synth 8-7071] port 'IBUF_DS_ODIV2' of module 'design_1_util_ds_buf_0_0' is unconnected for instance 'util_ds_buf_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:76]
+WARNING: [Synth 8-7023] instance 'util_ds_buf_0' of module 'design_1_util_ds_buf_0_0' has 4 connections declared, but only 3 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:76]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/synth/design_1_xdma_0_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_core_top' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:60]
 INFO: [Synth 8-6157] synthesizing module 'dma_pcie_axis_rq_if' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/dma_pcie_axis_rq_if.svh:3]
@@ -346,8 +208,8 @@ INFO: [Synth 8-6157] synthesizing module 'xdma_v4_2_2_GenericFIFO__parameterized
 INFO: [Synth 8-6155] done synthesizing module 'xdma_v4_2_2_GenericFIFO__parameterized3' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:279]
 INFO: [Synth 8-6157] synthesizing module 'xdma_v4_2_2_GenericFIFO__parameterized4' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:279]
 INFO: [Synth 8-6155] done synthesizing module 'xdma_v4_2_2_GenericFIFO__parameterized4' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:279]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized1' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized1' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8996]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [/opt/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:524]
@@ -775,8 +637,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie2_fifo_generator_tgt_brdg' [/home/k
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
 INFO: [Synth 8-3491] module 'fifo_generator_v13_2_14' declared at '/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d654/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38308' bound to instance 'U0' of component 'fifo_generator_v13_2_14' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_4/synth/pcie2_fifo_generator_tgt_brdg.vhd:564]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized1' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized1' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
 INFO: [Synth 8-256] done synthesizing module 'pcie2_fifo_generator_tgt_brdg' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_4/synth/pcie2_fifo_generator_tgt_brdg.vhd:81]
 WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'pcie2_fifo_generator_tgt_brdg' is unconnected for instance 'tgt_brdg_fifo_inst' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_rx_demux.sv:311]
 WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'pcie2_fifo_generator_tgt_brdg' is unconnected for instance 'tgt_brdg_fifo_inst' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_rx_demux.sv:311]
@@ -791,46 +653,111 @@ INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_dma_req' [/home/koku
 INFO: [Synth 8-155] case statement is not full and has no default [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_req.sv:215]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_dma_req' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_req.sv:76]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_dma_cpl' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_cpl.sv:76]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-155] case statement is not full and has no default [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_cpl.sv:199]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_dma_cpl' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_cpl.sv:76]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_tgt_req' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_req.sv:76]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_req.sv:196]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_tgt_req' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_req.sv:76]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_tgt_cpl' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_cpl.sv:77]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_cpl.sv:174]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_tgt_cpl' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_tgt_cpl.sv:77]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_axi_stream_intf' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_axi_stream_intf.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_cfg_sideband' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_cfg_sideband.sv:58]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_cfg_sideband' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_cfg_sideband.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized2' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/synth/design_1_xdma_0_0_pcie2_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie2_top' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie2_top.v:59]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_core_top' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_core_top.v:63]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_top' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_top' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_top.v:68]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline.v:70]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen.v:71]
 INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_rx' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_rx.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl.v:71]
 INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl.v:573]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl.v:71]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_tx' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_tx.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_axi_basic_top' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_axi_basic_top.v:68]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_7x' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_7x.v:63]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:72]
 WARNING: [Synth 8-11581] system function call 'time' not supported [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:139]
 INFO: [Synth 8-251] [1'b0]  ROWS_TX 1 COLS_TX 4 [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:139]
 WARNING: [Synth 8-11581] system function call 'time' not supported [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:140]
 INFO: [Synth 8-251] [1'b0]  ROWS_RX 1 COLS_RX 4 [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:140]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_brams_7x' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_brams_7x.v:65]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_bram_7x' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_7x.v:63]
+INFO: [Synth 8-6157] synthesizing module 'xil_internal_svlib_BRAM_TDP_MACRO' [/opt/Xilinx/2025.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.v:30]
+INFO: [Synth 8-6157] synthesizing module 'RAMB36E1' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:159948]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'RAMB36E1' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:159948]
+INFO: [Synth 8-6155] done synthesizing module 'xil_internal_svlib_BRAM_TDP_MACRO' (0#1) [/opt/Xilinx/2025.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_bram_7x' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_7x.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_brams_7x' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_brams_7x.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_bram_top_7x.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'PCIE_2_1' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:129233]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_7x' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_7x.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_pipe_lane' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_pipe_lane.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_pipe_misc' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_pipe_misc.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_pipe_pipeline' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_pipe_pipeline.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pcie_top' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pcie_top.v:62]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_gt_rx_valid_filter_7x.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_gt_rx_valid_filter_7x' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_gt_rx_valid_filter_7x.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCTRL' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2740]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV__parameterized0' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0_pcie2_ip_pipe_clock' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_clock.v:67]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_eq.v:402]
 INFO: [Synth 8-226] default block is never used [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_user.v:354]
 INFO: [Synth 8-7071] port 'cfg_fc_vc_sel' of module 'design_1_xdma_0_0_core_top' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/synth/design_1_xdma_0_0.sv:598]
 INFO: [Synth 8-7023] instance 'inst' of module 'design_1_xdma_0_0_core_top' has 1313 connections declared, but only 1312 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/synth/design_1_xdma_0_0.sv:598]
-WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'msi_enable' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'msi_vector_width' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_negotiated_width_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_current_speed_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_ltssm_state_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_err_cor_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_err_fatal_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_err_nonfatal_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_local_error_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7071] port 'cfg_local_error_valid_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7023] instance 'xdma_0' of module 'design_1_xdma_0_0' has 64 connections declared, but only 51 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:210]
-INFO: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:323]
-INFO: [Synth 8-6014] Unused sequential element Not_Dual.gpio_Data_In_reg was removed.  [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:485]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:672]
+WARNING: [Synth 8-7071] port 'axi_aclk' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'axi_aresetn' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'msi_enable' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'msi_vector_width' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awaddr' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awlen' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awvalid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awlock' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_awcache' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_wdata' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_wlast' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_wvalid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_bready' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_araddr' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arlen' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arvalid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arlock' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_arcache' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'm_axi_rready' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_negotiated_width_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_current_speed_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_ltssm_state_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_err_cor_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_err_fatal_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_err_nonfatal_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_local_error_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7071] port 'cfg_local_error_valid_o' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'design_1_xdma_0_0' has 64 connections declared, but only 25 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:80]
 WARNING: [Synth 8-6014] Unused sequential element wlengthback_ff_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element wrreqChnlIdq_ff_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element rrq_did_nn1_reg was removed. 
@@ -982,6 +909,7 @@ WARNING: [Synth 8-3848] Net pipe_debug_9 in module/entity design_1_xdma_0_0_core
 WARNING: [Synth 8-3848] Net pipe_debug in module/entity design_1_xdma_0_0_core_top does not have driver. [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:3006]
 WARNING: [Synth 8-3848] Net gt_txelecidle in module/entity design_1_xdma_0_0_core_top does not have driver. [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:3021]
 WARNING: [Synth 8-3848] Net gt_txresetdone in module/entity design_1_xdma_0_0_core_top does not have driver. [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:3022]
+WARNING: [Synth 8-3848] Net gt_rxresetdone in module/entity design_1_xdma_0_0_core_top does not have driver. [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:3023]
 INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-7129] Port GT_RXDISPERR[7] in module design_1_xdma_0_0_pcie2_ip_gt_wrapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port GT_RXDISPERR[6] in module design_1_xdma_0_0_pcie2_ip_gt_wrapper is either unconnected or has no load
@@ -1085,20 +1013,20 @@ WARNING: [Synth 8-7129] Port pipe_rx3_polarity in module design_1_xdma_0_0_pcie2
 WARNING: [Synth 8-7129] Port pipe_tx3_compliance in module design_1_xdma_0_0_pcie2_ip_gt_top is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3002.621 ; gain = 1212.211 ; free physical = 6806 ; free virtual = 50695
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2883.336 ; gain = 1100.133 ; free physical = 1765 ; free virtual = 46362
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3002.621 ; gain = 1212.211 ; free physical = 6805 ; free virtual = 50694
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2883.336 ; gain = 1100.133 ; free physical = 1766 ; free virtual = 46360
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3002.621 ; gain = 1212.211 ; free physical = 6805 ; free virtual = 50694
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2883.336 ; gain = 1100.133 ; free physical = 1766 ; free virtual = 46360
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3002.621 ; gain = 0.000 ; free physical = 6704 ; free virtual = 50597
+Netlist sorting complete. Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.64 . Memory (MB): peak = 2883.336 ; gain = 0.000 ; free physical = 1779 ; free virtual = 46364
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
-INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: design_1_i/util_ds_buf_0/U0/<const0>.
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1122,12 +1050,6 @@ Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/projec
 Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_7vx_ip.xdc] for cell 'design_1_i/xdma_0/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_7vx_ip.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
-Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
-Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
-Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
 Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
@@ -1148,28 +1070,17 @@ Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/projec
 Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/ip_xilinx_pcie_2_1_7x_late.xdc] for cell 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/ip_xilinx_pcie_2_1_7x_late.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/2025.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 40 XPM XDC files have been applied to the design.
+INFO: [Project 1-1714] 23 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3244.016 ; gain = 0.000 ; free physical = 6658 ; free virtual = 50544
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2999.074 ; gain = 0.000 ; free physical = 1802 ; free virtual = 46385
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  SRL16 => SRL16E: 1 instance 
+No Unisim elements were transformed.
 
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           WDATASM_START |                               00 |                               00
-            WDATASM_IDLE |                               01 |                               01
-        WDATASM_DATAXFER |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wrdatasm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_mm_master_omulti_wr_v'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1449,7 +1360,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'resetovrd.fsm_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'txsync_fsm.fsm_tx_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_pipe_sync'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 3268.027 ; gain = 1477.617 ; free physical = 1495 ; free virtual = 45385
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 3019.000 ; gain = 1235.797 ; free physical = 456 ; free virtual = 41191
 ---------------------------------------------------------------------------------
 
 
@@ -1479,12 +1390,6 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_afc3.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_w_cmd_reg.m_write_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_r_cmd_reg.m_read_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top.
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[6]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
 INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[5]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
@@ -1779,7 +1684,7 @@ INFO: [Synth 8-3332] Sequential element (inst/gt_top_i/pipe_wrapper_i/pipe_lane[
 INFO: [Synth 8-3332] Sequential element (inst/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_eq.pipe_eq_i/FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pcie2_top.
 INFO: [Synth 8-3332] Sequential element (inst/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_sync_i/FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pcie2_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 3279.953 ; gain = 1489.543 ; free physical = 523 ; free virtual = 44319
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 3035.012 ; gain = 1251.809 ; free physical = 470 ; free virtual = 40045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -1787,7 +1692,7 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst' to pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/inverted_reset_inferred/i_0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:16 . Memory (MB): peak = 3279.953 ; gain = 1489.543 ; free physical = 2048 ; free virtual = 45894
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:45 ; elapsed = 00:01:07 . Memory (MB): peak = 3060.090 ; gain = 1276.887 ; free physical = 2721 ; free virtual = 41741
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -1796,7 +1701,7 @@ WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_oneh
 WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[0]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
 WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[3]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:01:26 . Memory (MB): peak = 3279.953 ; gain = 1489.543 ; free physical = 1926 ; free virtual = 45773
+Finished Timing Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:01:18 . Memory (MB): peak = 3165.715 ; gain = 1382.512 ; free physical = 2594 ; free virtual = 41597
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1817,7 +1722,7 @@ INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wra
 INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_topi_4/dma_top/dma_enable.wb_eng.dma_pcie_wb_eng/axidma_wb_arb/Fifowhead.fifoInfo/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_udma_top__GCB2_tempName due to constant propagation
 INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_topi_4/dma_top/dma_enable.wb_eng.dma_pcie_wb_eng/WB_DAT_FIFO/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_udma_top__GCB2_tempName due to constant propagation
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:01:33 . Memory (MB): peak = 3303.965 ; gain = 1513.555 ; free physical = 896 ; free virtual = 44769
+Finished Technology Mapping : Time (s): cpu = 00:02:00 ; elapsed = 00:01:25 . Memory (MB): peak = 3205.656 ; gain = 1422.453 ; free physical = 1605 ; free virtual = 40624
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1841,139 +1746,38 @@ INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/ram_top/
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:349]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:364]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:523]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:523]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:866]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1040]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:979]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:221]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1413]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1243]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:897]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1040]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:897]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:382]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:350]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:479]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:138]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:479]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:139]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2004]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2421]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1638]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:253]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1636]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:1636]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:326]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2578]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2081]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2081]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2474]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:975]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:975]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:975]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:975]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2493]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2059]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2081]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2081]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
-INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:01:39 . Memory (MB): peak = 3384.863 ; gain = 1594.453 ; free physical = 771 ; free virtual = 44712
+Finished IO Insertion : Time (s): cpu = 00:02:06 ; elapsed = 00:01:30 . Memory (MB): peak = 3290.555 ; gain = 1507.352 ; free physical = 1509 ; free virtual = 40594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:01:39 . Memory (MB): peak = 3384.863 ; gain = 1594.453 ; free physical = 771 ; free virtual = 44712
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:06 ; elapsed = 00:01:30 . Memory (MB): peak = 3290.555 ; gain = 1507.352 ; free physical = 1509 ; free virtual = 40594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:01:42 . Memory (MB): peak = 3411.004 ; gain = 1620.594 ; free physical = 579 ; free virtual = 44337
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:01:33 . Memory (MB): peak = 3318.836 ; gain = 1535.633 ; free physical = 1516 ; free virtual = 40600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:16 ; elapsed = 00:01:42 . Memory (MB): peak = 3411.004 ; gain = 1620.594 ; free physical = 579 ; free virtual = 44337
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:01:33 . Memory (MB): peak = 3318.836 ; gain = 1535.633 ; free physical = 1516 ; free virtual = 40600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:17 ; elapsed = 00:01:43 . Memory (MB): peak = 3411.004 ; gain = 1620.594 ; free physical = 598 ; free virtual = 44357
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:01:34 . Memory (MB): peak = 3318.836 ; gain = 1535.633 ; free physical = 1529 ; free virtual = 40614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:17 ; elapsed = 00:01:43 . Memory (MB): peak = 3411.004 ; gain = 1620.594 ; free physical = 598 ; free virtual = 44356
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:01:34 . Memory (MB): peak = 3318.836 ; gain = 1535.633 ; free physical = 1529 ; free virtual = 40614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1991,16 +1795,16 @@ Report Cell Usage:
 +------+--------------+------+
 |1     |BUFG          |     6|
 |2     |BUFGCTRL      |     1|
-|3     |CARRY4        |   892|
+|3     |CARRY4        |   886|
 |4     |GTPE2_CHANNEL |     2|
 |5     |GTPE2_COMMON  |     1|
 |6     |IBUFDS_GTE2   |     1|
-|7     |LUT1          |  1368|
-|8     |LUT2          |  1801|
-|9     |LUT3          |  4544|
-|10    |LUT4          |  2862|
-|11    |LUT5          |  3032|
-|12    |LUT6          |  6211|
+|7     |LUT1          |  1393|
+|8     |LUT2          |  1718|
+|9     |LUT3          |  4487|
+|10    |LUT4          |  2810|
+|11    |LUT5          |  2987|
+|12    |LUT6          |  6069|
 |13    |MMCME2_ADV    |     2|
 |14    |MUXF7         |   265|
 |15    |MUXF8         |    29|
@@ -2012,52 +1816,50 @@ Report Cell Usage:
 |21    |RAM64X1S      |     9|
 |22    |RAMB18E1      |     9|
 |24    |RAMB36E1      |    20|
-|31    |SRL16         |     1|
-|32    |SRL16E        |     9|
-|33    |SRLC32E       |     7|
-|34    |FDCE          |    98|
-|35    |FDPE          |    62|
-|36    |FDRE          | 19572|
-|37    |FDSE          |   164|
-|38    |IBUF          |     3|
-|39    |IBUFDS        |     1|
-|40    |OBUF          |     3|
+|31    |SRL16E        |     9|
+|32    |SRLC32E       |     7|
+|33    |FDCE          |    60|
+|34    |FDPE          |    62|
+|35    |FDRE          | 19231|
+|36    |FDSE          |   155|
+|37    |IBUF          |     5|
+|38    |IBUFDS        |     1|
+|39    |OBUF          |     3|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:17 ; elapsed = 00:01:43 . Memory (MB): peak = 3411.004 ; gain = 1620.594 ; free physical = 597 ; free virtual = 44355
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:09 ; elapsed = 00:01:34 . Memory (MB): peak = 3318.836 ; gain = 1535.633 ; free physical = 1529 ; free virtual = 40614
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26079 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:04 ; elapsed = 00:01:35 . Memory (MB): peak = 3414.918 ; gain = 1371.191 ; free physical = 6753 ; free virtual = 50506
-Synthesis Optimization Complete : Time (s): cpu = 00:02:17 ; elapsed = 00:01:46 . Memory (MB): peak = 3414.918 ; gain = 1624.508 ; free physical = 6787 ; free virtual = 50510
+Synthesis finished with 0 errors, 0 critical warnings and 25962 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:59 ; elapsed = 00:01:29 . Memory (MB): peak = 3322.750 ; gain = 1411.887 ; free physical = 7679 ; free virtual = 46763
+Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:01:37 . Memory (MB): peak = 3322.750 ; gain = 1539.547 ; free physical = 7723 ; free virtual = 46778
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3440.816 ; gain = 0.000 ; free physical = 6804 ; free virtual = 50519
+Netlist sorting complete. Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3345.633 ; gain = 0.000 ; free physical = 7723 ; free virtual = 46779
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
-INFO: [Netlist 29-17] Analyzing 1829 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1822 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: design_1_i/util_ds_buf_0/U0/<const0>.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 4 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3507.652 ; gain = 0.000 ; free physical = 6892 ; free virtual = 50605
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3410.500 ; gain = 0.000 ; free physical = 7741 ; free virtual = 46797
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 611 instances were transformed.
+  A total of 610 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 48 instances
   RAM16X1S => RAM32X1S (RAMS32): 13 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 508 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 32 instances
   RAM64X1S => RAM64X1S (RAMS64E): 9 instances
-  SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: 17932bc8
+Synth Design complete | Checksum: a1ebf0a8
 INFO: [Common 17-83] Releasing license: Synthesis
-701 Infos, 402 Warnings, 0 Critical Warnings and 0 Errors encountered.
+646 Infos, 313 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:01:56 . Memory (MB): peak = 3507.688 ; gain = 1870.488 ; free physical = 6899 ; free virtual = 50611
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9270.445; main = 2544.779; forked = 7149.006
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18618.918; main = 3507.656; forked = 15342.879
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3531.664 ; gain = 0.000 ; free physical = 6899 ; free virtual = 50615
+synth_design: Time (s): cpu = 00:02:37 ; elapsed = 00:01:52 . Memory (MB): peak = 3410.535 ; gain = 1707.371 ; free physical = 7740 ; free virtual = 46796
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9156.535; main = 2460.547; forked = 7227.768
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18458.473; main = 3410.504; forked = 15427.375
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3434.512 ; gain = 0.000 ; free physical = 7740 ; free virtual = 46800
 INFO: [Common 17-1381] The checkpoint '/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3531.664 ; gain = 23.977 ; free physical = 6926 ; free virtual = 50688
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3434.512 ; gain = 23.977 ; free physical = 7780 ; free virtual = 46878
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 16:18:51 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 18:31:03 2026...

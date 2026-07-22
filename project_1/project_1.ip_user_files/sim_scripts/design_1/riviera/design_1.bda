@@ -193,24 +193,6 @@
                 "VH": "2",
                 "VT": "PM",
                 "TU": "active"
-            },
-            "V3": {
-                "VT": "AC",
-                "BA": "0x0000000040000000",
-                "HA": "0x000000004000FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "M_AXI",
-                "MX": "/xdma_0",
-                "MI": "M_AXI",
-                "MS": "SEG_axi_gpio_0_Reg",
-                "MV": "xilinx.com:ip:xdma:4.2",
-                "SX": "/axi_gpio_0",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
             }
         },
         "edges": [
@@ -221,11 +203,6 @@
             {
                 "src": "V1",
                 "trg": "V2"
-            },
-            {
-                "src": "V3",
-                "trg": "V2",
-                "EH": "2"
             }
         ]
     }

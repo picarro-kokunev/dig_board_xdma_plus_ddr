@@ -13,8 +13,6 @@
     "design_tree": {
       "util_ds_buf_0": "",
       "xdma_0": "",
-      "axi_gpio_0": "",
-      "axi_smc": "",
       "ilvector_logic_1": "",
       "clk_wiz_0": "",
       "adc_ctrl_0": ""
@@ -173,7 +171,7 @@
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "design_1_adc_ctrl_0_1_adc_clk",
+            "value": "design_1_adc_ctrl_0_2_adc_clk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -301,97 +299,6 @@
           }
         }
       },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "ip_revision": "37",
-        "xci_name": "design_1_axi_gpio_0_0",
-        "xci_path": "ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_smc": {
-        "vlnv": "xilinx.com:ip:smartconnect:1.0",
-        "ip_revision": "28",
-        "xci_name": "design_1_axi_smc_0",
-        "xci_path": "ip/design_1_axi_smc_0/design_1_axi_smc_0.xci",
-        "inst_hier_path": "axi_smc",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "NUM_SI": {
-            "value": "1"
-          }
-        },
-        "interface_ports": {
-          "S00_AXI": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "32"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "16"
-              }
-            },
-            "bridges": [
-              "M00_AXI"
-            ],
-            "bd_attributes": {
-              "BRIDGES": {
-                "value": "M00_AXI",
-                "value_src": "auto"
-              },
-              "TYPE": {
-                "value": "interior",
-                "value_src": "default"
-              }
-            }
-          },
-          "M00_AXI": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "32"
-              },
-              "NUM_READ_THREADS": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "16"
-              },
-              "NUM_WRITE_THREADS": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
-              }
-            },
-            "bd_attributes": {
-              "TYPE": {
-                "value": "interior",
-                "value_src": "default"
-              }
-            }
-          }
-        }
-      },
       "ilvector_logic_1": {
         "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
         "parameters": {
@@ -479,8 +386,8 @@
       "adc_ctrl_0": {
         "vlnv": "xilinx.com:module_ref:adc_ctrl:1.0",
         "ip_revision": "1",
-        "xci_name": "design_1_adc_ctrl_0_1",
-        "xci_path": "ip/design_1_adc_ctrl_0_1/design_1_adc_ctrl_0_1.xci",
+        "xci_name": "design_1_adc_ctrl_0_2",
+        "xci_path": "ip/design_1_adc_ctrl_0_2/design_1_adc_ctrl_0_2.xci",
         "inst_hier_path": "adc_ctrl_0",
         "has_run_ip_tcl": "true",
         "reference_info": {
@@ -538,6 +445,19 @@
           },
           "ofa_b": {
             "direction": "O"
+          },
+          "tie_all": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           }
         }
       }
@@ -555,18 +475,6 @@
           "util_ds_buf_0/CLK_IN_D"
         ]
       },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "xdma_0_M_AXI": {
-        "interface_ports": [
-          "xdma_0/M_AXI",
-          "axi_smc/S00_AXI"
-        ]
-      },
       "xdma_0_pcie_mgt": {
         "interface_ports": [
           "pcie_mgt_0",
@@ -581,7 +489,13 @@
           "adc_clk_0"
         ]
       },
-      "adc_data_a_0_1": {
+      "adc_ctrl_0_tie_all": {
+        "ports": [
+          "adc_ctrl_0/tie_all",
+          "led_red_0"
+        ]
+      },
+      "adc_data_a_0": {
         "ports": [
           "adc_data_a_0",
           "adc_ctrl_0/adc_data_a"
@@ -591,12 +505,6 @@
         "ports": [
           "adc_ofa_a_0",
           "adc_ctrl_0/adc_ofa_a"
-        ]
-      },
-      "axi_gpio_0_gpio_io_o": {
-        "ports": [
-          "axi_gpio_0/gpio_io_o",
-          "led_red_0"
         ]
       },
       "clk_wiz_0_clk_out1": {
@@ -625,40 +533,11 @@
           "xdma_0/sys_clk"
         ]
       },
-      "xdma_0_axi_aclk": {
-        "ports": [
-          "xdma_0/axi_aclk",
-          "axi_smc/aclk",
-          "axi_gpio_0/s_axi_aclk"
-        ]
-      },
-      "xdma_0_axi_aresetn": {
-        "ports": [
-          "xdma_0/axi_aresetn",
-          "axi_gpio_0/s_axi_aresetn",
-          "axi_smc/aresetn"
-        ]
-      },
       "xdma_0_user_lnk_up": {
         "ports": [
           "xdma_0/user_lnk_up",
           "ilvector_logic_1/Op1"
         ]
-      }
-    },
-    "addressing": {
-      "/xdma_0": {
-        "address_spaces": {
-          "M_AXI": {
-            "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x0000000040000000",
-                "range": "64K"
-              }
-            }
-          }
-        }
       }
     }
   }

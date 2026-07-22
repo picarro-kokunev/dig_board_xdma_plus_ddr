@@ -66,15 +66,15 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [1:0] pcie_mgt_0_txp,
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire sys_clk_clk_n,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire sys_clk_clk_p,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire pcie_reset_n,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] led_green_0,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] led_red_0,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire sys_clk_clk_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire sys_clk_clk_p,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire adc_clk_0,
   (* X_INTERFACE_IGNORE = "true" *)
@@ -90,11 +90,11 @@ module design_1_sv (
     .pcie_mgt_0_rxp(pcie_mgt_0_rxp),
     .pcie_mgt_0_txn(pcie_mgt_0_txn),
     .pcie_mgt_0_txp(pcie_mgt_0_txp),
+    .sys_clk_clk_n(sys_clk_clk_n),
+    .sys_clk_clk_p(sys_clk_clk_p),
     .pcie_reset_n(pcie_reset_n),
     .led_green_0(led_green_0),
     .led_red_0(led_red_0),
-    .sys_clk_clk_n(sys_clk_clk_n),
-    .sys_clk_clk_p(sys_clk_clk_p),
     .adc_clk_0(adc_clk_0),
     .adc_data_a_0(adc_data_a_0),
     .adc_ofa_a_0(adc_ofa_a_0)

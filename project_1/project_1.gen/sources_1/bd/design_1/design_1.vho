@@ -59,11 +59,11 @@ COMPONENT design_1
     pcie_mgt_0_rxp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     pcie_mgt_0_txn : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     pcie_mgt_0_txp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    sys_clk_clk_n : IN STD_LOGIC;
+    sys_clk_clk_p : IN STD_LOGIC;
     pcie_reset_n : IN STD_LOGIC;
     led_green_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     led_red_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    sys_clk_clk_n : IN STD_LOGIC;
-    sys_clk_clk_p : IN STD_LOGIC;
     adc_clk_0 : OUT STD_LOGIC;
     adc_data_a_0 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     adc_ofa_a_0 : IN STD_LOGIC
@@ -83,11 +83,11 @@ your_instance_name : design_1
     pcie_mgt_0_rxp => pcie_mgt_0_rxp,
     pcie_mgt_0_txn => pcie_mgt_0_txn,
     pcie_mgt_0_txp => pcie_mgt_0_txp,
+    sys_clk_clk_n => sys_clk_clk_n,
+    sys_clk_clk_p => sys_clk_clk_p,
     pcie_reset_n => pcie_reset_n,
     led_green_0 => led_green_0,
     led_red_0 => led_red_0,
-    sys_clk_clk_n => sys_clk_clk_n,
-    sys_clk_clk_p => sys_clk_clk_p,
     adc_clk_0 => adc_clk_0,
     adc_data_a_0 => adc_data_a_0,
     adc_ofa_a_0 => adc_ofa_a_0
