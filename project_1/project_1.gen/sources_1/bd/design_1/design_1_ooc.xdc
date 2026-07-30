@@ -7,6 +7,5 @@
 # of Vivado)
 ################################################################################
 create_clock -name pcie_clk_clk_p -period 10 [get_ports pcie_clk_clk_p]
-create_clock -name sys_clk_clk_p -period 6.667 [get_ports sys_clk_clk_p]
 
 ################################################################################
