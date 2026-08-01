@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/opt/Xilinx/2025.2/Vitis/bin:/opt/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx/2025.2/Vivado/bin
+  PATH=/opt/Xilinx_2/2025.2/Vitis/bin:/opt/Xilinx_2/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx_2/2025.2/Vivado/bin
 else
-  PATH=/opt/Xilinx/2025.2/Vitis/bin:/opt/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx/2025.2/Vivado/bin:$PATH
+  PATH=/opt/Xilinx_2/2025.2/Vitis/bin:/opt/Xilinx_2/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx_2/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/kokunev/data/git_root/dig_board_xdma_plus_ddr/project_1/project_1.runs/impl_1'
+HD_PWD='/home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 
 

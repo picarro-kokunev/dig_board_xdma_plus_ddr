@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x850E20BEE67F4A3A",
+      "boundary_crc": "0x82F15B242823C693",
       "device": "xc7a100tfgg484-2",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -73,25 +73,25 @@
           "rxn": {
             "physical_name": "pcie_mgt_0_rxn",
             "direction": "I",
-            "left": "1",
+            "left": "3",
             "right": "0"
           },
           "rxp": {
             "physical_name": "pcie_mgt_0_rxp",
             "direction": "I",
-            "left": "1",
+            "left": "3",
             "right": "0"
           },
           "txn": {
             "physical_name": "pcie_mgt_0_txn",
             "direction": "O",
-            "left": "1",
+            "left": "3",
             "right": "0"
           },
           "txp": {
             "physical_name": "pcie_mgt_0_txp",
             "direction": "O",
-            "left": "1",
+            "left": "3",
             "right": "0"
           }
         }
@@ -346,16 +346,16 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "PF0_DEVICE_ID_mqdma": {
-            "value": "9022"
+            "value": "9024"
           },
           "PF0_SRIOV_VF_DEVICE_ID": {
-            "value": "A032"
+            "value": "A034"
           },
           "PF2_DEVICE_ID_mqdma": {
-            "value": "9222"
+            "value": "9224"
           },
           "PF3_DEVICE_ID_mqdma": {
-            "value": "9322"
+            "value": "9324"
           },
           "enable_ltssm_dbg": {
             "value": "true"
@@ -376,7 +376,7 @@
             "value": "80"
           },
           "pf0_device_id": {
-            "value": "7022"
+            "value": "7024"
           },
           "pf0_sub_class_interface_menu": {
             "value": "Generic_XT_compatible_serial_controller"
@@ -385,7 +385,7 @@
             "value": "5.0_GT/s"
           },
           "pl_link_cap_max_link_width": {
-            "value": "X2"
+            "value": "X4"
           },
           "xdma_rnum_chnl": {
             "value": "2"

@@ -58,13 +58,13 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire [0:0] pcie_clk_clk_p,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [1:0] pcie_mgt_0_rxn,
+  input wire [3:0] pcie_mgt_0_rxn,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [1:0] pcie_mgt_0_rxp,
+  input wire [3:0] pcie_mgt_0_rxp,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [1:0] pcie_mgt_0_txn,
+  output wire [3:0] pcie_mgt_0_txn,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [1:0] pcie_mgt_0_txp,
+  output wire [3:0] pcie_mgt_0_txp,
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire [31:0] DDR3_0_dq,
   (* X_INTERFACE_IGNORE = "true" *)

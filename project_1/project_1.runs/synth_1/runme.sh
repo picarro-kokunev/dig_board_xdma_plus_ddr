@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/opt/Xilinx/2025.2/Vitis/bin:/opt/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx/2025.2/Vivado/bin
+  PATH=/opt/Xilinx_2/2025.2/Vitis/bin:/opt/Xilinx_2/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx_2/2025.2/Vivado/bin
 else
-  PATH=/opt/Xilinx/2025.2/Vitis/bin:/opt/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx/2025.2/Vivado/bin:$PATH
+  PATH=/opt/Xilinx_2/2025.2/Vitis/bin:/opt/Xilinx_2/2025.2/Vivado/ids_lite/ISE/bin/lin64:/opt/Xilinx_2/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/kokunev/data/git_root/dig_board_xdma_plus_ddr/project_1/project_1.runs/synth_1'
+HD_PWD='/home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

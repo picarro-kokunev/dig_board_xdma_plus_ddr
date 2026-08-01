@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 14 09:44:28 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 31 17:04:55 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -95,22 +95,22 @@
         <CONNECTION INSTANCE="util_ds_buf_0" PORT="IBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="pcie_mgt_0_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
+    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_0_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="pcie_mgt_0_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
+    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_0_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxp"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="1" NAME="pcie_mgt_0_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
+    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_0_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="1" NAME="pcie_mgt_0_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
+    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_0_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txp"/>
       </CONNECTIONS>
@@ -776,7 +776,7 @@
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_rdata">
+        <PORT DIR="O" LEFT="127" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rdata"/>
           </CONNECTIONS>
@@ -806,7 +806,7 @@
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wdata">
+        <PORT DIR="I" LEFT="127" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wdata"/>
           </CONNECTIONS>
@@ -821,7 +821,7 @@
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wstrb">
+        <PORT DIR="I" LEFT="15" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wstrb"/>
           </CONNECTIONS>
@@ -843,13 +843,13 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="xdma_0_M_AXI" DATAWIDTH="64" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="xdma_0_M_AXI" DATAWIDTH="128" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_xdma_0_0_axi_aclk"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
@@ -8170,7 +8170,7 @@
         <PARAMETER NAME="AXIS_PIPE_LINE_STAGE" VALUE="0"/>
         <PARAMETER NAME="AXI_ACLK_LOOPBACK" VALUE="FALSE"/>
         <PARAMETER NAME="AXI_ADDR_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="AXI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="AXI_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="AXI_VIP_IN_EXDES" VALUE="FALSE"/>
         <PARAMETER NAME="AXSIZE_BYTE_ACCESS_EN" VALUE="FALSE"/>
         <PARAMETER NAME="BARLITE1" VALUE="0"/>
@@ -8232,7 +8232,7 @@
         <PARAMETER NAME="C_M_AXI_ID_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_M_AXI_NUM_READ" VALUE="8"/>
         <PARAMETER NAME="C_M_AXI_NUM_READQ" VALUE="2"/>
-        <PARAMETER NAME="C_M_AXI_NUM_WRITE" VALUE="4"/>
+        <PARAMETER NAME="C_M_AXI_NUM_WRITE" VALUE="8"/>
         <PARAMETER NAME="C_M_AXI_NUM_WRITE_SCALE" VALUE="1"/>
         <PARAMETER NAME="C_NUM_OF_SC" VALUE="1"/>
         <PARAMETER NAME="C_OLD_BRIDGE_TIMEOUT" VALUE="0"/>
@@ -8354,7 +8354,7 @@
         <PARAMETER NAME="PF0_BAR5_APERTURE_SIZE" VALUE="0x05"/>
         <PARAMETER NAME="PF0_BAR5_CONTROL" VALUE="0x0"/>
         <PARAMETER NAME="PF0_CLASS_CODE" VALUE="0x058000"/>
-        <PARAMETER NAME="PF0_DEVICE_ID" VALUE="0x7022"/>
+        <PARAMETER NAME="PF0_DEVICE_ID" VALUE="0x7024"/>
         <PARAMETER NAME="PF0_DEV_CAP2_10B_TAG_COMPLETER_SUPPORTED" VALUE="FALSE"/>
         <PARAMETER NAME="PF0_EXPANSION_ROM_APERTURE_SIZE" VALUE="0x000"/>
         <PARAMETER NAME="PF0_EXPANSION_ROM_ENABLE" VALUE="FALSE"/>
@@ -8406,7 +8406,7 @@
         <PARAMETER NAME="PIPE_SIM" VALUE="FALSE"/>
         <PARAMETER NAME="PLL_TYPE" VALUE="2"/>
         <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_SPEED" VALUE="2"/>
-        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_WIDTH" VALUE="4"/>
         <PARAMETER NAME="PL_UPSTREAM_FACING" VALUE="true"/>
         <PARAMETER NAME="RBAR_ENABLE" VALUE="FALSE"/>
         <PARAMETER NAME="RD_CH0_ENABLED" VALUE="FALSE"/>
@@ -8484,7 +8484,7 @@
         <PARAMETER NAME="INS_LOSS_NYQ" VALUE="15"/>
         <PARAMETER NAME="MSI_X_OPTIONS" VALUE="None"/>
         <PARAMETER NAME="PCIE_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="PF0_DEVICE_ID_mqdma" VALUE="9022"/>
+        <PARAMETER NAME="PF0_DEVICE_ID_mqdma" VALUE="9024"/>
         <PARAMETER NAME="PF0_MSIX_CAP_PBA_BIR_mqdma" VALUE="BAR_0"/>
         <PARAMETER NAME="PF0_MSIX_CAP_PBA_OFFSET_mqdma" VALUE="00000000"/>
         <PARAMETER NAME="PF0_MSIX_CAP_TABLE_BIR_mqdma" VALUE="BAR_0"/>
@@ -8495,7 +8495,7 @@
         <PARAMETER NAME="PF0_SRIOV_FIRST_VF_OFFSET" VALUE="0"/>
         <PARAMETER NAME="PF0_SRIOV_FUNC_DEP_LINK" VALUE="0000"/>
         <PARAMETER NAME="PF0_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="00000553"/>
-        <PARAMETER NAME="PF0_SRIOV_VF_DEVICE_ID" VALUE="A032"/>
+        <PARAMETER NAME="PF0_SRIOV_VF_DEVICE_ID" VALUE="A034"/>
         <PARAMETER NAME="PF0_SUBSYSTEM_ID_mqdma" VALUE="0007"/>
         <PARAMETER NAME="PF0_SUBSYSTEM_VENDOR_ID_mqdma" VALUE="10EE"/>
         <PARAMETER NAME="PF1_DEVICE_ID_mqdma" VALUE="0007"/>
@@ -8512,11 +8512,11 @@
         <PARAMETER NAME="PF1_SRIOV_FIRST_VF_OFFSET" VALUE="0"/>
         <PARAMETER NAME="PF1_SRIOV_FUNC_DEP_LINK" VALUE="0001"/>
         <PARAMETER NAME="PF1_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="00000553"/>
-        <PARAMETER NAME="PF1_SRIOV_VF_DEVICE_ID" VALUE="A132"/>
+        <PARAMETER NAME="PF1_SRIOV_VF_DEVICE_ID" VALUE="A134"/>
         <PARAMETER NAME="PF1_SUBSYSTEM_ID_mqdma" VALUE="0007"/>
         <PARAMETER NAME="PF1_SUBSYSTEM_VENDOR_ID_mqdma" VALUE="10EE"/>
         <PARAMETER NAME="PF1_Use_Class_Code_Lookup_Assistant" VALUE="false"/>
-        <PARAMETER NAME="PF2_DEVICE_ID_mqdma" VALUE="9222"/>
+        <PARAMETER NAME="PF2_DEVICE_ID_mqdma" VALUE="9224"/>
         <PARAMETER NAME="PF2_INTERRUPT_PIN" VALUE="NONE"/>
         <PARAMETER NAME="PF2_MSIX_CAP_PBA_BIR_mqdma" VALUE="BAR_0"/>
         <PARAMETER NAME="PF2_MSIX_CAP_PBA_OFFSET_mqdma" VALUE="00000000"/>
@@ -8530,12 +8530,12 @@
         <PARAMETER NAME="PF2_SRIOV_FIRST_VF_OFFSET" VALUE="0"/>
         <PARAMETER NAME="PF2_SRIOV_FUNC_DEP_LINK" VALUE="0002"/>
         <PARAMETER NAME="PF2_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="00000553"/>
-        <PARAMETER NAME="PF2_SRIOV_VF_DEVICE_ID" VALUE="A232"/>
+        <PARAMETER NAME="PF2_SRIOV_VF_DEVICE_ID" VALUE="A234"/>
         <PARAMETER NAME="PF2_SUBSYSTEM_ID_mqdma" VALUE="0007"/>
         <PARAMETER NAME="PF2_SUBSYSTEM_VENDOR_ID" VALUE="10EE"/>
         <PARAMETER NAME="PF2_SUBSYSTEM_VENDOR_ID_mqdma" VALUE="10EE"/>
         <PARAMETER NAME="PF2_Use_Class_Code_Lookup_Assistant" VALUE="false"/>
-        <PARAMETER NAME="PF3_DEVICE_ID_mqdma" VALUE="9322"/>
+        <PARAMETER NAME="PF3_DEVICE_ID_mqdma" VALUE="9324"/>
         <PARAMETER NAME="PF3_INTERRUPT_PIN" VALUE="NONE"/>
         <PARAMETER NAME="PF3_MSIX_CAP_PBA_BIR_mqdma" VALUE="BAR_0"/>
         <PARAMETER NAME="PF3_MSIX_CAP_PBA_OFFSET_mqdma" VALUE="00000000"/>
@@ -8549,7 +8549,7 @@
         <PARAMETER NAME="PF3_SRIOV_FIRST_VF_OFFSET" VALUE="0"/>
         <PARAMETER NAME="PF3_SRIOV_FUNC_DEP_LINK" VALUE="0003"/>
         <PARAMETER NAME="PF3_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="00000553"/>
-        <PARAMETER NAME="PF3_SRIOV_VF_DEVICE_ID" VALUE="A332"/>
+        <PARAMETER NAME="PF3_SRIOV_VF_DEVICE_ID" VALUE="A334"/>
         <PARAMETER NAME="PF3_SUBSYSTEM_ID_mqdma" VALUE="0007"/>
         <PARAMETER NAME="PF3_SUBSYSTEM_VENDOR_ID" VALUE="10EE"/>
         <PARAMETER NAME="PF3_SUBSYSTEM_VENDOR_ID_mqdma" VALUE="10EE"/>
@@ -8575,7 +8575,7 @@
         <PARAMETER NAME="axi_addr_width" VALUE="64"/>
         <PARAMETER NAME="axi_bypass_64bit_en" VALUE="false"/>
         <PARAMETER NAME="axi_bypass_prefetchable" VALUE="false"/>
-        <PARAMETER NAME="axi_data_width" VALUE="64_bit"/>
+        <PARAMETER NAME="axi_data_width" VALUE="128_bit"/>
         <PARAMETER NAME="axi_id_width" VALUE="4"/>
         <PARAMETER NAME="axi_vip_in_exdes" VALUE="false"/>
         <PARAMETER NAME="axibar2pciebar_0" VALUE="0x0000000000000000"/>
@@ -8841,7 +8841,7 @@
         <PARAMETER NAME="pf0_class_code_sub" VALUE="80"/>
         <PARAMETER NAME="pf0_class_code_sub_mqdma" VALUE="80"/>
         <PARAMETER NAME="pf0_dev_cap2_10b_tag_completer_supported" VALUE="false"/>
-        <PARAMETER NAME="pf0_device_id" VALUE="7022"/>
+        <PARAMETER NAME="pf0_device_id" VALUE="7024"/>
         <PARAMETER NAME="pf0_expansion_rom_enabled" VALUE="false"/>
         <PARAMETER NAME="pf0_expansion_rom_scale" VALUE="Kilobytes"/>
         <PARAMETER NAME="pf0_expansion_rom_size" VALUE="4"/>
@@ -9363,7 +9363,7 @@
         <PARAMETER NAME="pipe_line_stage" VALUE="2"/>
         <PARAMETER NAME="pipe_sim" VALUE="false"/>
         <PARAMETER NAME="pl_link_cap_max_link_speed" VALUE="5.0_GT/s"/>
-        <PARAMETER NAME="pl_link_cap_max_link_width" VALUE="X2"/>
+        <PARAMETER NAME="pl_link_cap_max_link_width" VALUE="X4"/>
         <PARAMETER NAME="plltype" VALUE="QPLL1"/>
         <PARAMETER NAME="post_synth_sim_en" VALUE="false"/>
         <PARAMETER NAME="prog_usr_irq_vec_map" VALUE="false"/>
@@ -9578,7 +9578,7 @@
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="m_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_rdata">
+        <PORT DIR="I" LEFT="127" NAME="m_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
@@ -9608,7 +9608,7 @@
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wdata">
+        <PORT DIR="O" LEFT="127" NAME="m_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_wdata"/>
           </CONNECTIONS>
@@ -9623,7 +9623,7 @@
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wstrb">
+        <PORT DIR="O" LEFT="15" NAME="m_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="S00_AXI_wstrb"/>
           </CONNECTIONS>
@@ -9635,22 +9635,22 @@
         </PORT>
         <PORT DIR="O" NAME="msi_enable" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="msi_vector_width" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="pci_exp_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
+        <PORT DIR="I" LEFT="3" NAME="pci_exp_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="pcie_mgt_0_rxn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="pci_exp_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
+        <PORT DIR="I" LEFT="3" NAME="pci_exp_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="pcie_mgt_0_rxp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="pci_exp_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
+        <PORT DIR="O" LEFT="3" NAME="pci_exp_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="pcie_mgt_0_txn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="pci_exp_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
+        <PORT DIR="O" LEFT="3" NAME="pci_exp_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="pcie_mgt_0_txp"/>
           </CONNECTIONS>
@@ -9674,13 +9674,13 @@
         <PORT DIR="I" LEFT="0" NAME="usr_irq_req" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="xdma_0_M_AXI" DATAWIDTH="64" NAME="M_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="xdma_0_M_AXI" DATAWIDTH="128" NAME="M_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_xdma_0_0_axi_aclk"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>

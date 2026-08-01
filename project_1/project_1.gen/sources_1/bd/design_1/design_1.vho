@@ -55,10 +55,10 @@ COMPONENT design_1
   PORT (
     pcie_clk_clk_n : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     pcie_clk_clk_p : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    pcie_mgt_0_rxn : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_rxp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_txn : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pcie_mgt_0_txp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    pcie_mgt_0_rxn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    pcie_mgt_0_rxp : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    pcie_mgt_0_txn : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    pcie_mgt_0_txp : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     DDR3_0_dq : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     DDR3_0_dqs_p : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     DDR3_0_dqs_n : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
