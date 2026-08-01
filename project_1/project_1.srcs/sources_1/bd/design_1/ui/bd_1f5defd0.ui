@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.730216",
-   "Default View_TopLeft":"-207,188",
+   "Default View_TopLeft":"-207,-86",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
@@ -19,20 +19,20 @@ preplace inst xdma_0 -pg 1 -lvl 2 -x 740 -y 130 -defaultsOSRD
 preplace inst ilvector_logic_1 -pg 1 -lvl 5 -x 1680 -y 140 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 410 -y 340 -defaultsOSRD
 preplace inst adc_ctrl_0 -pg 1 -lvl 2 -x 740 -y 470 -defaultsOSRD
+preplace netloc adc_clk_0 1 2 4 NJ 420 N 420 N 420 1830
+preplace netloc adc_ctrl_0_tie_all 1 2 4 910 270 NJ 270 NJ 270 NJ
+preplace netloc adc_data_a_0 1 0 2 NJ 470 550
+preplace netloc adc_ofa_a_0 1 0 2 NJ 500 N
+preplace netloc clk_wiz_0_clk_out1 1 1 1 550 330n
 preplace netloc ilvector_logic_1_Res 1 5 1 NJ 140
 preplace netloc pcie_reset_n_1 1 0 2 270J 210 570
 preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 NJ 130
 preplace netloc xdma_0_user_lnk_up 1 2 3 NJ 100 N 100 1380
-preplace netloc clk_wiz_0_clk_out1 1 1 1 550 330n
-preplace netloc adc_clk_0 1 2 4 NJ 420 N 420 N 420 1830
-preplace netloc adc_data_a_0 1 0 2 NJ 470 550
-preplace netloc adc_ofa_a_0 1 0 2 NJ 500 N
-preplace netloc adc_ctrl_0_tie_all 1 2 4 910 270 NJ 270 NJ 270 NJ
 preplace netloc CLK_IN1_D_0_1 1 0 1 NJ 330
 preplace netloc CLK_IN_D_0_1 1 0 1 NJ 140
 preplace netloc xdma_0_pcie_mgt 1 2 4 NJ 80 N 80 N 80 NJ
 levelinfo -pg 1 -30 410 740 1070 1360 1680 1850
-pagesize -pg 1 -db -bbox -sgen -210 -150 2010 850
+pagesize -pg 1 -db -bbox -sgen -210 -150 2020 850
 "
 }
 {

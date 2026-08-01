@@ -56,15 +56,10 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
-set_param project.hsv.suppressChildGraphs 0
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 3
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3413880-emerald/incrSyn
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param bd.open.in_stealth_mode 6
+set_msg_config  -id {17-179}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tfgg484-2
 
@@ -112,6 +107,10 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/early.xdc
+set_property used_in_implementation false [get_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/early.xdc]
+set_property processing_order EARLY [get_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/early.xdc]
+
 read_xdc /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/io.xdc
 set_property used_in_implementation false [get_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/io.xdc]
 

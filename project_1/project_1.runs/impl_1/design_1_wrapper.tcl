@@ -97,9 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config  -id {17-179}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -107,12 +105,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 5
-  set_param project.hsv.suppressChildGraphs 0
   set_param general.usePosixSpawnForFork 1
-  set_param bd.open.in_stealth_mode 3
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3413880-emerald/incrSyn
+  set_param bd.open.in_stealth_mode 6
   set_param runs.launchOptions { -jobs 10  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tfgg484-2
@@ -133,6 +128,8 @@ OPTRACE "add files" START { }
   add_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/early.xdc
+  set_property processing_order EARLY [get_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/early.xdc]
   read_xdc /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/constrs_1/new/io.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
