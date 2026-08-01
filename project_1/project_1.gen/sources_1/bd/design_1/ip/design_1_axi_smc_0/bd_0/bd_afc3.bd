@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF016FFE5877D84E6",
+      "boundary_crc": "0x994342E2A7A1EBE4",
       "design_src": "SBD",
       "device": "xc7a100tfgg484-2",
       "name": "bd_afc3",
@@ -61,7 +61,7 @@
             "value_src": "default_prop"
           },
           "DATA_WIDTH": {
-            "value": "64",
+            "value": "128",
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
@@ -537,7 +537,7 @@
                 "value": "16"
               },
               "RDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               },
               "READ_WRITE_MODE": {
                 "value": "READ_WRITE"
@@ -594,7 +594,7 @@
                 "value": "0"
               },
               "WDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               }
             },
             "interface_ports": {
@@ -658,7 +658,7 @@
                 "value": "1"
               },
               "RDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               },
               "READ_WRITE_MODE": {
                 "value": "READ_WRITE"
@@ -679,7 +679,7 @@
                 "value": "4"
               },
               "WDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               }
             },
             "interface_ports": {
@@ -767,7 +767,7 @@
                 "value": "1"
               },
               "RDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               },
               "READ_WATERMARK": {
                 "value": "0"
@@ -797,7 +797,7 @@
                 "value": "0"
               },
               "WDATA_WIDTH": {
-                "value": "64"
+                "value": "128"
               },
               "WRITE_WATERMARK": {
                 "value": "0"

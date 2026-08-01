@@ -56,10 +56,10 @@
 design_1 your_instance_name (
   .pcie_clk_clk_n(pcie_clk_clk_n), // input wire [0:0] pcie_clk_clk_n
   .pcie_clk_clk_p(pcie_clk_clk_p), // input wire [0:0] pcie_clk_clk_p
-  .pcie_mgt_0_rxn(pcie_mgt_0_rxn), // input wire [1:0] pcie_mgt_0_rxn
-  .pcie_mgt_0_rxp(pcie_mgt_0_rxp), // input wire [1:0] pcie_mgt_0_rxp
-  .pcie_mgt_0_txn(pcie_mgt_0_txn), // output wire [1:0] pcie_mgt_0_txn
-  .pcie_mgt_0_txp(pcie_mgt_0_txp), // output wire [1:0] pcie_mgt_0_txp
+  .pcie_mgt_0_rxn(pcie_mgt_0_rxn), // input wire [3:0] pcie_mgt_0_rxn
+  .pcie_mgt_0_rxp(pcie_mgt_0_rxp), // input wire [3:0] pcie_mgt_0_rxp
+  .pcie_mgt_0_txn(pcie_mgt_0_txn), // output wire [3:0] pcie_mgt_0_txn
+  .pcie_mgt_0_txp(pcie_mgt_0_txp), // output wire [3:0] pcie_mgt_0_txp
   .pcie_reset_n(pcie_reset_n), // input wire pcie_reset_n
   .led_green_0(led_green_0), // output wire [0:0] led_green_0
   .led_red_0(led_red_0) // output wire [0:0] led_red_0
