@@ -61,9 +61,7 @@ module design_1_adc_ctrl_0_2 (
   adc_data_a,
   adc_ofa_a,
   data_a,
-  ofa_a,
   data_b,
-  ofa_b,
   tie_all
 );
 
@@ -81,10 +79,8 @@ input wire reset_n;
 output wire adc_clk;
 input wire [13 : 0] adc_data_a;
 input wire adc_ofa_a;
-output wire [13 : 0] data_a;
-output wire ofa_a;
-output wire [13 : 0] data_b;
-output wire ofa_b;
+output wire [14 : 0] data_a;
+output wire [14 : 0] data_b;
 output wire tie_all;
 
   adc_ctrl #(
@@ -96,9 +92,7 @@ output wire tie_all;
     .adc_data_a(adc_data_a),
     .adc_ofa_a(adc_ofa_a),
     .data_a(data_a),
-    .ofa_a(ofa_a),
     .data_b(data_b),
-    .ofa_b(ofa_b),
     .tie_all(tie_all)
   );
 endmodule

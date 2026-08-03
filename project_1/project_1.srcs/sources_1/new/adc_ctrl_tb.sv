@@ -19,9 +19,9 @@ module adc_ctrl_tb;
     logic adc_ofa_a;
     logic [DATA_W-1:0] adc_data_a;
 
-    // Controller output
-    logic [1:0][DATA_W-1:0] data;
-    logic [1:0] ofa;
+    // Controller output: bit DATA_W is OFA, bits DATA_W-1:0 are sample data
+    logic [1:0][DATA_W:0] data;
+    logic tie_all;
 
     // Instantiate the ADC model
     adc_ad_ltc22xx #(.DATA_W(DATA_W)) adc_ad_ltc22xx_inst (
@@ -38,9 +38,8 @@ module adc_ctrl_tb;
         .adc_data_a(adc_data_a),
         .adc_ofa_a(adc_ofa_a),
         .data_a(data[0]),
-        .ofa_a(ofa[0]),
         .data_b(data[1]),
-        .ofa_b(ofa[1])
+        .tie_all(tie_all)
     );
 
     // System clock generation
@@ -102,18 +101,13 @@ module adc_ctrl_tb;
             automatic int j = adc_clk ? 0 : 1;
             automatic logic [DATA_W-1:0] expected = adc_expected[j].pop_front();
             automatic logic ofa_exp = ofa_expected[j].pop_front();
+            automatic logic [DATA_W:0] expected_packed = {ofa_exp, expected};
 
-            if (data[j] != expected) 
+            if (data[j] != expected_packed) 
             begin
                 error_count++;
-                $error("%0t : wrong data[%d] : expected %h got %h",
-                        $time, j, expected, data[j]);
-            end
-            if (ofa[j] != ofa_exp) 
-            begin
-                error_count++;
-                $error("%0t : wrong ofa[%d] : expected %h got %h",
-                        $time, j, ofa_exp, ofa[j]);
+                $error("%0t : wrong data[%d] : expected %h got %h (ofa=%b sample=%h)",
+                        $time, j, expected_packed, data[j], ofa_exp, expected);
             end
         end
     end
@@ -134,12 +128,6 @@ module adc_ctrl_tb;
                 error_count++;
                 $error("%0t : Non zero data %h during the reset",
                         $time, data);
-            end
-            if(ofa != '0 )
-            begin
-                error_count++;
-                $error("%0t : Non zero ofa %h during the reset",
-                        $time, ofa);
             end
         end
     endtask

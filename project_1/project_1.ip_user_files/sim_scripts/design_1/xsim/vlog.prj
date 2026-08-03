@@ -1,4 +1,4 @@
-verilog xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
+verilog xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx_2/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_clock.v" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_eq.v" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie2_ip_pipe_drp.v" \
@@ -43,7 +43,7 @@ verilog xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx/2025.2/da
 "../../../bd/design_1/ip/design_1_xdma_0_0/ip_3/sim/pcie2_fifo_generator_dma_cpl.v" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/ip_4/sim/pcie2_fifo_generator_tgt_brdg.v" \
 
-sv xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
+sv xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx_2/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_cpl.sv" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_dma_req.sv" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_rx_destraddler.sv" \
@@ -60,7 +60,7 @@ sv xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx/2025.2/data/rs
 "../../../bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv" \
 "../../../bd/design_1/ip/design_1_xdma_0_0/sim/design_1_xdma_0_0.sv" \
 
-verilog xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
+verilog xil_defaultlib -i "../../../../../../../../../../../opt/Xilinx_2/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.v" \
 "../../../bd/design_1/ip/design_1_adc_ctrl_0_2/sim/design_1_adc_ctrl_0_2.v" \

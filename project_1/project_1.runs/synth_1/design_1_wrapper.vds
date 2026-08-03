@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Jul 31 17:29:39 2026
-# Process ID         : 2688975
+# Start of session at: Mon Aug  3 13:48:14 2026
+# Process ID         : 350310
 # Current directory  : /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.runs/synth_1
 # Command line       : vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.runs/synth_1/design_1_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 3811.483 MHz
+# CPU Frequency      : 1192.637 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 20
 # Host memory        : 65777 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 74367 MB
-# Available Virtual  : 44473 MB
+# Available Virtual  : 41858 MB
 #-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults_2.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
@@ -38,9 +38,9 @@ INFO: [Device 21-403] Loading part xc7a100tfgg484-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 2689067
+INFO: [Synth 8-7075] Helper process launched with PID 350394
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2231.207 ; gain = 482.156 ; free physical = 7498 ; free virtual = 41120
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2231.961 ; gain = 479.875 ; free physical = 12883 ; free virtual = 38879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'RdDeQ', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:179]
 INFO: [Synth 8-11241] undeclared symbol 'cfg_config_space_enable', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:4347]
@@ -54,10 +54,8 @@ INFO: [Synth 8-6157] synthesizing module 'adc_ctrl' [/home/kokunev/data/git_root
 INFO: [Synth 8-6155] done synthesizing module 'adc_ctrl' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/new/adc_ctrl.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_ctrl_0_2' (0#1) [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_ctrl_0_2/synth/design_1_adc_ctrl_0_2.v:53]
 WARNING: [Synth 8-7071] port 'data_a' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
-WARNING: [Synth 8-7071] port 'ofa_a' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
 WARNING: [Synth 8-7071] port 'data_b' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
-WARNING: [Synth 8-7071] port 'ofa_b' of module 'design_1_adc_ctrl_0_2' is unconnected for instance 'adc_ctrl_0' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
-WARNING: [Synth 8-7023] instance 'adc_ctrl_0' of module 'design_1_adc_ctrl_0_2' has 10 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
+WARNING: [Synth 8-7023] instance 'adc_ctrl_0' of module 'design_1_adc_ctrl_0_2' has 8 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:63]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.v:65]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1_clk_wiz' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_clk_wiz.v:65]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82819]
@@ -1027,18 +1025,18 @@ WARNING: [Synth 8-7129] Port pipe_tx4_data[0] in module design_1_xdma_0_0_pcie2_
 WARNING: [Synth 8-7129] Port pipe_tx4_elec_idle in module design_1_xdma_0_0_pcie2_ip_gt_top is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2866.332 ; gain = 1117.281 ; free physical = 6853 ; free virtual = 40483
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2866.250 ; gain = 1114.164 ; free physical = 12355 ; free virtual = 38360
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2866.332 ; gain = 1117.281 ; free physical = 6852 ; free virtual = 40482
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2866.250 ; gain = 1114.164 ; free physical = 12369 ; free virtual = 38374
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2866.332 ; gain = 1117.281 ; free physical = 6852 ; free virtual = 40482
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2866.250 ; gain = 1114.164 ; free physical = 12369 ; free virtual = 38374
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2866.332 ; gain = 0.000 ; free physical = 6810 ; free virtual = 40439
+Netlist sorting complete. Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2866.250 ; gain = 0.000 ; free physical = 12331 ; free virtual = 38336
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1095,173 +1093,40 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wra
 INFO: [Project 1-1714] 23 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3024.945 ; gain = 0.000 ; free physical = 6782 ; free virtual = 40412
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3026.832 ; gain = 0.000 ; free physical = 12384 ; free virtual = 38390
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3036.867 ; gain = 0.000 ; free physical = 6768 ; free virtual = 40398
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3038.754 ; gain = 0.000 ; free physical = 12403 ; free virtual = 38408
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 3036.867 ; gain = 1287.816 ; free physical = 5378 ; free virtual = 39009
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3038.754 ; gain = 1286.668 ; free physical = 10958 ; free virtual = 36966
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 3044.871 ; gain = 1295.820 ; free physical = 5378 ; free virtual = 39008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3046.758 ; gain = 1294.672 ; free physical = 10958 ; free virtual = 36966
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 3044.871 ; gain = 1295.820 ; free physical = 5378 ; free virtual = 39008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3046.758 ; gain = 1294.672 ; free physical = 10958 ; free virtual = 36966
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
-got a mismatch design_1
-got a mismatch design_1_xdma_0_0
-Is not a child genome
-got a mismatch design_1_xdma_0_0_core_top
-Is not a child genome
-got a mismatch xdma_v4_2_2_udma_wrapper
-got a mismatch xdma_v4_2_2_udma_top
-got a mismatch xdma_v4_2_2_dma_aximm
-got a mismatch xdma_v4_2_2_axi_mm_master_omulti_rd_v
-got a mismatch xdma_v4_2_2_axi_mm_master_omulti_wr_v
-got a mismatch xdma_v4_2_2_GenericFIFO
-got a mismatch xdma_v4_2_2_axi4mm_bridge_top
-got a mismatch xdma_v4_2_2_axi4mm_axi_mm_master_top_br_v
-got a mismatch xdma_v4_2_2_axi_str_masterbr_wrrd_br_v
-got a mismatch xdma_v4_2_2_axi_str_masterbr_rdtlp_br_v
-Is not a child genome
-got a mismatch xdma_v4_2_2_axi_mm_master_wr_br_v
-Is not a child genome
-got a mismatch xdma_v4_2_2_axi_mm_master_rd_br_v
-Is not a child genome
-got a mismatch xdma_v4_2_2_axi4mm_axi_mm_master_top_soft
-got a mismatch xdma_v4_2_2_axi_str_cq_if
-Is not a child genome
-got a mismatch xdma_v4_2_2_axi_str_rq_if
-got a mismatch xdma_v4_2_2_dma_pcie_req
-Is not a child genome
-got a mismatch xdma_v4_2_2_dma_pcie_rq
-got a mismatch xdma_v4_2_2_GenericFIFO
-got a mismatch xdma_v4_2_2_GenericFIFOHead2
-got a mismatch xdma_v4_2_2_dma_pcie_rc
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram
-got a mismatch xdma_v4_2_2_dma_rc_mem_pfch
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap__parameterized0
-got a mismatch xpm_memory_sdpram__parameterized0
-got a mismatch xpm_memory_base__parameterized0
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized3
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized5
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized7
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized7
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap__parameterized0
-got a mismatch xpm_memory_sdpram__parameterized0
-got a mismatch xpm_memory_base__parameterized0
-got a mismatch design_1_xdma_0_0_pcie2_to_pcie3_wrapper
-got a mismatch design_1_xdma_0_0_axi_stream_intf
-got a mismatch design_1_xdma_0_0_rx_demux
-got a mismatch pcie2_fifo_generator_dma_cpl
-got a mismatch fifo_generator_v13_2_14
-got a mismatch fifo_generator_v13_2_14_synth
-got a mismatch fifo_generator_top
-got a mismatch fifo_generator_ramfifo
-got a mismatch input_blk
-got a mismatch memory
-got a mismatch blk_mem_gen_v8_4_12
-got a mismatch blk_mem_gen_v8_4_12_synth
-got a mismatch blk_mem_gen_top
-got a mismatch blk_mem_input_block
-got a mismatch blk_mem_gen_generic_cstr
-got a mismatch blk_mem_gen_prim_width__parameterized0
-got a mismatch blk_mem_output_block
-got a mismatch output_blk
-got a mismatch pcie2_fifo_generator_tgt_brdg
-got a mismatch fifo_generator_v13_2_14__parameterized1
-got a mismatch fifo_generator_v13_2_14_synth__parameterized0
-got a mismatch fifo_generator_top__parameterized0
-got a mismatch fifo_generator_ramfifo__parameterized0
-got a mismatch input_blk__parameterized0
-got a mismatch memory__parameterized0
-got a mismatch dmem
-got a mismatch output_blk__parameterized0
-got a mismatch design_1_xdma_0_0_rx_destraddler
-got a mismatch design_1_xdma_0_0_tx_mux
-got a mismatch design_1_xdma_0_0_dma_req
-got a mismatch design_1_xdma_0_0_dma_cpl
-got a mismatch design_1_xdma_0_0_tgt_req
-got a mismatch design_1_xdma_0_0_tgt_cpl
-got a mismatch design_1_xdma_0_0_cfg_sideband
-got a mismatch design_1_xdma_0_0_pcie2_ip
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie2_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_core_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen
-Is not a child genome
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl
-Is not a child genome
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline
-Is not a child genome
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie_7x
-got a mismatch design_1_xdma_0_0_pcie2_ip_gt_top
-Is not a child genome
-got a mismatch design_1_xdma_0_0_pcie2_ip_pipe_wrapper
-got a mismatch design_1_xdma_0_0_pcie2_ip_pipe_clock
-got a mismatch design_1_xdma_0_0_pcie2_ip_gtp_pipe_reset
-got a mismatch design_1_xdma_0_0_pcie2_ip_qpll_reset
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 3044.871 ; gain = 1295.820 ; free physical = 4102 ; free virtual = 37742
+Finished Doing Graph Differ : Time (s): cpu = 00:00:35 ; elapsed = 00:00:34 . Memory (MB): peak = 3046.758 ; gain = 1294.672 ; free physical = 9791 ; free virtual = 35809
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Over 50% of reference run partitions are impacted by design changes. Reverting to default synthesis
+IncrSyn: Total reference run partitions are 11, Impacted partitions are 11.
+IncrSyn: List of changed modules: 
+	Changed Module : design_1
+WARNING: [Synth 8-6702] IncrSynth : Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 3044.871 ; gain = 1295.820 ; free physical = 4102 ; free virtual = 37742
+Finished Preparing Guide Design : Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 3046.758 ; gain = 1294.672 ; free physical = 9163 ; free virtual = 35181
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wrdatasm_cs_reg' in module 'xdma_v4_2_2_axi_mm_master_omulti_wr_v'
 INFO: [Synth 8-802] inferred FSM for state register 'memreqsm_cs_reg' in module 'xdma_v4_2_2_axi_str_masterbr_wrrd_br_v'
@@ -1579,7 +1444,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'resetovrd.fsm_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'txsync_fsm.fsm_tx_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_pipe_sync'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 3044.871 ; gain = 1295.820 ; free physical = 1712 ; free virtual = 35340
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3050.844 ; gain = 1298.758 ; free physical = 7153 ; free virtual = 33169
 ---------------------------------------------------------------------------------
 
 
@@ -1587,7 +1452,7 @@ Incremental Synthesis Report Summary:
 
 1. Incremental synthesis run: no
 
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+   Reason for not running incremental synthesis : Change is too high
 
 
 INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
@@ -1768,6 +1633,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr
 INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__3 due to constant propagation
 INFO: [Synth 8-4471] merging register 'ch_arb_ch_nn1_reg[1:0]' into 'ch_arb_ch_nn1_reg[1:0]' [/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/xdma_v4_2_vl_rfs.sv:16448]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\cfg_mrs_nn1_reg[6] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\rrq_head_adr_nn1_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[511] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[510] )
@@ -1915,7 +1781,7 @@ INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/FSM_onehot_fsm_reg[0]) is u
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_sync.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 3060.883 ; gain = 1311.832 ; free physical = 569 ; free virtual = 33910
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3062.770 ; gain = 1310.684 ; free physical = 5357 ; free virtual = 31458
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -1923,7 +1789,7 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst' to pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/inverted_reset_inferred/i_0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:01 ; elapsed = 00:01:17 . Memory (MB): peak = 3071.961 ; gain = 1322.910 ; free physical = 2104 ; free virtual = 35510
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:17 . Memory (MB): peak = 3134.848 ; gain = 1382.762 ; free physical = 6871 ; free virtual = 33038
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -1932,7 +1798,7 @@ WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_oneh
 WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[0]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
 WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[3]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:01:28 . Memory (MB): peak = 3179.148 ; gain = 1430.098 ; free physical = 2178 ; free virtual = 35586
+Finished Timing Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:01:29 . Memory (MB): peak = 3243.043 ; gain = 1490.957 ; free physical = 6685 ; free virtual = 32855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1957,7 +1823,7 @@ INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_
 INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/MASTER_READ_BRAM/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/MASTER_READ_BRAM/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:16 ; elapsed = 00:01:36 . Memory (MB): peak = 3223.809 ; gain = 1474.758 ; free physical = 685 ; free virtual = 34113
+Finished Technology Mapping : Time (s): cpu = 00:02:04 ; elapsed = 00:01:38 . Memory (MB): peak = 3286.703 ; gain = 1534.617 ; free physical = 5211 ; free virtual = 31401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1984,37 +1850,37 @@ INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/ram_top/
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:22 ; elapsed = 00:01:42 . Memory (MB): peak = 3298.699 ; gain = 1549.648 ; free physical = 599 ; free virtual = 34098
+Finished IO Insertion : Time (s): cpu = 00:02:09 ; elapsed = 00:01:43 . Memory (MB): peak = 3361.594 ; gain = 1609.508 ; free physical = 5159 ; free virtual = 31422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:22 ; elapsed = 00:01:42 . Memory (MB): peak = 3298.699 ; gain = 1549.648 ; free physical = 599 ; free virtual = 34098
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:01:44 . Memory (MB): peak = 3361.594 ; gain = 1609.508 ; free physical = 5158 ; free virtual = 31422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:25 ; elapsed = 00:01:45 . Memory (MB): peak = 3333.551 ; gain = 1584.500 ; free physical = 556 ; free virtual = 34055
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:13 ; elapsed = 00:01:47 . Memory (MB): peak = 3397.445 ; gain = 1645.359 ; free physical = 5111 ; free virtual = 31374
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:25 ; elapsed = 00:01:46 . Memory (MB): peak = 3333.551 ; gain = 1584.500 ; free physical = 556 ; free virtual = 34055
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:13 ; elapsed = 00:01:47 . Memory (MB): peak = 3397.445 ; gain = 1645.359 ; free physical = 5111 ; free virtual = 31374
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:01:46 . Memory (MB): peak = 3336.691 ; gain = 1587.641 ; free physical = 556 ; free virtual = 34056
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:14 ; elapsed = 00:01:48 . Memory (MB): peak = 3400.586 ; gain = 1648.500 ; free physical = 5122 ; free virtual = 31384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:01:47 . Memory (MB): peak = 3336.691 ; gain = 1587.641 ; free physical = 556 ; free virtual = 34056
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:14 ; elapsed = 00:01:48 . Memory (MB): peak = 3400.586 ; gain = 1648.500 ; free physical = 5122 ; free virtual = 31384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2037,9 +1903,9 @@ Report Cell Usage:
 |5     |GTPE2_COMMON  |     1|
 |6     |IBUFDS_GTE2   |     1|
 |7     |LUT1          |  1649|
-|8     |LUT2          |  2110|
-|9     |LUT3          |  5228|
-|10    |LUT4          |  4024|
+|8     |LUT2          |  2111|
+|9     |LUT3          |  5226|
+|10    |LUT4          |  4023|
 |11    |LUT5          |  3742|
 |12    |LUT6          |  7271|
 |13    |MMCME2_ADV    |     2|
@@ -2055,22 +1921,22 @@ Report Cell Usage:
 |23    |RAMB36E1      |    34|
 |31    |SRL16E        |     9|
 |32    |SRLC32E       |     7|
-|33    |FDCE          |    60|
+|33    |FDCE          |    58|
 |34    |FDPE          |    62|
 |35    |FDRE          | 22934|
 |36    |FDSE          |   226|
-|37    |IBUF          |     5|
+|37    |IBUF          |     4|
 |38    |IBUFDS        |     1|
 |39    |OBUF          |     3|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:01:47 . Memory (MB): peak = 3336.691 ; gain = 1587.641 ; free physical = 556 ; free virtual = 34056
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:14 ; elapsed = 00:01:48 . Memory (MB): peak = 3400.586 ; gain = 1648.500 ; free physical = 5123 ; free virtual = 31386
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30024 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:15 ; elapsed = 00:01:38 . Memory (MB): peak = 3340.605 ; gain = 1421.020 ; free physical = 6483 ; free virtual = 39983
-Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:01:48 . Memory (MB): peak = 3340.605 ; gain = 1591.555 ; free physical = 6579 ; free virtual = 40047
+Synthesis finished with 0 errors, 0 critical warnings and 30025 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:02 ; elapsed = 00:01:44 . Memory (MB): peak = 3404.500 ; gain = 1479.910 ; free physical = 11723 ; free virtual = 37985
+Synthesis Optimization Complete : Time (s): cpu = 00:02:14 ; elapsed = 00:01:53 . Memory (MB): peak = 3404.500 ; gain = 1652.414 ; free physical = 11765 ; free virtual = 37995
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3345.598 ; gain = 0.000 ; free physical = 6670 ; free virtual = 40138
+Netlist sorting complete. Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.42 . Memory (MB): peak = 3404.500 ; gain = 0.000 ; free physical = 11712 ; free virtual = 37942
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 1939 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2079,7 +1945,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3422.371 ; gain = 0.000 ; free physical = 6743 ; free virtual = 40211
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3494.062 ; gain = 0.000 ; free physical = 11550 ; free virtual = 37778
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 673 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 48 instances
@@ -2088,15 +1954,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 35 instances
   RAM64X1S => RAM64X1S (RAMS64E): 9 instances
 
-Synth Design complete | Checksum: 8efcd9c1
+Synth Design complete | Checksum: 2fb09d27
 INFO: [Common 17-83] Releasing license: Synthesis
-667 Infos, 317 Warnings, 0 Critical Warnings and 0 Errors encountered.
+668 Infos, 316 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:37 ; elapsed = 00:01:57 . Memory (MB): peak = 3422.406 ; gain = 1796.629 ; free physical = 6766 ; free virtual = 40233
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9021.354; main = 2331.108; forked = 7122.355
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18265.988; main = 3422.375; forked = 15209.020
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3446.383 ; gain = 0.000 ; free physical = 6765 ; free virtual = 40237
+synth_design: Time (s): cpu = 00:02:24 ; elapsed = 00:02:03 . Memory (MB): peak = 3494.098 ; gain = 1880.223 ; free physical = 11570 ; free virtual = 37796
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9027.411; main = 2401.550; forked = 7119.869
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18265.832; main = 3494.066; forked = 15206.977
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3518.074 ; gain = 0.000 ; free physical = 11573 ; free virtual = 37801
 INFO: [Common 17-1381] The checkpoint '/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3446.383 ; gain = 23.977 ; free physical = 6857 ; free virtual = 40374
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3518.074 ; gain = 23.977 ; free physical = 11543 ; free virtual = 37818
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 31 17:31:46 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  3 13:50:27 2026...

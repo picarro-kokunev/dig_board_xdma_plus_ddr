@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Jul 21 18:16:37 2026
+//Date        : Mon Aug  3 13:46:19 2026
 //Host        : emerald running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -33,10 +33,10 @@ module design_1
   output [0:0]led_red_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 pcie_clk CLK_N" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pcie_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]pcie_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 pcie_clk CLK_P" *) input [0:0]pcie_clk_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 rxn" *) (* X_INTERFACE_MODE = "Master" *) input [1:0]pcie_mgt_0_rxn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 rxp" *) input [1:0]pcie_mgt_0_rxp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txn" *) output [1:0]pcie_mgt_0_txn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txp" *) output [1:0]pcie_mgt_0_txp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 rxn" *) (* X_INTERFACE_MODE = "Master" *) input [3:0]pcie_mgt_0_rxn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 rxp" *) input [3:0]pcie_mgt_0_rxp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txn" *) output [3:0]pcie_mgt_0_txn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_mgt_0 txp" *) output [3:0]pcie_mgt_0_txp;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.PCIE_RESET_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.PCIE_RESET_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input pcie_reset_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_N" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk, CAN_DEBUG false, FREQ_HZ 150000000" *) input sys_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_P" *) input sys_clk_clk_p;
@@ -46,24 +46,27 @@ module design_1
   wire adc_ofa_a_0;
   wire clk_wiz_0_clk_out1;
   wire [0:0]led_green_0;
+  wire \^led_red_0 ;
   wire [0:0]pcie_clk_clk_n;
   wire [0:0]pcie_clk_clk_p;
-  wire [1:0]pcie_mgt_0_rxn;
-  wire [1:0]pcie_mgt_0_rxp;
-  wire [1:0]pcie_mgt_0_txn;
-  wire [1:0]pcie_mgt_0_txp;
+  wire [3:0]pcie_mgt_0_rxn;
+  wire [3:0]pcie_mgt_0_rxp;
+  wire [3:0]pcie_mgt_0_txn;
+  wire [3:0]pcie_mgt_0_txp;
   wire pcie_reset_n;
   wire sys_clk_clk_n;
   wire sys_clk_clk_p;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
   wire xdma_0_user_lnk_up;
 
+  assign led_red_0[0] = \^led_red_0 ;
   design_1_adc_ctrl_0_2 adc_ctrl_0
        (.adc_clk(adc_clk_0),
         .adc_data_a(adc_data_a_0),
         .adc_ofa_a(adc_ofa_a_0),
         .clk(clk_wiz_0_clk_out1),
-        .reset_n(pcie_reset_n));
+        .reset_n(pcie_reset_n),
+        .tie_all(\^led_red_0 ));
   design_1_clk_wiz_0_1 clk_wiz_0
        (.clk_in1_n(sys_clk_clk_n),
         .clk_in1_p(sys_clk_clk_p),
@@ -86,7 +89,7 @@ module design_1
         .m_axi_bid({1'b0,1'b0,1'b0,1'b0}),
         .m_axi_bresp({1'b0,1'b0}),
         .m_axi_bvalid(1'b0),
-        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .m_axi_rid({1'b0,1'b0,1'b0,1'b0}),
         .m_axi_rlast(1'b0),
         .m_axi_rresp({1'b0,1'b0}),

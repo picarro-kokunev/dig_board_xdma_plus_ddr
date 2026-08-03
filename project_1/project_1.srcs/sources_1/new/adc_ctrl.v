@@ -24,10 +24,9 @@ module adc_ctrl #(parameter DATA_W = 14)
     // output overflow/under flow from ADC chip, DDR relative to adc_clk 
 
     // ADC output for channel 0,1 SDR relative to clk
-    output reg [DATA_W-1:0] data_a,
-    output reg ofa_a,
-    output reg [DATA_W-1:0] data_b,
-    output reg ofa_b,
+    // data_[DATA_W] carries overflow/underflow; data_[DATA_W-1:0] is sample data
+    output reg [DATA_W:0] data_a,
+    output reg [DATA_W:0] data_b,
 
     // debug
     output tie_all     
@@ -45,7 +44,7 @@ module adc_ctrl #(parameter DATA_W = 14)
     assign adc_clk = adc_clk_reg;    
 
     // to force no pruning
-    assign tie_all = data_a | data_b | ofa_a | ofa_b;
+    assign tie_all = data_a | data_b;
 
     // convert DDR stream to 2 SDR streams
     // ADC is updating data_a after (posedge adc_clk) + adc_ad_ltc22xx.CLK_TO_DATA_DELAY
@@ -57,22 +56,16 @@ module adc_ctrl #(parameter DATA_W = 14)
     begin
         if (!reset_n) 
             begin
-                { ofa_a, data_a } <= 0;
-                { ofa_b, data_b } <= 0;
+                data_a <= 0;
+                data_b <= 0;
             end 
         else
             begin
                 // adc_clk is high
                 if( adc_clk_reg == 1'b1 )
-                begin
-                    data_a <= adc_data_a;
-                    ofa_a <= adc_ofa_a;
-                end
+                    data_a <= {adc_ofa_a, adc_data_a};
                 else
-                begin
-                    data_b <= adc_data_a;
-                    ofa_b <= adc_ofa_a;                   
-                end
+                    data_b <= {adc_ofa_a, adc_data_a};
             end
     end
 endmodule

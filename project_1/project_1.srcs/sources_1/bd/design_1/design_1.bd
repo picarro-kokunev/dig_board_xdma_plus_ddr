@@ -432,19 +432,13 @@
           },
           "data_a": {
             "direction": "O",
-            "left": "13",
+            "left": "14",
             "right": "0"
-          },
-          "ofa_a": {
-            "direction": "O"
           },
           "data_b": {
             "direction": "O",
-            "left": "13",
+            "left": "14",
             "right": "0"
-          },
-          "ofa_b": {
-            "direction": "O"
           },
           "tie_all": {
             "direction": "O",
