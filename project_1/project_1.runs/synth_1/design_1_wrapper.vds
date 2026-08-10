@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Jul 30 16:07:58 2026
-# Process ID         : 1986675
+# Start of session at: Mon Aug 10 11:02:06 2026
+# Process ID         : 312750
 # Current directory  : /home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.runs/synth_1
 # Command line       : vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : /home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.runs/synth_1/design_1_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 800.000 MHz
+# CPU Frequency      : 800.539 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 20
 # Host memory        : 65777 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 74367 MB
-# Available Virtual  : 45069 MB
+# Available Virtual  : 62213 MB
 #-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults_2.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
@@ -37,9 +37,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1986916
+INFO: [Synth 8-7075] Helper process launched with PID 312953
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2238.680 ; gain = 482.594 ; free physical = 10603 ; free virtual = 41630
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2237.848 ; gain = 482.156 ; free physical = 42276 ; free virtual = 58148
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'RdDeQ', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog/axidma_fifo.vh:179]
 INFO: [Synth 8-11241] undeclared symbol 'cfg_config_space_enable', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/xdma_v4_2/hdl/verilog/design_1_xdma_0_0_core_top.sv:4347]
@@ -1077,18 +1077,18 @@ WARNING: [Synth 8-7129] Port pipe_tx4_data[0] in module design_1_xdma_0_0_pcie2_
 WARNING: [Synth 8-7129] Port pipe_tx4_elec_idle in module design_1_xdma_0_0_pcie2_ip_gt_top is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.203 ; gain = 1223.117 ; free physical = 9742 ; free virtual = 40783
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.207 ; gain = 1223.516 ; free physical = 41148 ; free virtual = 57036
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.203 ; gain = 1223.117 ; free physical = 9671 ; free virtual = 40711
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.207 ; gain = 1223.516 ; free physical = 41155 ; free virtual = 57043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.203 ; gain = 1223.117 ; free physical = 9671 ; free virtual = 40711
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.207 ; gain = 1223.516 ; free physical = 41155 ; free virtual = 57043
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2979.203 ; gain = 0.000 ; free physical = 9753 ; free virtual = 40793
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2979.207 ; gain = 0.000 ; free physical = 41226 ; free virtual = 57115
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1146,541 +1146,99 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wra
 INFO: [Project 1-1714] 40 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3265.598 ; gain = 0.000 ; free physical = 9600 ; free virtual = 40640
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3262.664 ; gain = 0.000 ; free physical = 41165 ; free virtual = 57057
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3277.520 ; gain = 0.008 ; free physical = 9581 ; free virtual = 40621
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3274.586 ; gain = 0.000 ; free physical = 41154 ; free virtual = 57046
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3277.520 ; gain = 1521.434 ; free physical = 8192 ; free virtual = 39233
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 3274.586 ; gain = 1518.895 ; free physical = 39483 ; free virtual = 55378
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3285.523 ; gain = 1529.438 ; free physical = 8190 ; free virtual = 39231
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 39474 ; free virtual = 55369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 3285.523 ; gain = 1529.438 ; free physical = 8116 ; free virtual = 39157
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 39403 ; free virtual = 55298
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
-got a mismatch design_1
-Is not a child genome
-got a mismatch design_1_axi_smc_0
-got a mismatch bd_afc3
-got a mismatch s00_entry_pipeline_imp_USCCV8
-got a mismatch bd_afc3_s00mmu_0
-got a mismatch sc_mmu_v1_0_16_top
-got a mismatch sc_mmu_v1_0_16_decerr_slave
-got a mismatch sc_util_v1_0_4_axi2vector__parameterized1
-got a mismatch sc_util_v1_0_4_vector2axi__parameterized1
-got a mismatch bd_afc3_s00sic_0
-got a mismatch sc_si_converter_v1_0_16_top
-got a mismatch sc_si_converter_v1_0_16_axilite_conv
-got a mismatch bd_afc3_s00tr_0
-got a mismatch sc_transaction_regulator_v1_0_12_top
-got a mismatch design_1_xdma_0_0
-Is not a child genome
-got a mismatch design_1_xdma_0_0_core_top
-Is not a child genome
-got a mismatch xdma_v4_2_2_udma_wrapper
-Is not a child genome
-got a mismatch xdma_v4_2_2_udma_top
-Is not a child genome
-got a mismatch xdma_v4_2_2_dma_aximm
-got a mismatch xdma_v4_2_2_axi_mm_master_omulti_rd_v
-got a mismatch xdma_v4_2_2_axi_mm_master_omulti_wr_v
-got a mismatch xdma_v4_2_2_GenericFIFO
-got a mismatch xdma_v4_2_2_axi4mm_bridge_top
-got a mismatch xdma_v4_2_2_axi4mm_axi_mm_master_top_br_v
-got a mismatch xdma_v4_2_2_axi_str_masterbr_wrrd_br_v
-got a mismatch xdma_v4_2_2_axi_str_masterbr_rdtlp_br_v
-got a mismatch xdma_v4_2_2_axi_mm_master_wr_br_v
-got a mismatch xdma_v4_2_2_axi_mm_master_rd_br_v
-got a mismatch xdma_v4_2_2_axi4mm_axi_mm_master_top_soft
-got a mismatch xdma_v4_2_2_axi_str_cq_if
-got a mismatch xdma_v4_2_2_axi_str_rq_if
-got a mismatch xdma_v4_2_2_dma_pcie_req
-got a mismatch xdma_v4_2_2_dma_pcie_rq
-got a mismatch xdma_v4_2_2_GenericFIFO
-got a mismatch xdma_v4_2_2_GenericFIFOHead2
-got a mismatch xdma_v4_2_2_dma_pcie_rc
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram
-got a mismatch xdma_v4_2_2_dma_rc_mem_pfch
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xpm_memory_sdpram
-got a mismatch xpm_memory_base
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap__parameterized0
-got a mismatch xpm_memory_sdpram__parameterized0
-got a mismatch xpm_memory_base__parameterized0
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized3
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized5
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized7
-got a mismatch xdma_v4_2_2_mem_simple_dport_ram__parameterized7
-got a mismatch xdma_v4_2_2_dma_xpm_sdpram_wrap__parameterized0
-got a mismatch xpm_memory_sdpram__parameterized0
-got a mismatch xpm_memory_base__parameterized0
-got a mismatch design_1_xdma_0_0_pcie2_to_pcie3_wrapper
-got a mismatch design_1_xdma_0_0_axi_stream_intf
-got a mismatch design_1_xdma_0_0_rx_demux
-got a mismatch pcie2_fifo_generator_dma_cpl
-got a mismatch fifo_generator_v13_2_14
-got a mismatch fifo_generator_v13_2_14_synth
-got a mismatch fifo_generator_top
-got a mismatch fifo_generator_ramfifo
-got a mismatch input_blk
-got a mismatch memory
-got a mismatch blk_mem_gen_v8_4_12
-got a mismatch blk_mem_gen_v8_4_12_synth
-got a mismatch blk_mem_gen_top
-got a mismatch blk_mem_input_block
-got a mismatch blk_mem_gen_generic_cstr
-got a mismatch blk_mem_gen_prim_width__parameterized0
-got a mismatch blk_mem_output_block
-got a mismatch output_blk
-got a mismatch pcie2_fifo_generator_tgt_brdg
-got a mismatch fifo_generator_v13_2_14__parameterized1
-got a mismatch fifo_generator_v13_2_14_synth__parameterized0
-got a mismatch fifo_generator_top__parameterized0
-got a mismatch fifo_generator_ramfifo__parameterized0
-got a mismatch input_blk__parameterized0
-got a mismatch memory__parameterized0
-got a mismatch dmem
-got a mismatch output_blk__parameterized0
-got a mismatch design_1_xdma_0_0_rx_destraddler
-got a mismatch design_1_xdma_0_0_tx_mux
-got a mismatch design_1_xdma_0_0_dma_req
-got a mismatch design_1_xdma_0_0_dma_cpl
-got a mismatch design_1_xdma_0_0_tgt_req
-got a mismatch design_1_xdma_0_0_tgt_cpl
-got a mismatch design_1_xdma_0_0_cfg_sideband
-got a mismatch design_1_xdma_0_0_pcie2_ip
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie2_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_core_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx_pipeline
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_rx_null_gen
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx_thrtl_ctl
-got a mismatch design_1_xdma_0_0_pcie2_ip_axi_basic_tx_pipeline
-got a mismatch design_1_xdma_0_0_pcie2_ip_pcie_7x
-got a mismatch design_1_xdma_0_0_pcie2_ip_gt_top
-got a mismatch design_1_xdma_0_0_pcie2_ip_pipe_wrapper
-got a mismatch design_1_xdma_0_0_pcie2_ip_pipe_clock
-got a mismatch design_1_xdma_0_0_pcie2_ip_gtp_pipe_reset
-got a mismatch design_1_xdma_0_0_pcie2_ip_qpll_reset
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 3285.523 ; gain = 1529.438 ; free physical = 6780 ; free virtual = 37833
+Finished Doing Graph Differ : Time (s): cpu = 00:00:41 ; elapsed = 00:00:40 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 37744 ; free virtual = 53651
+---------------------------------------------------------------------------------
+xdma_v4_2_2_dma_pcie_req__GB0xdma_v4_2_2_dma_pcie_req__GB1xdma_v4_2_2_vul_rdwr__parameterized0design_1_xdma_0_0_core_top__GC0xdma_v4_2_2_udma_top__GCB0design_1__GC0xdma_v4_2_2_vul_top__GB2xdma_v4_2_2_udma_wrapper__GC0xdma_v4_2_2_vul_rdwrxdma_v4_2_2_udma_top__GCB1---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 36961 ; free virtual = 52866
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 3285.523 ; gain = 1529.438 ; free physical = 6780 ; free virtual = 37833
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:43 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 36625 ; free virtual = 52527
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
-INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_si_converter_v1_0_16_axilite_conv'
-INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_si_converter_v1_0_16_axilite_conv'
-INFO: [Synth 8-802] inferred FSM for state register 'wrdatasm_cs_reg' in module 'xdma_v4_2_2_axi_mm_master_omulti_wr_v'
-INFO: [Synth 8-802] inferred FSM for state register 'memreqsm_cs_reg' in module 'xdma_v4_2_2_axi_str_masterbr_wrrd_br_v'
-INFO: [Synth 8-802] inferred FSM for state register 'cpldtlpSm_cs_reg' in module 'xdma_v4_2_2_axi_str_masterbr_rdtlp_br_v'
-INFO: [Synth 8-802] inferred FSM for state register 'wrlitesm_cs_reg' in module 'xdma_v4_2_2_axi_mm_master_wr_br_v'
-INFO: [Synth 8-802] inferred FSM for state register 'wrdatasm_cs_reg' in module 'xdma_v4_2_2_axi_mm_master_wr_br_v'
-INFO: [Synth 8-802] inferred FSM for state register 'rdliteSM_cs_reg' in module 'xdma_v4_2_2_axi_mm_master_rd_br_v'
-INFO: [Synth 8-802] inferred FSM for state register 'tar_sm_mr_cur_reg' in module 'xdma_v4_2_2_vul_tar'
-INFO: [Synth 8-802] inferred FSM for state register 'msix_init_state_reg' in module 'xdma_v4_2_2_udma_msix'
-INFO: [Synth 8-802] inferred FSM for state register 'intr_issue_state_reg' in module 'xdma_v4_2_2_pcie_userapp_tgt_intr_ctrl'
-INFO: [Synth 8-802] inferred FSM for state register 'clk_sm_cur_reg' in module 'xdma_v4_2_2_vul_irq'
-INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
-INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft__parameterized0'
-INFO: [Synth 8-802] inferred FSM for state register 'data_width_128.state_reg' in module 'design_1_xdma_0_0_rx_destraddler'
-INFO: [Synth 8-802] inferred FSM for state register 'transfer_SM_reg' in module 'design_1_xdma_0_0_tx_mux'
-INFO: [Synth 8-802] inferred FSM for state register 'tx_128.state_reg' in module 'design_1_xdma_0_0_dma_req'
-INFO: [Synth 8-802] inferred FSM for state register 'rc_128.state_reg' in module 'design_1_xdma_0_0_dma_cpl'
-INFO: [Synth 8-802] inferred FSM for state register 'tx_128.state_reg' in module 'design_1_xdma_0_0_tgt_req'
-INFO: [Synth 8-802] inferred FSM for state register 'tx_128.state_reg' in module 'design_1_xdma_0_0_tgt_cpl'
-INFO: [Synth 8-802] inferred FSM for state register 'reg_state_eios_det_reg' in module 'design_1_xdma_0_0_pcie2_ip_gt_rx_valid_filter_7x'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_gtp_pipe_reset'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_qpll_reset'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_gtp_pipe_rate'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_rxeq_scan'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_tx_reg' in module 'design_1_xdma_0_0_pcie2_ip_pipe_eq'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_rx_reg' in module 'design_1_xdma_0_0_pcie2_ip_pipe_eq'
-INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_qpll_drp'
-INFO: [Synth 8-802] inferred FSM for state register 'resetovrd.fsm_reg' in module 'design_1_xdma_0_0_pcie2_ip_pipe_user'
-INFO: [Synth 8-802] inferred FSM for state register 'txsync_fsm.fsm_tx_reg' in module 'design_1_xdma_0_0_pcie2_ip_pipe_sync'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 iSTATE2 |                             0001 |                               00
-                  iSTATE |                             0010 |                               01
-                 iSTATE0 |                             0100 |                               10
-                 iSTATE1 |                             1000 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  W_IDLE |                              000 | 00000000000000000000000000000000
-                    W_RX |                              001 | 00000000000000000000000000000001
-                    W_TX |                              010 | 00000000000000000000000000000010
-              W_COMPLETE |                              011 | 00000000000000000000000000000100
-               W_RECOVER |                              100 | 00000000000000000000000000000011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_axilite_conv'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  R_IDLE |                               00 | 00000000000000000000000000000000
-               R_PENDING |                               01 | 00000000000000000000000000000001
-                    R_RX |                               10 | 00000000000000000000000000000010
-                    R_TX |                               11 | 00000000000000000000000000000011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_16_axilite_conv'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           WDATASM_START |                               00 |                               00
-            WDATASM_IDLE |                               01 |                               01
-        WDATASM_DATAXFER |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wrdatasm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_mm_master_omulti_wr_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-               WRRD_IDLE |                              000 |                              000
-             WRRD_MEMREQ |                              001 |                              001
-          WRRD_MEMREQ2ND |                              010 |                              010
-          WRRD_MEMWRDATA |                              011 |                              100
-           WRRD_MEMRDREQ |                              100 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'memreqsm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_str_masterbr_wrrd_br_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-              MCPL_START |                               00 |                               00
-          MCPL_CRTDATBT1 |                               01 |                               01
-          MCPL_CRTDATBT2 |                               10 |                               10
-           MCPL_DATAXFER |                               11 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'cpldtlpSm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_str_masterbr_rdtlp_br_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           WDATASM_START |                               00 |                               00
-            WDATASM_IDLE |                               01 |                               01
-        WDATASM_DATAXFER |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wrdatasm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_mm_master_wr_br_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           WRLITESM_IDLE |                               00 |                               00
-    WRLITESM_PCIETLPINFO |                               01 |                               01
-         WRLITESM_WRDATA |                               10 |                               10
-         WRLITESM_WAITWR |                               11 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wrlitesm_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_mm_master_wr_br_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-             RDLITE_IDLE |                               00 |                               00
-      RDLITE_PCIETLPINFO |                               01 |                               01
-        RDLITE_WAITRDCPL |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rdliteSM_cs_reg' using encoding 'sequential' in module 'xdma_v4_2_2_axi_mm_master_rd_br_v'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-              sm_mr_idle |                             0001 |                             0001
-                sm_mr_ld |                             0010 |                             0010
-              sm_mr_wait |                             0100 |                             0100
-               sm_mr_cpl |                             1000 |                             1000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'tar_sm_mr_cur_reg' using encoding 'one-hot' in module 'xdma_v4_2_2_vul_tar'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-        S_INTR_ISSUE_RST |                        000000001 |                             0000
-       S_INTR_ISSUE_IDLE |                        000000010 |                             0001
-      S_INTR_ISSUE_ADDRL |                        000000100 |                             0010
-      S_INTR_ISSUE_ADDRH |                        000001000 |                             0011
-       S_INTR_ISSUE_DATA |                        000010000 |                             0100
-     S_INTR_ISSUE_VECCON |                        000100000 |                             0101
-        S_INTR_ISSUE_VLD |                        001000000 |                             0110
-       S_INTR_ISSUE_SEND |                        010000000 |                             0111
-       S_INTR_ISSUE_WAIT |                        100000000 |                             1001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'intr_issue_state_reg' using encoding 'one-hot' in module 'xdma_v4_2_2_pcie_userapp_tgt_intr_ctrl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 sm_idle |                              000 | 00000000000000000000000000000000
-                  sm_arb |                              001 | 00000000000000000000000000000001
-                  sm_vec |                              010 | 00000000000000000000000000000010
-              sm_irq_set |                              011 | 00000000000000000000000000000011
-                  sm_irq |                              100 | 00000000000000000000000000000100
-              sm_irq_clr |                              101 | 00000000000000000000000000000101
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'clk_sm_cur_reg' using encoding 'sequential' in module 'xdma_v4_2_2_vul_irq'
-INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 invalid |                               00 |                               00
-            stage1_valid |                               10 |                               10
-       both_stages_valid |                               11 |                               11
-            stage2_valid |                               01 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft__parameterized0', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 invalid |                               00 |                               00
-            stage1_valid |                               10 |                               10
-       both_stages_valid |                               11 |                               11
-            stage2_valid |                               01 |                               01
----------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           NORMAL_PACKET |                               00 |                               00
-        STRADDLED_PACKET |                               01 |                               01
-            THROTTLE_TLP |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'data_width_128.state_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_rx_destraddler'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 SM_IDLE |                               00 |                               00
-                  SM_TGT |                               01 |                               10
-                 SM_MSIX |                               10 |                               11
-                  SM_REQ |                               11 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'transfer_SM_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_tx_mux'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 TX_IDLE |                            00001 |                              000
-                 TX_DATA |                            00010 |                              010
-               TX_DATA_N |                            00100 |                              011
-                  TX_NEW |                            01000 |                              101
-                 TX_WAIT |                            10000 |                              100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'tx_128.state_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_dma_req'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 RX_IDLE |                                0 |                              000
-                 RX_DATA |                                1 |                              010
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rc_128.state_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_dma_cpl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 RX_IDLE |                                0 |                              000
-                  RX_DW2 |                                1 |                              010
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'tx_128.state_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_tgt_req'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 TX_IDLE |                               00 |                              000
-              TX_DW0_DW1 |                               01 |                              001
-                 TX_WAIT |                               10 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'tx_128.state_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_tgt_cpl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-            EIOS_DET_IDL |                            00001 |                            00001
-        EIOS_DET_NO_STR0 |                            00010 |                            00010
-           EIOS_DET_STR0 |                            00100 |                            00100
-           EIOS_DET_STR1 |                            01000 |                            01000
-           EIOS_DET_DONE |                            10000 |                            10000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'reg_state_eios_det_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_gt_rx_valid_filter_7x'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-            FSM_CFG_WAIT |                  000000000000001 |                            00001
-            FSM_PLLRESET |                  001000000000000 |                            00010
-       FSM_DRP_X16_START |                  000001000000000 |                            00011
-        FSM_DRP_X16_DONE |                  000010000000000 |                            00100
-             FSM_PLLLOCK |                  000000100000000 |                            00101
-             FSM_GTRESET |                  000000001000000 |                            00110
-    FSM_RXPMARESETDONE_1 |                  000000000000100 |                            00111
-    FSM_RXPMARESETDONE_2 |                  000000000001000 |                            01000
-       FSM_DRP_X20_START |                  000000000010000 |                            01001
-        FSM_DRP_X20_DONE |                  000000000100000 |                            01010
-           FSM_MMCM_LOCK |                  100000000000000 |                            01011
-           FSM_RESETDONE |                  010000000000000 |                            01100
-        FSM_TXSYNC_START |                  000100000000000 |                            01101
-         FSM_TXSYNC_DONE |                  000000010000000 |                            01110
-                FSM_IDLE |                  000000000000010 |                            00000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_gtp_pipe_reset'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           FSM_WAIT_LOCK |                         00000001 |                             0010
-           FSM_MMCM_LOCK |                         00000010 |                             0011
-       FSM_DRP_START_NOM |                         00000100 |                             0100
-        FSM_DRP_DONE_NOM |                         00001000 |                             0101
-            FSM_QPLLLOCK |                         00010000 |                             0110
-        FSM_QPLL_PDRESET |                         00100000 |                             1011
-             FSM_QPLL_PD |                         01000000 |                             1100
-                FSM_IDLE |                         10000000 |                             0001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_qpll_reset'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                FSM_IDLE |                    0000000010000 |                             0000
-         FSM_TXDATA_WAIT |                    0000100000000 |                             0001
-            FSM_PCLK_SEL |                    0000000001000 |                             0010
-       FSM_DRP_X16_START |                    0000000000001 |                             0011
-        FSM_DRP_X16_DONE |                    0000000000010 |                             0100
-            FSM_RATE_SEL |                    0000000000100 |                             0101
-      FSM_RXPMARESETDONE |                    1000000000000 |                             0110
-       FSM_DRP_X20_START |                    0001000000000 |                             0111
-        FSM_DRP_X20_DONE |                    0010000000000 |                             1000
-           FSM_RATE_DONE |                    0100000000000 |                             1001
-        FSM_TXSYNC_START |                    0000010000000 |                             1010
-         FSM_TXSYNC_DONE |                    0000001000000 |                             1011
-                FSM_DONE |                    0000000100000 |                             1100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_gtp_pipe_rate'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                            00001 |                             0000
-*
-                FSM_IDLE |                            00010 |                             0001
-              FSM_PRESET |                            00100 |                             0010
-            FSM_CONVERGE |                            01000 |                             0100
-     FSM_NEW_TXCOEFF_REQ |                            10000 |                             1000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_rxeq_scan'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              000 |                           000000
-*
-           FSM_TXEQ_IDLE |                              001 |                           000001
-         FSM_TXEQ_PRESET |                              010 |                           000010
-        FSM_TXEQ_TXCOEFF |                              011 |                           000100
-          FSM_TXEQ_REMAP |                              100 |                           001000
-          FSM_TXEQ_QUERY |                              101 |                           010000
-           FSM_TXEQ_DONE |                              110 |                           100000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_tx_reg' using encoding 'sequential' in module 'design_1_xdma_0_0_pcie2_ip_pipe_eq'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                          0000001 |                           000000
-*
-           FSM_RXEQ_IDLE |                          0000010 |                           000001
-         FSM_RXEQ_PRESET |                          0000100 |                           000010
-        FSM_RXEQ_TXCOEFF |                          0001000 |                           000100
-             FSM_RXEQ_LF |                          0010000 |                           001000
-FSM_RXEQ_NEW_TXCOEFF_REQ |                          0100000 |                           010000
-           FSM_RXEQ_DONE |                          1000000 |                           100000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_rx_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_pipe_eq'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                FSM_IDLE |                        000000001 |                        000000001
-                FSM_LOAD |                        000000010 |                        000000010
-                FSM_READ |                        000000100 |                        000000100
-                FSM_RRDY |                        000001000 |                        000001000
-               FSM_WRITE |                        000010000 |                        000010000
-                FSM_WRDY |                        000100000 |                        000100000
-                FSM_DONE |                        001000000 |                        001000000
-           FSM_QPLLRESET |                        010000000 |                        010000000
-            FSM_QPLLLOCK |                        100000000 |                        100000000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_qpll_drp'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                FSM_IDLE |                             0010 |                               00
-           FSM_RESETOVRD |                             1000 |                               01
-          FSM_RESET_INIT |                             0100 |                               10
-               FSM_RESET |                             0001 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'resetovrd.fsm_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_pipe_user'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                          0000001 |                           000000
-*
-         FSM_TXSYNC_IDLE |                          0000010 |                           000001
-           FSM_MMCM_LOCK |                          0000100 |                           000010
-        FSM_TXSYNC_START |                          0001000 |                           000100
-        FSM_TXPHINITDONE |                          0010000 |                           001000
-        FSM_TXSYNC_DONE1 |                          0100000 |                           010000
-        FSM_TXSYNC_DONE2 |                          1000000 |                           100000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'txsync_fsm.fsm_tx_reg' using encoding 'one-hot' in module 'design_1_xdma_0_0_pcie2_ip_pipe_sync'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 3289.609 ; gain = 1533.523 ; free physical = 4343 ; free virtual = 35394
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 3282.590 ; gain = 1526.898 ; free physical = 36015 ; free virtual = 51917
 ---------------------------------------------------------------------------------
 
 
 Incremental Synthesis Report Summary:
 
-1. Incremental synthesis run: no
+1. Incremental synthesis run: yes
 
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+   Stitch points used : changed
 
 
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 214498
+   Resynthesis Design Size (number of cells) : 3
+   Resynth % : 0.0014,  Reuse % : 99.9986
+
+3. Reference Checkpoint Information
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | /home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp |
++---------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2025.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+---------------------------------------------+------------+----------+
+|      |RTL Partition                                |Replication |Instances |
++------+---------------------------------------------+------------+----------+
+|1     |xdma_v4_2_2_vul_rdwr_#REUSE#                 |           1|         0|
+|2     |xdma_v4_2_2_vul_rdwr__parameterized0_#REUSE# |           1|         0|
+|3     |xdma_v4_2_2_vul_top__GB2_#REUSE#             |           1|         0|
+|4     |xdma_v4_2_2_dma_pcie_req__GB0_#REUSE#        |           1|         0|
+|5     |xdma_v4_2_2_dma_pcie_req__GB1_#REUSE#        |           1|         0|
+|6     |xdma_v4_2_2_udma_top__GCB0_#REUSE#           |           1|         0|
+|7     |xdma_v4_2_2_udma_top__GCB1_#REUSE#           |           1|         0|
+|8     |xdma_v4_2_2_udma_wrapper__GC0_#REUSE#        |           1|         0|
+|9     |design_1_xdma_0_0_core_top__GC0_#REUSE#      |           1|         0|
+|10    |design_1__GC0_#REUSE#                        |           1|         0|
++------+---------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1699,320 +1257,15 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_afc3.
-WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_afc3.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_w_cmd_reg.m_write_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top.
-INFO: [Synth 8-3332] Sequential element (exit_inst/gen_r_cmd_reg.m_read_cmd_mesg_i_reg) is unused and will be removed from module sc_exit_v1_0_18_top.
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[6]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[5]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[1]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[2]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[3]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[4]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[6]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[5]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[0]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[1]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[2]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[3]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_msk_nn1_reg[4]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[0]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[1]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[2]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[3]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[0]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[1]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[2]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_errc_101_reg[3]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[0]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[1]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[2]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[3]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[0]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[1]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[2]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[3]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[4]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[5]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[5]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[6]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\cfg_mpl_msk_nn1_reg[6] )
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[0]' (FDRE) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[1]' (FDRE) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[2]' (FDRE) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg_rep[3]' (FDRE) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wrq_rid_301_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[0]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[1]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[2]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[3]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[4]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[5]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[5]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_msk_nn1_reg[6]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\cfg_mpl_msk_nn1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\rrq_dsc_bt_adj_902_reg[1] )
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[0]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[1]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[2]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[3]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\rrq_dsc_bt_adj_902_reg[1] )
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[0]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[1]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[2]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg_rep[3]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/wcp_rid_ord_nn2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[1]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[2]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[3]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[4]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[5]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[6]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[0]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[1]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[2]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[3]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[4]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[5]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[6]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[0]' (FD) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[1]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[2]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[3]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[4]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[5]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[6]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mpl_nn1_reg[0]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[1]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[2]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[3]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[4]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[5]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[6]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/cfg_mrs_nn1_reg[0]' (FD) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_dbe_nn1_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[8]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[8]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[4]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[5]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[5]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[6]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[6]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[7]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[7]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[3]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[2]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[1]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[0]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[8]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[8]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[4]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[5]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[5]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[6]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[6]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[7]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[7]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[3]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[2]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[1]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_tl_nn1_reg[0]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/dat_fifo_spc_tl_nn1_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /dat_fifo_dbe_nn1_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /dat_fifo_dbe_nn1_reg)
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/sts_nn1_reg[6]' (FDR) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/ctl_run_nn2_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/sts_nn1_reg[6]' (FDR) to 'gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/ctl_run_nn2_reg'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/reg_umsk_nn1_reg[0]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/reg_umsk_nn1_reg[24]'
-INFO: [Synth 8-3886] merging instance 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/reg_umsk_nn1_reg[24]' (FDRE) to 'gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/reg_umsk_nn1_reg[25]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\reg_umsk_nn1_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\reg_umsk_nn1_reg[31] )
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_120_120 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_0_5 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_120_120 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__2 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__2 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_0_5 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__2 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_30_35 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_30_35 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__2 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__2 due to constant propagation
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cfg_dbe_all_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /WRQ_FIFO/\Head_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /WRQ_FIFO/\Head_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /RRQ_FIFO/\Head_reg[120] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /RRQ_FIFO/\Head_reg[120] )
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__1 due to constant propagation
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\rrq_dsc_bt_adj_902_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\rrq_dsc_bt_adj_902_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\cfg_mpl_msk_nn1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\cfg_mpl_msk_nn1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /wrq_unx_dat_303_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /wrq_unx_dat_303_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /dat_fifo_dbe_nn1_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /dat_fifo_dbe_nn1_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /\reg_umsk_nn1_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /\reg_umsk_nn1_reg[31] )
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_120_120 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_0_5 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_120_120 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__4 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__4 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_0_5 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__4 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_30_35 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_GenericFIFOHead__parameterized3__3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_30_35 from module xdma_v4_2_2_GenericFIFOHead__parameterized3 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/WRQ_FIFO/i_0/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_GenericFIFOHead__parameterized3 due to constant propagation
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /wrq_unx_dat_304_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /wrq_unx_dat_304_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cfg_dbe_all_reg)
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /WRQ_FIFO/\Head_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /WRQ_FIFO/\Head_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST /RRQ_FIFO/\Head_reg[120] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST /RRQ_FIFO/\Head_reg[120] )
-INFO: [Synth 8-7067] Removed DRAM instance gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1__3 due to constant propagation
-INFO: [Synth 8-4471] merging register 'ch_arb_ch_nn1_reg[1:0]' into 'ch_arb_ch_nn1_reg[1:0]' [/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/xdma_v4_2_vl_rfs.sv:16448]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\cfg_mrs_nn1_reg[6] )
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\rrq_head_adr_nn1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[511] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[510] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[509] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[508] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[507] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[506] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[505] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[504] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[503] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[502] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[501] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[500] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[499] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[498] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[497] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[496] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[495] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[494] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[493] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[492] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[491] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[490] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[489] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[488] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[487] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[486] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[485] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[484] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[483] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[482] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[481] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[480] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[479] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[478] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[477] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[476] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[475] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[474] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[473] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[472] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[471] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[470] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[469] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[468] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[467] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[466] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[465] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[464] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[463] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[462] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[461] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[460] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[459] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[458] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[457] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[456] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[455] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[454] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[453] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[452] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[451] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[450] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[449] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[448] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[447] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[446] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[445] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dsc_eng.DSC /\dsc_fifo_entry_size_reg[444] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_120_120 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_54_59 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_48_53 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_36_41 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_0_5 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dsc_eng.DSC/RRQ_FIFO/i_0/MemArray_reg_0_3_54_59 from module xdma_v4_2_2_GenericFIFOHead__parameterized1 due to constant propagation
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "p_1_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p_1_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "cplLenMid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "addrmask" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p_0_in" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "p_0_in" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-12589] Found 58 bits of RAM  (axi4mm_bridge_top_inst/\axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_wr_inst /i_42) with no load. RAM width may be reduced from 64 to 6 
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_wr_inst/i_12/i_0/m_axi_funcq_reg_0_7_6_7 from module extram__20 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_wr_inst/i_12/i_0/m_axi_funcq_reg_0_7_0_5 from module extram__20 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_rd/i_3/m_axi_funcq_reg_0_1_6_7 from module xdma_v4_2_2_axi_mm_master_rd_br_v due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_rd/i_3/m_axi_funcq_reg_0_1_0_5 from module xdma_v4_2_2_axi_mm_master_rd_br_v due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_str_masterbr_rdtlp_inst/__23/i_/axi4mm_axi_mm_master_top_inst/axi4mm_axi_str_masterbr_rdtlp_inst/rdtlpfuncq_reg_0_7_6_7 from module xdma_v4_2_2_axi4mm_bridge_top due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_str_masterbr_rdtlp_inst/__23/i_/axi4mm_axi_mm_master_top_inst/axi4mm_axi_str_masterbr_rdtlp_inst/rdtlpfuncq_reg_0_7_0_5 from module xdma_v4_2_2_axi4mm_bridge_top due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance axi4mm_bridge_top_inst/axi4mm_axi_mm_master_top_inst/axi4mm_axi_mm_master_wr_inst/i_12/i_0/m_axi_funcq_reg_0_7_0_5 from module extram__20 due to constant propagation
-WARNING: [Synth 8-3332] Sequential element (WB_DAT_FIFO/DataOut_reg[35]) is unused and will be removed from module xdma_v4_2_2_dma_wb_eng.
-WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/i_15/i_0/axi4mm_axi_mm_master_rd/rdDataBuf_ff_reg_0_7_138_143 from module extram__5 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/i_15/i_0/axi4mm_axi_mm_master_rd/rdDataBuf_ff_reg_0_7_132_137 from module extram__5 due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/axi4mm_axi_mm_master_rd/__10/i_/axi4mm_axi_mm_master_rd/m_axi_arprotissueq_reg_0_15_0_2 from module xdma_v4_2_2_dma_aximm due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/axi4mm_axi_mm_master_wr/i_8/m_axi_awprotq_reg_0_15_0_2 from module xdma_v4_2_2_axi_mm_master_omulti_wr_v due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/axi4mm_axi_mm_master_wr/i_2/wrrsp_ChnlIdq_reg_0_15_6_7 from module xdma_v4_2_2_axi_mm_master_omulti_wr_v due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance dma_enable.aximm.dma_aximm/i_15/i_0/axi4mm_axi_mm_master_rd/rdDataBuf_ff_reg_0_7_138_143 from module extram__5 due to constant propagation
-INFO: [Synth 8-5544] ROM "design_1_xdma_0_0_rx_destraddler_inst/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "tx_tkeep" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "s_axis_rc_tuser" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "s_axis_cq_tuser" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "qpll_drp_i/addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/pcie_top_i/axi_basic_top/rx_inst/rx_null_gen_inst/packet_overhead" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_current_speed_o[2] driven by constant 0
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_function_status[7] driven by constant 0
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_function_status[6] driven by constant 0
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_function_status[5] driven by constant 0
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_function_status[4] driven by constant 0
-WARNING: [Synth 8-3917] design design_1_xdma_0_0_core_top__GC0 has port cfg_interrupt_msi_enable[1] driven by constant 0
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_sw_ctxt_ram[0].SW_CTXT_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_sw_ctxt_ram[1].SW_CTXT_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_sw_ctxt_ram[2].SW_CTXT_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_sw_ctxt_ram[3].SW_CTXT_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM HW_CTXT_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM DSC_CRD_RCV_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 3 RAM instances of RAM C2H_PCIE_DSC_CPLI_RAM/the_bram_reg to conserve power
-INFO: [Synth 8-4652] Swapped enable and write-enable on 4 RAM instances of RAM C2H_PCIE_DSC_CPLD_RAM/the_bram_reg to conserve power
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_reg[7]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_qpll_reset.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_reg[6]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_qpll_reset.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_reg[5]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_qpll_reset.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_reg[4]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_qpll_reset.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_reg[3]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_qpll_reset.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/FSM_onehot_fsm_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/FSM_onehot_fsm_reg[8]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/FSM_onehot_fsm_reg[7]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_gt_common.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_sync__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/FSM_onehot_fsm_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__2.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_sync__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/FSM_onehot_fsm_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__3.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq__3.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_sync__3.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/FSM_onehot_fsm_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_fsm_rx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_eq.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_txsync_fsm.fsm_tx_reg[0]) is unused and will be removed from module design_1_xdma_0_0_pcie2_ip_pipe_sync.
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 3301.535 ; gain = 1545.449 ; free physical = 2996 ; free virtual = 34177
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:49 . Memory (MB): peak = 3286.676 ; gain = 1530.984 ; free physical = 35709 ; free virtual = 51732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:01:11 ; elapsed = 00:00:54 . Memory (MB): peak = 3290.594 ; gain = 1534.902 ; free physical = 36198 ; free virtual = 52222
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -2020,41 +1273,26 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst' to pin 'design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/inverted_reset_inferred/i_0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:17 ; elapsed = 00:01:24 . Memory (MB): peak = 3301.535 ; gain = 1545.449 ; free physical = 4606 ; free virtual = 35851
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 3290.594 ; gain = 1534.902 ; free physical = 36063 ; free virtual = 52172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[8]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
-WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[0]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
-WARNING: [Synth 8-3332] Sequential element (msix_internal_xdma.msix_ctl/FSM_onehot_intr_issue_state_reg[3]) is unused and will be removed from module xdma_v4_2_2_vul_irq.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:37 ; elapsed = 00:01:45 . Memory (MB): peak = 3301.535 ; gain = 1545.449 ; free physical = 4490 ; free virtual = 35716
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 3290.594 ; gain = 1534.902 ; free physical = 36065 ; free virtual = 52174
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/WR/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_15_0_3 from module xdma_v4_2_2_vul_rdwr_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/WR/gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_15_0_3 from module xdma_v4_2_2_vul_rdwr_tempName due to constant propagation
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/WR/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_15_0_3 from module xdma_v4_2_2_vul_rdwr_tempName due to constant propagation
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/WR/gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rrq_wadr_nn1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/WR/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rrq_wadr_nn1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/RD/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_31_0_3 from module xdma_v4_2_2_vul_rdwr__parameterized0_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/RD/gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_31_0_3 from module xdma_v4_2_2_vul_rdwr__parameterized0_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/RD/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rcp_rcv_lba_101_reg_0_31_0_3 from module xdma_v4_2_2_vul_rdwr__parameterized0_tempName due to constant propagation
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/RD/gen_rdwr_loop[0].gen_rdwr_eng.RDWR_INST/rrq_wadr_nn1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wrapper/dma_top/dma_enable.vul_dma/RD/gen_rdwr_loop[1].gen_rdwr_eng.RDWR_INST/rrq_wadr_nn1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_topi_4/dma_top/dma_enable.wb_eng.dma_pcie_wb_eng/axidma_wb_arb/Fifowhead.fifoInfo/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_udma_top__GCB0_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance design_1_i/xdma_0/inst/udma_wrapper/dma_topi_4/dma_top/dma_enable.wb_eng.dma_pcie_wb_eng/WB_DAT_FIFO/MemArray_reg_0_3_24_29 from module xdma_v4_2_2_udma_top__GCB0_tempName due to constant propagation
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/udma_wrapper/dma_topi_4/dma_top/base/IRQ_INST/msix_internal_xdma.pf0_msix_table/msix_ram_gen[1].msix_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'design_1_i/xdma_0/inst/i_0/\design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/design_1_xdma_0_0_axi_stream_intf_i/design_1_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst /U0/\inst_fifo_gen/inverted_reset ' with timing assertions on output pin 'O'
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/mas_bridge_ram_write_512.MASTER_WRITE_FIFO/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/mas_bridge_ram_write_512.MASTER_WRITE_FIFO/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/MASTER_READ_BRAM/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance design_1_i/xdma_0/inst/i_0/ram_top/MASTER_READ_BRAM/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:01:54 . Memory (MB): peak = 3325.555 ; gain = 1569.469 ; free physical = 2973 ; free virtual = 34221
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 3290.594 ; gain = 1534.902 ; free physical = 36065 ; free virtual = 52174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:17 ; elapsed = 00:00:59 . Memory (MB): peak = 3290.594 ; gain = 1534.902 ; free physical = 36069 ; free virtual = 52178
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2182,37 +1420,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2519]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:48 ; elapsed = 00:02:00 . Memory (MB): peak = 3393.445 ; gain = 1637.359 ; free physical = 2865 ; free virtual = 34199
+Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:06 . Memory (MB): peak = 3325.488 ; gain = 1569.797 ; free physical = 35441 ; free virtual = 51674
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:48 ; elapsed = 00:02:00 . Memory (MB): peak = 3393.445 ; gain = 1637.359 ; free physical = 2850 ; free virtual = 34183
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:06 . Memory (MB): peak = 3325.488 ; gain = 1569.797 ; free physical = 35441 ; free virtual = 51674
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:52 ; elapsed = 00:02:03 . Memory (MB): peak = 3428.297 ; gain = 1672.211 ; free physical = 2870 ; free virtual = 34197
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:08 . Memory (MB): peak = 3354.777 ; gain = 1599.086 ; free physical = 35456 ; free virtual = 51666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:52 ; elapsed = 00:02:03 . Memory (MB): peak = 3428.297 ; gain = 1672.211 ; free physical = 2870 ; free virtual = 34197
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:08 . Memory (MB): peak = 3354.777 ; gain = 1599.086 ; free physical = 35455 ; free virtual = 51665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:53 ; elapsed = 00:02:04 . Memory (MB): peak = 3431.438 ; gain = 1675.352 ; free physical = 2900 ; free virtual = 34227
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:09 . Memory (MB): peak = 3357.918 ; gain = 1602.227 ; free physical = 35528 ; free virtual = 51742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:53 ; elapsed = 00:02:04 . Memory (MB): peak = 3431.438 ; gain = 1675.352 ; free physical = 2900 ; free virtual = 34227
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:09 . Memory (MB): peak = 3357.918 ; gain = 1602.227 ; free physical = 35528 ; free virtual = 51742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2251,24 +1489,24 @@ Report Cell Usage:
 |21    |RAM64X1S      |     9|
 |22    |RAMB18E1      |     1|
 |23    |RAMB36E1      |    34|
-|31    |SRL16         |     1|
-|32    |SRL16E        |     9|
-|33    |SRLC32E       |     7|
-|34    |FDCE          |    98|
-|35    |FDPE          |    62|
-|36    |FDRE          | 23346|
-|37    |FDSE          |   235|
-|38    |IBUF          |     3|
-|39    |OBUF          |     2|
+|24    |SRL16         |     1|
+|25    |SRL16E        |     9|
+|26    |SRLC32E       |     7|
+|27    |FDCE          |    98|
+|28    |FDPE          |    62|
+|29    |FDRE          | 23346|
+|30    |FDSE          |   235|
+|31    |IBUF          |     3|
+|32    |OBUF          |     2|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:53 ; elapsed = 00:02:04 . Memory (MB): peak = 3431.438 ; gain = 1675.352 ; free physical = 2900 ; free virtual = 34227
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:09 . Memory (MB): peak = 3357.918 ; gain = 1602.227 ; free physical = 35535 ; free virtual = 51748
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30141 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:38 ; elapsed = 00:01:55 . Memory (MB): peak = 3435.352 ; gain = 1380.949 ; free physical = 9471 ; free virtual = 40798
-Synthesis Optimization Complete : Time (s): cpu = 00:02:53 ; elapsed = 00:02:07 . Memory (MB): peak = 3435.352 ; gain = 1679.266 ; free physical = 9500 ; free virtual = 40795
+Synthesis finished with 0 errors, 0 critical warnings and 29423 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:00 . Memory (MB): peak = 3361.832 ; gain = 1310.762 ; free physical = 40626 ; free virtual = 56839
+Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:13 . Memory (MB): peak = 3361.832 ; gain = 1606.141 ; free physical = 40626 ; free virtual = 56839
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3464.211 ; gain = 0.000 ; free physical = 9438 ; free virtual = 40732
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3390.699 ; gain = 0.000 ; free physical = 40655 ; free virtual = 56850
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'design_1_i/xdma_0/inst/design_1_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 1947 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2277,7 +1515,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3533.047 ; gain = 0.000 ; free physical = 9496 ; free virtual = 40788
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3476.379 ; gain = 0.000 ; free physical = 40672 ; free virtual = 56868
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 674 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 48 instances
@@ -2289,13 +1527,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete | Checksum: 41809b13
 INFO: [Common 17-83] Releasing license: Synthesis
-721 Infos, 398 Warnings, 0 Critical Warnings and 0 Errors encountered.
+344 Infos, 380 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:04 ; elapsed = 00:02:18 . Memory (MB): peak = 3533.082 ; gain = 1919.207 ; free physical = 9447 ; free virtual = 40739
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9275.786; main = 2431.956; forked = 7138.695
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18524.719; main = 3533.051; forked = 15227.098
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3557.059 ; gain = 0.000 ; free physical = 9434 ; free virtual = 40729
+synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:23 . Memory (MB): peak = 3476.414 ; gain = 1861.965 ; free physical = 40675 ; free virtual = 56871
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 5974.854; main = 2467.497; forked = 3799.471
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 13227.598; main = 3476.383; forked = 9945.004
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3500.391 ; gain = 0.000 ; free physical = 40676 ; free virtual = 56875
 INFO: [Common 17-1381] The checkpoint '/home/kokunev/data/git_root/dig/dig_board_pcie/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3557.059 ; gain = 23.977 ; free physical = 9454 ; free virtual = 40804
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3500.391 ; gain = 23.977 ; free physical = 40652 ; free virtual = 56914
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 16:10:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 11:03:39 2026...
