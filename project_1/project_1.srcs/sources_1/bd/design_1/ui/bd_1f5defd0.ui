@@ -1,54 +1,46 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.527801",
-   "Default View_TopLeft":"-208,-997",
+   "Default View_ScaleFactor":"0.878079",
+   "Default View_TopLeft":"-133,-120",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port pcie_clk -pg 1 -lvl 0 -x -80 -y -80 -defaultsOSRD
-preplace port pcie_mgt_0 -pg 1 -lvl 6 -x 2000 -y -340 -defaultsOSRD
-preplace port DDR3_0 -pg 1 -lvl 6 -x 2000 -y -880 -defaultsOSRD
-preplace port sys_clk -pg 1 -lvl 0 -x -80 -y -540 -defaultsOSRD
-preplace port port-id_pcie_reset_n -pg 1 -lvl 0 -x -80 -y -180 -defaultsOSRD
-preplace portBus led_green_0 -pg 1 -lvl 6 -x 2000 -y -450 -defaultsOSRD
-preplace portBus unused_0 -pg 1 -lvl 6 -x 2000 -y -90 -defaultsOSRD -right
-preplace portBus led_red_0 -pg 1 -lvl 6 -x 2000 -y -610 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 260 -y -80 -defaultsOSRD
-preplace inst xdma_0 -pg 1 -lvl 2 -x 630 -y -190 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 260 -y -540 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 3 -x 1190 -y -840 -defaultsOSRD
-preplace inst rst_mig_7series_0_100M -pg 1 -lvl 2 -x 630 -y -780 -defaultsOSRD
-preplace inst jtag_axi_0 -pg 1 -lvl 4 -x 1470 -y -790 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1190 -y -110 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 1190 -y -270 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 3 -x 1190 -y -670 -defaultsOSRD
-preplace inst ilvector_logic_1 -pg 1 -lvl 5 -x 1830 -y -450 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 4 -x 1470 -y -590 -defaultsOSRD
-preplace netloc clk_wiz_0_clk_out1 1 1 2 N -550 820
-preplace netloc clk_wiz_0_locked 1 1 2 N -530 810
-preplace netloc gpio_io_i_0_1 1 3 3 1370 -90 N -90 N
-preplace netloc ilvector_logic_1_Res 1 5 1 N -450
-preplace netloc mig_7series_0_mmcm_locked 1 1 3 430 -980 N -980 1340
-preplace netloc mig_7series_0_ui_clk 1 1 3 450 -880 1030 -950 1360
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 3 440 -970 N -970 1330
-preplace netloc pcie_reset_n_1 1 0 2 NJ -180 400
-preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 2 2 1020 -960 1370
-preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 420 -190n
-preplace netloc xdma_0_axi_aclk 1 2 1 1030 -270n
-preplace netloc xdma_0_axi_aresetn 1 2 1 1040 -250n
-preplace netloc xdma_0_user_lnk_up 1 2 3 810 -450 N -450 N
-preplace netloc CLK_IN1_D_0_1 1 0 1 NJ -540
-preplace netloc CLK_IN_D_0_1 1 0 1 N -80
-preplace netloc axi_smc_1_M00_AXI 1 2 2 1050 -940 1350
-preplace netloc axi_smc_M00_AXI 1 2 2 1050 -350 1330
-preplace netloc jtag_axi_0_M_AXI 1 2 3 1040 -990 N -990 1570
-preplace netloc mig_7series_0_DDR3 1 3 3 N -880 N -880 N
-preplace netloc xdma_0_M_AXI 1 2 1 830 -290n
-preplace netloc xdma_0_pcie_mgt 1 2 4 820 -360 1370 -340 N -340 N
-levelinfo -pg 1 -80 260 630 1190 1470 1830 2000
-pagesize -pg 1 -db -bbox -sgen -240 -1090 2250 620
+preplace port pcie_clk -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port pcie_mgt_0 -pg 1 -lvl 5 -x 1330 -y 390 -defaultsOSRD
+preplace port DDR3_0 -pg 1 -lvl 5 -x 1330 -y 90 -defaultsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_pcie_reset_n -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace portBus led_green_0 -pg 1 -lvl 5 -x 1330 -y 450 -defaultsOSRD
+preplace portBus unused_0 -pg 1 -lvl 5 -x 1330 -y 50 -defaultsOSRD -right
+preplace portBus led_red_0 -pg 1 -lvl 5 -x 1330 -y 20 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 160 -y 390 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 490 -y 440 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 840 -y 310 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 4 -x 1150 -y 130 -defaultsOSRD
+preplace inst rst_mig_7series_0_100M -pg 1 -lvl 2 -x 490 -y 110 -defaultsOSRD
+preplace inst ilvector_logic_1 -pg 1 -lvl 4 -x 1150 -y 450 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 840 -y 100 -defaultsOSRD
+preplace netloc clk_wiz_0_clk_out1 1 3 1 990 140n
+preplace netloc clk_wiz_0_locked 1 3 1 980 120n
+preplace netloc ilvector_logic_1_Res 1 4 1 NJ 450
+preplace netloc mig_7series_0_mmcm_locked 1 1 4 300 230 NJ 230 NJ 230 1300
+preplace netloc mig_7series_0_ui_clk 1 1 4 310 210 700 240 NJ 240 1310
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 4 300 10 NJ 10 NJ 10 1300
+preplace netloc pcie_reset_n_1 1 0 2 NJ 460 NJ
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 2 2 690 190 1000J
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 300J 380n
+preplace netloc xdma_0_user_lnk_up 1 2 2 NJ 410 1000J
+preplace netloc xdma_0_axi_aclk 1 2 1 680 90n
+preplace netloc CLK_IN1_D_0_1 1 0 3 NJ 310 NJ 310 NJ
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 390
+preplace netloc mig_7series_0_DDR3 1 4 1 NJ 90
+preplace netloc xdma_0_pcie_mgt 1 2 3 NJ 390 NJ 390 NJ
+preplace netloc xdma_0_M_AXI 1 2 1 670 70n
+preplace netloc axi_smc_M00_AXI 1 3 1 N 100
+levelinfo -pg 1 0 160 490 840 1150 1330
+pagesize -pg 1 -db -bbox -sgen -140 0 1490 570
 "
 }
 {
-   "da_axi4_cnt":"4"
+   "da_axi4_cnt":"5"
 }
