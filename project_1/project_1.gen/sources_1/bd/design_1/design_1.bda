@@ -196,40 +196,21 @@
             },
             "V3": {
                 "VT": "AC",
-                "BA": "0x0000000040000000",
-                "HA": "0x000000004000FFFF",
+                "BA": "0x00000000",
+                "HA": "0x0000FFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
-                "MA": "M_AXI",
-                "MX": "/xdma_0",
+                "MA": "Data",
+                "MX": "/jtag_axi_0",
                 "MI": "M_AXI",
                 "MS": "SEG_axi_gpio_0_Reg",
-                "MV": "xilinx.com:ip:xdma:4.2",
+                "MV": "xilinx.com:ip:jtag_axi:1.2",
                 "SX": "/axi_gpio_0",
                 "SI": "S_AXI",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
                 "TM": "both",
                 "TU": "register"
-            },
-            "V4": {
-                "VT": "AC",
-                "BA": "0x80000000",
-                "HA": "0xBFFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/jtag_axi_0",
-                "MI": "M_AXI",
-                "MS": "SEG_mig_7series_0_memaddr",
-                "MV": "xilinx.com:ip:jtag_axi:1.2",
-                "SX": "/mig_7series_0",
-                "SI": "S_AXI",
-                "MM": "memmap",
-                "SS": "memaddr",
-                "SV": "xilinx.com:ip:mig_7series:4.2",
-                "TM": "both",
-                "TU": "memory"
             }
         },
         "edges": [
@@ -243,11 +224,6 @@
             },
             {
                 "src": "V3",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V4",
                 "trg": "V2",
                 "EH": "2"
             }
