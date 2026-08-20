@@ -17,7 +17,9 @@
       "mig_7series_0": "",
       "rst_mig_7series_0_100M": "",
       "ilvector_logic_1": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "ilvector_logic_2": "",
+      "system_ila_0": ""
     },
     "interface_ports": {
       "pcie_clk": {
@@ -487,7 +489,7 @@
             "value": "Custom"
           },
           "XML_INPUT_FILE": {
-            "value": "mig_a.prj"
+            "value": "mig_b.prj"
           }
         },
         "interface_ports": {
@@ -600,6 +602,41 @@
             }
           }
         }
+      },
+      "ilvector_logic_2": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "ip_revision": "22",
+        "xci_name": "design_1_system_ila_0_0",
+        "xci_path": "ip/design_1_system_ila_0_0/design_1_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "INTERFACE"
+          },
+          "C_SLOT_0_INTF_TYPE": {
+            "value": "xilinx.com:display_xdma:pcie_debug_rtl:1.0"
+          }
+        },
+        "interface_ports": {
+          "SLOT_0_PCIE_DEBUG": {
+            "mode": "Monitor",
+            "monitor_type": "SlaveType",
+            "vlnv_bus_definition": "xilinx.com:display_xdma:pcie_debug:1.0",
+            "vlnv": "xilinx.com:display_xdma:pcie_debug_rtl:1.0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -613,6 +650,12 @@
         "interface_ports": [
           "pcie_clk",
           "util_ds_buf_0/CLK_IN_D"
+        ]
+      },
+      "Conn": {
+        "interface_ports": [
+          "xdma_0/pcie_debug_ports",
+          "system_ila_0/SLOT_0_PCIE_DEBUG"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -650,13 +693,20 @@
       "clk_wiz_0_locked": {
         "ports": [
           "clk_wiz_0/locked",
-          "mig_7series_0/sys_rst"
+          "mig_7series_0/sys_rst",
+          "ilvector_logic_2/Op1"
         ]
       },
       "ilvector_logic_1_Res": {
         "ports": [
           "ilvector_logic_1/Res",
           "led_green_0"
+        ]
+      },
+      "ilvector_logic_2_Res": {
+        "ports": [
+          "ilvector_logic_2/Res",
+          "led_red_0"
         ]
       },
       "mig_7series_0_mmcm_locked": {
@@ -700,7 +750,8 @@
       "xdma_0_axi_aclk": {
         "ports": [
           "xdma_0/axi_aclk",
-          "axi_smc/aclk"
+          "axi_smc/aclk",
+          "system_ila_0/clk"
         ]
       },
       "xdma_0_user_lnk_up": {
@@ -717,7 +768,7 @@
             "segments": {
               "SEG_mig_7series_0_memaddr": {
                 "address_block": "/mig_7series_0/memmap/memaddr",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000000000000",
                 "range": "1G"
               }
             }

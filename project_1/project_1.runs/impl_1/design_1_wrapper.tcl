@@ -109,16 +109,42 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 5
   set_param general.usePosixSpawnForFork 1
-  set_param bd.open.in_stealth_mode 5
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-309585-emerald/incrSyn
+  set_param bd.open.in_stealth_mode 2
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-578306-emerald/incrSyn
   set_param runs.launchOptions { -jobs 10  }
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.runs/impl_1/design_1_wrapper.dcp
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a100tfgg484-2
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.cache/wt [current_project]
   set_property parent.project_path /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.xpr [current_project]
   set_property ip_output_repo /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.runs/synth_1/design_1_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.srcs/constrs_1/new/early.xdc
+  set_property processing_order EARLY [get_files /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.srcs/constrs_1/new/early.xdc]
+  read_xdc /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.srcs/constrs_1/new/io.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top design_1_wrapper -part xc7a100tfgg484-2 
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

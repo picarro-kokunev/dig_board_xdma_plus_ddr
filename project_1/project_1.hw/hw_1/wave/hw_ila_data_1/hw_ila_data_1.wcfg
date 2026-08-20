@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="1,024"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_current_speed">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_current_speed[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_current_speed[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_cor">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_cor</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_err_cor</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_fatal">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_fatal</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_err_fatal</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_nonfatal">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_err_nonfatal</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_err_nonfatal</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_local_error">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_local_error[4:0]</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_local_error[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_local_error_valid">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_local_error_valid</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_local_error_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_ltssm_state">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_ltssm_state[5:0]</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_ltssm_state[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_negotiated_width">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/SLOT_0_PCIE_DEBUG_cfg_negotiated_width[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SLOT_0_PCIE_DEBUG_cfg_negotiated_width[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

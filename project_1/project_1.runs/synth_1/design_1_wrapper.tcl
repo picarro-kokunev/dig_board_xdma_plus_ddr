@@ -57,10 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 5
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-309585-emerald/incrSyn
+set_param bd.open.in_stealth_mode 2
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-578306-emerald/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -111,6 +110,12 @@ set_property used_in_implementation false [get_files -all /home/kokunev/data/git
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_13/bd_6e42_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/bd_f60c_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_xdma_plus_ddr/project_1/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

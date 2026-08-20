@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Mon Aug 10 11:56:48 2026
+//Date        : Thu Aug 20 10:00:54 2026
 //Host        : emerald running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR3_0_addr,
     DDR3_0_ba,
@@ -67,6 +67,14 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_P" *) input sys_clk_clk_p;
   input [0:0]unused_0;
 
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_current_speed" *) (* DONT_TOUCH *) wire [2:0]Conn_cfg_current_speed;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_err_cor" *) (* DONT_TOUCH *) wire Conn_cfg_err_cor;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_err_fatal" *) (* DONT_TOUCH *) wire Conn_cfg_err_fatal;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_err_nonfatal" *) (* DONT_TOUCH *) wire Conn_cfg_err_nonfatal;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_local_error" *) (* DONT_TOUCH *) wire [4:0]Conn_cfg_local_error;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_local_error_valid" *) (* DONT_TOUCH *) wire Conn_cfg_local_error_valid;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_ltssm_state" *) (* DONT_TOUCH *) wire [5:0]Conn_cfg_ltssm_state;
+  (* CONN_BUS_INFO = "Conn xilinx.com:display_xdma:pcie_debug:1.0 None cfg_negotiated_width" *) (* DONT_TOUCH *) wire [3:0]Conn_cfg_negotiated_width;
   wire [14:0]DDR3_0_addr;
   wire [2:0]DDR3_0_ba;
   wire DDR3_0_cas_n;
@@ -118,6 +126,7 @@ module design_1
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
   wire [0:0]led_green_0;
+  wire [0:0]led_red_0;
   wire mig_7series_0_mmcm_locked;
   wire mig_7series_0_ui_clk;
   wire mig_7series_0_ui_clk_sync_rst;
@@ -250,6 +259,7 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked));
   assign led_green_0 = ~ xdma_0_user_lnk_up;
+  assign led_red_0 = ~ clk_wiz_0_locked;
   design_1_mig_7series_0_0 mig_7series_0
        (.aresetn(rst_mig_7series_0_100M_peripheral_aresetn),
         .ddr3_addr(DDR3_0_addr),
@@ -314,18 +324,36 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_mig_7series_0_100M_peripheral_aresetn),
         .slowest_sync_clk(mig_7series_0_ui_clk));
+  design_1_system_ila_0_0 system_ila_0
+       (.SLOT_0_PCIE_DEBUG_cfg_current_speed(Conn_cfg_current_speed),
+        .SLOT_0_PCIE_DEBUG_cfg_err_cor(Conn_cfg_err_cor),
+        .SLOT_0_PCIE_DEBUG_cfg_err_fatal(Conn_cfg_err_fatal),
+        .SLOT_0_PCIE_DEBUG_cfg_err_nonfatal(Conn_cfg_err_nonfatal),
+        .SLOT_0_PCIE_DEBUG_cfg_local_error(Conn_cfg_local_error),
+        .SLOT_0_PCIE_DEBUG_cfg_local_error_valid(Conn_cfg_local_error_valid),
+        .SLOT_0_PCIE_DEBUG_cfg_ltssm_state(Conn_cfg_ltssm_state),
+        .SLOT_0_PCIE_DEBUG_cfg_negotiated_width(Conn_cfg_negotiated_width),
+        .clk(xdma_0_axi_aclk));
   design_1_util_ds_buf_0_0 util_ds_buf_0
        (.IBUF_DS_N(pcie_clk_clk_n),
         .IBUF_DS_P(pcie_clk_clk_p),
         .IBUF_OUT(util_ds_buf_0_IBUF_OUT));
   design_1_xdma_0_0 xdma_0
        (.axi_aclk(xdma_0_axi_aclk),
+        .cfg_current_speed_o(Conn_cfg_current_speed),
+        .cfg_err_cor_o(Conn_cfg_err_cor),
+        .cfg_err_fatal_o(Conn_cfg_err_fatal),
+        .cfg_err_nonfatal_o(Conn_cfg_err_nonfatal),
+        .cfg_local_error_o(Conn_cfg_local_error),
+        .cfg_local_error_valid_o(Conn_cfg_local_error_valid),
+        .cfg_ltssm_state_o(Conn_cfg_ltssm_state),
         .cfg_mgmt_addr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_mgmt_byte_enable({1'b0,1'b0,1'b0,1'b0}),
         .cfg_mgmt_read(1'b0),
         .cfg_mgmt_type1_cfg_reg_access(1'b0),
         .cfg_mgmt_write(1'b0),
         .cfg_mgmt_write_data({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .cfg_negotiated_width_o(Conn_cfg_negotiated_width),
         .m_axi_araddr(xdma_0_M_AXI_ARADDR),
         .m_axi_arburst(xdma_0_M_AXI_ARBURST),
         .m_axi_arcache(xdma_0_M_AXI_ARCACHE),
