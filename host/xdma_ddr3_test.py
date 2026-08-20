@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# xdma_ddr3_test.py
 """
 Read/write DDR3 on the dig_board_xdma_plus_ddr design through the Xilinx XDMA driver.
 
@@ -325,7 +326,7 @@ def build_parser() -> argparse.ArgumentParser:
     fill_p.add_argument("--length", type=parse_int, required=True)
     fill_p.add_argument(
         "--pattern",
-        default="00",
+        default="0x00000000",
         help="Repeating hex pattern (default: 00 -> 32-bit zero words)",
     )
 
@@ -419,6 +420,7 @@ def main(argv: list[str] | None = None) -> int:
             elif args.command == "test":
                 run_self_test(ddr, offset=0x0, size=64 * 1024)
                 run_self_test(ddr, offset=0x10_0000, size=64 * 1024)
+                run_self_test(ddr, offset=0x0, size=64 *1024 * 1024)
 
             elif args.command == "bench":
                 run_bandwidth_test(ddr, args.offset, args.size, args.iterations)
