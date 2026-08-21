@@ -161,6 +161,23 @@ class XdmaDdr3:
             total += len(data)
         return b"".join(chunks)
 
+    def read_no_data_return(self, address: int, length: int):
+        """Read bytes from DDR3 at the given AXI byte address. Do not return anything."""
+        if self._c2h_fd is None:
+            raise XdmaDdr3Error("Device not open")
+        if length == 0:
+            return b""
+
+        self._check_range(address, length)
+        os.lseek(self._c2h_fd, address, os.SEEK_SET)
+
+        chunks: list[bytes] = []
+        total = 0
+        while total < length:
+            chunk = min(self.chunk_bytes, length - total)
+            total += len(os.read(self._c2h_fd, chunk))
+        return
+
     def fill(self, address: int, length: int, pattern: bytes) -> int:
         if not pattern:
             raise XdmaDdr3Error("Pattern must not be empty")
@@ -273,11 +290,17 @@ def run_bandwidth_test(ddr: XdmaDdr3, offset: int, size: int, iterations: int) -
             raise XdmaDdr3Error("Readback mismatch during bandwidth test")
     read_elapsed = time.perf_counter() - start
 
+    start = time.perf_counter()
+    for _ in range(iterations):
+        ddr.read_no_data_return(offset, size)
+    read_elapsed_no_verify = time.perf_counter() - start
+
     write_mbps = (size * iterations / write_elapsed) / (1024 * 1024)
     read_mbps = (size * iterations / read_elapsed) / (1024 * 1024)
+    read_mbps_no_verify = (size * iterations / read_elapsed_no_verify) / (1024 * 1024)
     print(f"  write: {write_mbps:.1f} MiB/s ({write_elapsed:.3f} s total)")
     print(f"  read : {read_mbps:.1f} MiB/s ({read_elapsed:.3f} s total)")
-
+    print(f"  read (no verify): {read_mbps_no_verify:.1f} MiB/s ({read_elapsed_no_verify:.3f} s total)")
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(

@@ -3,3 +3,4 @@ __pycache__/
 project_1/project_1.cache/
 **/*.dcp
 **/*.rpx
+host/xdma_ddr3_test

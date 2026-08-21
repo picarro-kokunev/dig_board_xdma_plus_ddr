@@ -153,6 +153,30 @@ public:
         return out;
     }
 
+    void readNoDataReturn(std::uint64_t address, std::size_t length) {
+        if (c2h_fd_ < 0) {
+            throw XdmaDdr3Error("Device not open");
+        }
+        if (length == 0) {
+            return;
+        }
+
+        checkRange(address, length);
+        if (lseek(c2h_fd_, static_cast<off_t>(address), SEEK_SET) < 0) {
+            throw XdmaDdr3Error("C2H lseek failed at 0x" + hex(address) + ": " + std::strerror(errno));
+        }
+
+        std::size_t total = 0;
+        while (total < length) {
+            const std::size_t chunk = std::min(config_.chunk_bytes, length - total);
+            std::vector<std::uint8_t> buffer(chunk);
+            const ssize_t got = ::read(c2h_fd_, buffer.data(), chunk);
+            if (got > 0) {
+                total += static_cast<std::size_t>(got);
+            }
+        }
+    }
+
     std::size_t fill(std::uint64_t address, std::size_t length, const std::vector<std::uint8_t>& pattern) {
         if (pattern.empty()) {
             throw XdmaDdr3Error("Pattern must not be empty");
@@ -472,17 +496,29 @@ void runBandwidthTest(XdmaDdr3& ddr, std::uint64_t offset, std::size_t size, int
     }
     const auto read_end = std::chrono::steady_clock::now();
 
+    const auto read_no_verify_start = std::chrono::steady_clock::now();
+    for (int i = 0; i < iterations; ++i) {
+        ddr.readNoDataReturn(offset, size);
+    }
+    const auto read_no_verify_end = std::chrono::steady_clock::now();
+
     const double write_elapsed =
         std::chrono::duration<double>(write_end - write_start).count();
     const double read_elapsed =
         std::chrono::duration<double>(read_end - read_start).count();
+    const double read_elapsed_no_verify =
+        std::chrono::duration<double>(read_no_verify_end - read_no_verify_start).count();
 
     const double write_mbps = (static_cast<double>(size) * iterations / write_elapsed) / (1024.0 * 1024.0);
     const double read_mbps = (static_cast<double>(size) * iterations / read_elapsed) / (1024.0 * 1024.0);
+    const double read_mbps_no_verify =
+        (static_cast<double>(size) * iterations / read_elapsed_no_verify) / (1024.0 * 1024.0);
 
     std::cout << std::fixed << std::setprecision(1);
     std::cout << "  write: " << write_mbps << " MiB/s (" << std::setprecision(3) << write_elapsed << " s total)\n";
     std::cout << "  read : " << read_mbps << " MiB/s (" << read_elapsed << " s total)\n";
+    std::cout << "  read (no verify): " << read_mbps_no_verify << " MiB/s (" << read_elapsed_no_verify
+              << " s total)\n";
 }
 
 void printUsage(const char* prog) {
