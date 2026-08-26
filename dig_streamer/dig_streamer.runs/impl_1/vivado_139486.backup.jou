@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Aug 25 18:17:50 2026
-# Process ID         : 186784
+# Start of session at: Tue Aug 25 18:12:15 2026
+# Process ID         : 139486
 # Current directory  : /home/kokunev/data/git_root/dig/dig_board_streamer/dig_streamer/dig_streamer.runs/impl_1
 # Command line       : vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file           : /home/kokunev/data/git_root/dig/dig_board_streamer/dig_streamer/dig_streamer.runs/impl_1/design_1_wrapper.vdi
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 718.926 MHz
+# CPU Frequency      : 799.665 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 20
 # Host memory        : 65777 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 74367 MB
-# Available Virtual  : 64812 MB
+# Available Virtual  : 65106 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
