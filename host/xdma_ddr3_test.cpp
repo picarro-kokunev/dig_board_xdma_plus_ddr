@@ -53,7 +53,8 @@ constexpr std::size_t kDdr3DataWidthBytes = 4;        // 32-bit DDR interface
 constexpr int kDefaultXdmaId = 0;
 constexpr int kDefaultH2cChannel = 0;
 constexpr int kDefaultC2hChannel = 0;
-constexpr std::size_t kDefaultChunkBytes = 1U << 20;  // 1 MiB
+//constexpr std::size_t kDefaultChunkBytes = 1U << 20;  // 1 MiB
+constexpr std::size_t kDefaultChunkBytes = 1U << 24;  // 16 MiB
 
 class XdmaDdr3Error : public std::runtime_error {
 public:
@@ -139,9 +140,10 @@ public:
         out.reserve(length);
 
         std::size_t total = 0;
+        const std::size_t buff_size = config_.chunk_bytes;
+        std::vector<std::uint8_t> buffer(buff_size);
         while (total < length) {
             const std::size_t chunk = std::min(config_.chunk_bytes, length - total);
-            std::vector<std::uint8_t> buffer(chunk);
             const ssize_t got = ::read(c2h_fd_, buffer.data(), chunk);
             if (got <= 0) {
                 throw XdmaDdr3Error(
@@ -167,13 +169,17 @@ public:
         }
 
         std::size_t total = 0;
+        const std::size_t buff_size = config_.chunk_bytes;
+        std::vector<std::uint8_t> buffer(buff_size);
         while (total < length) {
             const std::size_t chunk = std::min(config_.chunk_bytes, length - total);
-            std::vector<std::uint8_t> buffer(chunk);
             const ssize_t got = ::read(c2h_fd_, buffer.data(), chunk);
-            if (got > 0) {
-                total += static_cast<std::size_t>(got);
+            if (got <= 0)
+            {
+                throw XdmaDdr3Error(
+                    "C2H read failed at 0x" + hex(address + total) + " after " + hex(total) + " bytes");
             }
+            total += static_cast<std::size_t>(got);
         }
     }
 
