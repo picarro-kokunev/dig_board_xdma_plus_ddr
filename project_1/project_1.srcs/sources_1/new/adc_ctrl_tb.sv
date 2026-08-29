@@ -8,7 +8,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module adc_ctrl_tb;
-    parameter DATA_W = 14;
+    parameter DATA_W = 16;
+    parameter ADC_DATA_W = DATA_W-2;
 
     // system signals
     logic clk;
@@ -17,14 +18,15 @@ module adc_ctrl_tb;
     // ADC chip interface
     logic adc_clk;
     logic adc_ofa_a;
-    logic [DATA_W-1:0] adc_data_a;
+    logic [ADC_DATA_W-1:0] adc_data_a;
 
-    // Controller output: bit DATA_W is OFA, bits DATA_W-1:0 are sample data
-    logic [1:0][DATA_W:0] data;
-    logic tie_all;
+    // Controller output: 
+    // bit DATA_W - channel number
+    // bit DATA_W-2 is OFA, bits DATA_W-1:0 are sample data
+    logic [DATA_W-1:0] data;
 
     // Instantiate the ADC model
-    adc_ad_ltc22xx #(.DATA_W(DATA_W)) adc_ad_ltc22xx_inst (
+    adc_ad_ltc22xx #(.DATA_W(ADC_DATA_W)) adc_ad_ltc22xx_inst (
         .clk(adc_clk),
         .adc_data_a(adc_data_a),
         .adc_ofa_a(adc_ofa_a)
@@ -37,9 +39,7 @@ module adc_ctrl_tb;
         .adc_clk(adc_clk),
         .adc_data_a(adc_data_a),
         .adc_ofa_a(adc_ofa_a),
-        .data_a(data[0]),
-        .data_b(data[1]),
-        .tie_all(tie_all)
+        .data(data)
     );
 
     // System clock generation
@@ -50,7 +50,7 @@ module adc_ctrl_tb;
 
     // set input data and verify the output
     int error_count = 0;
-    logic [DATA_W-1:0] adc_expected[1:0][$];
+    logic [ADC_DATA_W-1:0] adc_expected[1:0][$];
     logic ofa_expected[1:0][$];
 
     // inject ADC data
@@ -58,9 +58,8 @@ module adc_ctrl_tb;
     begin
         integer i;
 
-        reset_n = 1;        
         // simulate with sequential data
-        for (i = 0; i < 10; i = i + 1) 
+        for (i = 0; i < 100; i = i + 1) 
         begin
             automatic int val = i%2;
             adc_ad_ltc22xx_inst.ofa_a.push_back(val);
@@ -83,14 +82,15 @@ module adc_ctrl_tb;
             adc_ad_ltc22xx_inst.ofa_b.push_back(val);
             ofa_expected[1].push_back(val);
             //
-            val = $urandom_range(2**DATA_W-1, 0);
+            val = $urandom_range(2**ADC_DATA_W-1, 0);
             adc_ad_ltc22xx_inst.adc_a.push_back(val);
             adc_expected[0].push_back(val);
             //
-            val = $urandom_range(2**DATA_W-1, 0);
+            val = $urandom_range(2**ADC_DATA_W-1, 0);
             adc_ad_ltc22xx_inst.adc_b.push_back(val);
             adc_expected[1].push_back(val);
         end
+        reset_n = 1;
     end
 
     // check data outside of reset_n
@@ -99,15 +99,16 @@ module adc_ctrl_tb;
         if (reset_n)
         begin
             automatic int j = adc_clk ? 0 : 1;
-            automatic logic [DATA_W-1:0] expected = adc_expected[j].pop_front();
+            automatic logic [ADC_DATA_W-1:0] expected = adc_expected[j].pop_front();
             automatic logic ofa_exp = ofa_expected[j].pop_front();
-            automatic logic [DATA_W:0] expected_packed = {ofa_exp, expected};
+            automatic logic channel_exp = j;
+            automatic logic [DATA_W-1:0] expected_packed = {channel_exp, ofa_exp, expected};
 
-            if (data[j] != expected_packed) 
+            if (data != expected_packed) 
             begin
                 error_count++;
                 $error("%0t : wrong data[%d] : expected %h got %h (ofa=%b sample=%h)",
-                        $time, j, expected_packed, data[j], ofa_exp, expected);
+                        $time, j, expected_packed, data, ofa_exp, expected);
             end
         end
     end

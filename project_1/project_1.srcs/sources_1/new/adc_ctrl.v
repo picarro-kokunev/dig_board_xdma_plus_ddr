@@ -8,7 +8,7 @@
 // Generate adc_clk from clk, and convert the DDR data to SDR data for each channel.
 // Convert DDR data from ADC chip to SDR data for each channel
 //
-module adc_ctrl #(parameter DATA_W = 14)
+module adc_ctrl #(parameter DATA_W = 16, ADC_DATA_W = DATA_W-2, ADC_ID_A = 0, ADC_ID_B = 1)
 (
     // system clock
     input clk,
@@ -18,19 +18,19 @@ module adc_ctrl #(parameter DATA_W = 14)
     // input to ADC chip
     output adc_clk,
     // output data from ADC chip, DDR
-    input [DATA_W-1:0] adc_data_a,
+    input [ADC_DATA_W-1:0] adc_data_a,
     // overflow/underflow
     input              adc_ofa_a,
     // output overflow/under flow from ADC chip, DDR relative to adc_clk 
 
     // ADC output for channel 0,1 SDR relative to clk
-    // data_[DATA_W] carries overflow/underflow; data_[DATA_W-1:0] is sample data
-    output reg [DATA_W:0] data_a,
-    output reg [DATA_W:0] data_b,
-
-    // debug
-    output tie_all     
+    // ADC channel 0 = ADC A
+    // ADC channel 1 = ADC B 
+    // data = { ADC_ID, adc_ofa, adc_data }
+    output [DATA_W-1:0] data
 );
+
+    reg [DATA_W-1:0] data_reg;
     // generate adc_clk from clk so period(adc_clk) == 2 *period(clk)
     reg adc_clk_reg;
     initial
@@ -43,29 +43,25 @@ module adc_ctrl #(parameter DATA_W = 14)
     end
     assign adc_clk = adc_clk_reg;    
 
-    // to force no pruning
-    assign tie_all = data_a | data_b;
-
+    assign data = data_reg;
     // convert DDR stream to 2 SDR streams
     // ADC is updating data_a after (posedge adc_clk) + adc_ad_ltc22xx.CLK_TO_DATA_DELAY
     // ADC is updating data_b after (negedge adc_clk) + adc_ad_ltc22xx.CLK_TO_DATA_DELAY
 
+    // if( adc_clk_reg == 1'b1 ) then data from adc_a otherwise adc_b          
+    wire adc_id =  !adc_clk_reg;    
+    
     // update data_a in the middle of adc_clk-is-high
-    // update data_b in the middle of adc_clk-is-low    
+    // update data_b in the middle of adc_clk-is-low   
     always @(negedge clk or negedge reset_n)
     begin
         if (!reset_n) 
             begin
-                data_a <= 0;
-                data_b <= 0;
+                data_reg <= 0;
             end 
         else
             begin
-                // adc_clk is high
-                if( adc_clk_reg == 1'b1 )
-                    data_a <= {adc_ofa_a, adc_data_a};
-                else
-                    data_b <= {adc_ofa_a, adc_data_a};
+                data_reg <= { adc_id, adc_ofa_a, adc_data_a};            
             end
     end
 endmodule
