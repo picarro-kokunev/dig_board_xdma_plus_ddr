@@ -1522,7 +1522,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.DATA_WIDTH">128</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.DATA_WIDTH">32</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1540,7 +1540,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.FREQ_HZ">125000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1549,7 +1549,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.ID_WIDTH">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.ID_WIDTH">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1558,7 +1558,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.ADDR_WIDTH">64</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.ADDR_WIDTH">32</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1648,7 +1648,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_QOS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.HAS_QOS">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.HAS_QOS">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1657,7 +1657,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_REGION</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.HAS_REGION">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.HAS_REGION">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1711,7 +1711,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.CLK_DOMAIN"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1720,7 +1720,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_THREADS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.NUM_READ_THREADS">2</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.NUM_READ_THREADS">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1729,7 +1729,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_THREADS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.NUM_WRITE_THREADS">2</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.NUM_WRITE_THREADS">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1767,7 +1767,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot; ) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0 )">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot; ) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0 )">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -3664,7 +3664,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PROTOCOL</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.PROTOCOL">AXI4</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.PROTOCOL">AXI4LITE</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3673,7 +3673,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.FREQ_HZ">125000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3754,7 +3754,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_BURST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_BURST">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_BURST">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3763,7 +3763,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_LOCK</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_LOCK">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_LOCK">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3781,7 +3781,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_CACHE</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_CACHE">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_CACHE">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3790,7 +3790,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_QOS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_QOS">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_QOS">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3799,7 +3799,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_REGION</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_REGION">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_REGION">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3835,7 +3835,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_BURST_LENGTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.MAX_BURST_LENGTH">256</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.MAX_BURST_LENGTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3853,7 +3853,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_LITE.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3909,7 +3909,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_LITE" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_LITE" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -4408,7 +4408,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4462,7 +4462,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TKEEP">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4471,7 +4471,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TLAST">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4480,7 +4480,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.FREQ_HZ">125000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4498,7 +4498,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_0.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4527,7 +4527,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXIS_C2H_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXIS_C2H_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -4591,7 +4591,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4645,7 +4645,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TKEEP">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4654,7 +4654,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TLAST">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4663,7 +4663,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.FREQ_HZ">125000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4681,7 +4681,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_0.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4710,7 +4710,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXIS_H2C_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXIS_H2C_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -4774,7 +4774,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4828,7 +4828,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TKEEP">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4837,7 +4837,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TLAST">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4846,7 +4846,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.FREQ_HZ">125000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4864,7 +4864,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C2H_1.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4893,7 +4893,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXIS_C2H_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXIS_C2H_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -4957,7 +4957,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -5011,7 +5011,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TKEEP">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -5020,7 +5020,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TLAST">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -5029,7 +5029,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.FREQ_HZ">125000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -5047,7 +5047,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_H2C_1.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -5076,7 +5076,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXIS_H2C_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXIS_H2C_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -20767,7 +20767,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f849cb86</spirit:value>
+            <spirit:value>9:067d031b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20778,7 +20778,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2d33ad54</spirit:value>
+            <spirit:value>9:c1f2ca39</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20792,11 +20792,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 20 18:29:24 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:14:22 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:397e702e</spirit:value>
+            <spirit:value>9:f24e80ad</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20810,11 +20810,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Aug 01 00:29:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:29:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f849cb86</spirit:value>
+            <spirit:value>9:067d031b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20825,7 +20825,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f849cb86</spirit:value>
+            <spirit:value>9:067d031b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20841,11 +20841,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Aug 01 00:29:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:29:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3fb92696</spirit:value>
+            <spirit:value>9:ab3929fd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20861,11 +20861,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Aug 01 00:29:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:29:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3fb92696</spirit:value>
+            <spirit:value>9:ab3929fd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20881,11 +20881,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Aug 01 00:29:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:29:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f849cb86</spirit:value>
+            <spirit:value>9:067d031b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20901,11 +20901,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Aug 01 00:29:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Aug 31 18:29:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f849cb86</spirit:value>
+            <spirit:value>9:067d031b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -21796,7 +21796,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21819,7 +21819,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21846,7 +21846,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21873,7 +21873,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21896,7 +21896,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21919,7 +21919,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21946,7 +21946,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21973,7 +21973,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22027,7 +22027,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22050,7 +22050,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rlast" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rlast" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22073,7 +22073,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22097,7 +22097,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22121,7 +22121,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awaddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awaddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22145,7 +22145,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awlen" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awlen" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22169,7 +22169,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awsize" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awsize" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22193,7 +22193,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awburst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awburst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22217,7 +22217,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22237,7 +22237,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22257,7 +22257,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awlock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awlock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22281,7 +22281,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awcache" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_awcache" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22305,7 +22305,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22353,7 +22353,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wstrb" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wstrb" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22373,7 +22373,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wlast" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wlast" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22393,7 +22393,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_wvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22413,7 +22413,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_bready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22437,7 +22437,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22461,7 +22461,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_araddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_araddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22485,7 +22485,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arlen" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arlen" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22509,7 +22509,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arsize" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arsize" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22533,7 +22533,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arburst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arburst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22557,7 +22557,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22577,7 +22577,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22597,7 +22597,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arlock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arlock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22621,7 +22621,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arcache" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_arcache" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22641,7 +22641,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axi_rready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULTQ_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;) and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22665,7 +22665,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awaddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awaddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22713,7 +22713,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22733,7 +22733,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22756,7 +22756,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_awready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22780,7 +22780,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22804,7 +22804,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wstrb" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wstrb" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22824,7 +22824,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22847,7 +22847,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_wready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22870,7 +22870,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22897,7 +22897,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22917,7 +22917,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_bready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22941,7 +22941,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_araddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_araddr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -22989,7 +22989,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arprot" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23009,7 +23009,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23032,7 +23032,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_arready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23059,7 +23059,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rdata" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23086,7 +23086,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rresp" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23109,7 +23109,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rvalid" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -23129,7 +23129,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axil_rready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXILITE_MASTER&apos;)) = &quot;TRUE&quot; and (spirit:decode(id(&apos;MODELPARAM_VALUE.DMA_EN&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.FUNC_MODE&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.MULT_PF_DES&apos;)) = &quot;TRUE&quot;))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25509,7 +25509,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tdata_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tdata_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25532,7 +25532,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tlast_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tlast_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25555,7 +25555,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tvalid_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tvalid_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25575,7 +25575,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tready_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tready_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25629,7 +25629,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tkeep_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tkeep_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25653,7 +25653,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tdata_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tdata_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25673,7 +25673,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tlast_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tlast_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25693,7 +25693,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tvalid_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tvalid_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25716,7 +25716,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tready_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tready_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25764,7 +25764,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tkeep_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tkeep_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_0&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25791,7 +25791,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tdata_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tdata_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25814,7 +25814,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tlast_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tlast_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25837,7 +25837,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tvalid_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tvalid_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25857,7 +25857,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tready_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tready_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25911,7 +25911,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tkeep_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c2h_tkeep_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_WCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25935,7 +25935,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tdata_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tdata_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25955,7 +25955,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tlast_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tlast_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25975,7 +25975,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tvalid_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tvalid_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -25998,7 +25998,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tready_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tready_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -26046,7 +26046,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tkeep_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_h2c_tkeep_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.XDMA_AXI_INTF_MM&apos;)) = 0 and spirit:decode(id(&apos;MODELPARAM_VALUE.EN_RCHNL_1&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.SHELL_BRIDGE&apos;)) = 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -52786,12 +52786,12 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>AXILITE_MASTER_APERTURE_SIZE</spirit:name>
         <spirit:displayName>Pf0 Bar0 Aperture Size</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_MASTER_APERTURE_SIZE" spirit:bitStringLength="8">0x0D</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_MASTER_APERTURE_SIZE" spirit:bitStringLength="8">0x09</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>AXILITE_MASTER_CONTROL</spirit:name>
         <spirit:displayName>Pf0 Bar0 Control</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_MASTER_CONTROL" spirit:bitStringLength="3">0x0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_MASTER_CONTROL" spirit:bitStringLength="3">0x4</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>XDMA_APERTURE_SIZE</spirit:name>
@@ -52915,7 +52915,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>XDMA_AXI_INTF_MM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.XDMA_AXI_INTF_MM">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.XDMA_AXI_INTF_MM">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>XDMA_PCIE_64BIT_EN</spirit:name>
@@ -52923,7 +52923,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>XDMA_AXILITE_MASTER</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.XDMA_AXILITE_MASTER">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.XDMA_AXILITE_MASTER">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>XDMA_AXIST_BYPASS</spirit:name>
@@ -53416,7 +53416,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BARLITE1</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE1">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE1">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BARLITE2</spirit:name>
@@ -53676,11 +53676,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DMA_MM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMA_MM">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMA_MM">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DMA_ST</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMA_ST">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMA_ST">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PCIE_PFS_SUPPORTED</spirit:name>
@@ -53692,7 +53692,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>BARLITE_EXT_PF0</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE_EXT_PF0" spirit:bitStringLength="6">0x00</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE_EXT_PF0" spirit:bitStringLength="6">0x01</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>BARLITE_EXT_PF1</spirit:name>
@@ -53708,7 +53708,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>BARLITE_INT_PF0</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE_INT_PF0" spirit:bitStringLength="6">0x01</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BARLITE_INT_PF0" spirit:bitStringLength="6">0x02</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>BARLITE_INT_PF1</spirit:name>
@@ -54528,6 +54528,10 @@
     <spirit:choice>
       <spirit:name>choice_list_ec64e624</spirit:name>
       <spirit:enumeration>N/A</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_edd2f0e5</spirit:name>
+      <spirit:enumeration>BAR_1</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_ef28ef63</spirit:name>
@@ -55648,7 +55652,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axilite_master_en</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_en" spirit:choiceRef="choice_list_7a7dde49" spirit:order="38">false</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_en" spirit:choiceRef="choice_list_7a7dde49" spirit:order="38">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -55659,22 +55663,22 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axilite_master_size</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="39">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_size" spirit:choiceRef="choice_list_e7f13338" spirit:order="39">64</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.axilite_master_size">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.axilite_master_size">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axilite_master_scale</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_scale" spirit:choiceRef="choice_list_d1e1a340" spirit:order="40">Megabytes</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axilite_master_scale" spirit:choiceRef="choice_list_d1e1a340" spirit:order="40">Kilobytes</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.axilite_master_scale">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.axilite_master_scale">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -55756,7 +55760,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.pciebar2axibar_axil_master">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.pciebar2axibar_axil_master">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -56054,7 +56058,7 @@
     <spirit:parameter>
       <spirit:name>xdma_axi_intf_mm</spirit:name>
       <spirit:displayName>XDMA Interface</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.xdma_axi_intf_mm" spirit:choiceRef="choice_list_a71f3969" spirit:order="86">AXI_Memory_Mapped</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.xdma_axi_intf_mm" spirit:choiceRef="choice_list_a71f3969" spirit:order="86">AXI_Stream</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -56137,7 +56141,7 @@
     <spirit:parameter>
       <spirit:name>pf0_msix_cap_table_bir</spirit:name>
       <spirit:displayName>Pf0 Msix Cap Table Bir</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msix_cap_table_bir" spirit:choiceRef="choice_list_3ca2cbc7" spirit:order="100">BAR_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msix_cap_table_bir" spirit:choiceRef="choice_list_edd2f0e5" spirit:order="100">BAR_1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -56161,7 +56165,7 @@
     <spirit:parameter>
       <spirit:name>pf0_msix_cap_pba_bir</spirit:name>
       <spirit:displayName>Pf0 Msix Cap Pba Bir</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msix_cap_pba_bir" spirit:choiceRef="choice_list_3ca2cbc7" spirit:order="102">BAR_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msix_cap_pba_bir" spirit:choiceRef="choice_list_edd2f0e5" spirit:order="102">BAR_1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -56253,13 +56257,6 @@
     <spirit:parameter>
       <spirit:name>axil_master_64bit_en</spirit:name>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.axil_master_64bit_en" spirit:order="111">false</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.axil_master_64bit_en">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axi_bypass_64bit_en</spirit:name>
@@ -63519,46 +63516,101 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.CLK_DOMAIN" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_BRESP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_BURST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_BURST.VALUE_SRC" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_CACHE" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_LOCK" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_PROT" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_RRESP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.HAS_WSTRB" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.ID_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.MAX_BURST_LENGTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.NUM_READ_THREADS" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.NUM_WRITE_THREADS" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.PROTOCOL" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.READ_WRITE_MODE" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.RUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.WUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_0.TUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_H2C_1.TUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.ARUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.AWUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_BRESP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_PROT" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_RRESP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.HAS_WSTRB" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.MAX_BURST_LENGTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.READ_WRITE_MODE" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_LITE.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PCIE_MGT.BOARD.ASSOCIATED_PARAM" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.AXI_ARESETN.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.SYS_RST_N.BOARD.ASSOCIATED_PARAM" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.SYS_RST_N.POLARITY" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.SYS_RST_N.TYPE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TKEEP" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TLAST" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TREADY" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TDATA_NUM_BYTES" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_0.TUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TLAST" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TREADY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TDATA_NUM_BYTES" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C2H_1.TUSER_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PF0_DEVICE_ID_mqdma" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PF0_SRIOV_VF_DEVICE_ID" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PF2_DEVICE_ID_mqdma" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PF3_DEVICE_ID_mqdma" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.axilite_master_en" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.axilite_master_scale" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.axilite_master_size" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_ltssm_dbg" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_mark_debug" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_pcie_debug_ports" xilinx:valueSource="user"/>
@@ -63570,6 +63622,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pl_link_cap_max_link_speed" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pl_link_cap_max_link_width" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.s_axi_id_width" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.xdma_axi_intf_mm" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.xdma_rnum_chnl" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.xdma_wnum_chnl" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "adc_ctrl,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_adc_ctrl_0_2,adc_ctrl,{}" *)
-(* CORE_GENERATION_INFO = "design_1_adc_ctrl_0_2,adc_ctrl,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=adc_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_W=14}" *)
+(* CORE_GENERATION_INFO = "design_1_adc_ctrl_0_2,adc_ctrl,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=adc_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_W=16,ADC_DATA_W=14,ADC_ID_A=0,ADC_ID_B=1}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_adc_ctrl_0_2 (
@@ -61,9 +61,7 @@ module design_1_adc_ctrl_0_2 (
   adc_clk,
   adc_data_a,
   adc_ofa_a,
-  data_a,
-  data_b,
-  tie_all
+  data
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -80,20 +78,19 @@ input wire reset_n;
 output wire adc_clk;
 input wire [13 : 0] adc_data_a;
 input wire adc_ofa_a;
-output wire [14 : 0] data_a;
-output wire [14 : 0] data_b;
-output wire tie_all;
+output wire [15 : 0] data;
 
   adc_ctrl #(
-    .DATA_W(14)
+    .DATA_W(16),
+    .ADC_DATA_W(14),
+    .ADC_ID_A(0),
+    .ADC_ID_B(1)
   ) inst (
     .clk(clk),
     .reset_n(reset_n),
     .adc_clk(adc_clk),
     .adc_data_a(adc_data_a),
     .adc_ofa_a(adc_ofa_a),
-    .data_a(data_a),
-    .data_b(data_b),
-    .tie_all(tie_all)
+    .data(data)
   );
 endmodule

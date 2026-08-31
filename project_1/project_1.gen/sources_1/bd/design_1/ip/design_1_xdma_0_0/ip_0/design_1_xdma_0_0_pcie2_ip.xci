@@ -22,13 +22,13 @@
         "Bar0_Prefetchable": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Bar0_Scale": [ { "value": "Kilobytes", "value_src": "propagated", "resolve_type": "user", "usage": "all" } ],
         "Bar0_Size": [ { "value": "64", "value_src": "propagated", "resolve_type": "user", "usage": "all" } ],
-        "Bar1_Enabled": [ { "value": "false", "value_src": "propagated", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "Bar1_Type": [ { "value": "N/A", "resolve_type": "user", "usage": "all" } ],
+        "Bar1_Enabled": [ { "value": "true", "value_src": "propagated", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "Bar1_Type": [ { "value": "Memory", "resolve_type": "user", "usage": "all" } ],
         "Bar1_64bit": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Bar1_Prefetchable": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "Bar1_Scale": [ { "value": "Kilobytes", "resolve_type": "user", "usage": "all" } ],
-        "Bar1_Size": [ { "value": "2", "resolve_type": "user", "usage": "all" } ],
-        "Bar2_Enabled": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "Bar1_Scale": [ { "value": "Kilobytes", "value_src": "propagated", "resolve_type": "user", "usage": "all" } ],
+        "Bar1_Size": [ { "value": "64", "value_src": "propagated", "resolve_type": "user", "usage": "all" } ],
+        "Bar2_Enabled": [ { "value": "false", "value_src": "propagated", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Bar2_Type": [ { "value": "N/A", "resolve_type": "user", "usage": "all" } ],
         "Bar2_64bit": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Bar2_Prefetchable": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
@@ -262,7 +262,7 @@
         "pci_exp_int_freq": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "c_pcie_fast_config": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "bar_0": [ { "value": "FFFF0000", "resolve_type": "generated", "usage": "all" } ],
-        "bar_1": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
+        "bar_1": [ { "value": "FFFF0000", "resolve_type": "generated", "usage": "all" } ],
         "bar_2": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
         "bar_3": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
         "bar_4": [ { "value": "00000000", "resolve_type": "generated", "usage": "all" } ],
@@ -969,5 +969,5 @@
       }
     }
   },
-  "checksum": "0939fdc6"
+  "checksum": "7df4e88f"
 }

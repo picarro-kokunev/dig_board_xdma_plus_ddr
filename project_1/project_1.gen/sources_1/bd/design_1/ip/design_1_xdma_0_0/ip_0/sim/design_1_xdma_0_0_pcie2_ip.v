@@ -557,7 +557,7 @@ input wire sys_rst_n;
     .pci_exp_int_freq(2),
     .c_pcie_fast_config(0),
     .bar_0("FFFF0000"),
-    .bar_1("00000000"),
+    .bar_1("FFFF0000"),
     .bar_2("00000000"),
     .bar_3("00000000"),
     .bar_4("00000000"),

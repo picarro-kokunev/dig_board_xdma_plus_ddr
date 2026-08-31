@@ -85,7 +85,7 @@ module design_1_xdma_0_0_pcie2_ip_core_top # (
   parameter         AER_CAP_PERMIT_ROOTERR_UPDATE = "FALSE",
 
   parameter [31:0]  BAR0 = 32'hFFFF0000,
-  parameter [31:0]  BAR1 = 32'h00000000,
+  parameter [31:0]  BAR1 = 32'hFFFF0000,
   parameter [31:0]  BAR2 = 32'h00000000,
   parameter [31:0]  BAR3 = 32'h00000000,
   parameter [31:0]  BAR4 = 32'h00000000,

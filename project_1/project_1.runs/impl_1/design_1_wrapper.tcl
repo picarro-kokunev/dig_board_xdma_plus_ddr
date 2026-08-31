@@ -98,7 +98,8 @@ OPTRACE "impl_1" END { }
 }
 
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config  -id {17-179}  -suppress 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -106,8 +107,12 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
   set_param general.usePosixSpawnForFork 1
+  set_param bd.open.in_stealth_mode 1
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-943695-emerald/incrSyn
   set_param runs.launchOptions { -jobs 10  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tfgg484-2
@@ -125,6 +130,7 @@ OPTRACE "add files" START { }
   add_files -quiet /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
+  read_ip -quiet /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/ip/adc_sample_fifo/adc_sample_fifo_2/adc_sample_fifo.xci
   add_files /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
