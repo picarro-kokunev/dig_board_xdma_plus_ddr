@@ -33,7 +33,7 @@ ADC packet format (adc_c2h_axis_bridge.v)
   Each 16-bit sample word (adc_ctrl.v):
     bit[15]    adc_id  (0 = channel A, 1 = channel B)
     bit[14]    adc_ofa (overflow/underflow flag)
-    bits[13:0] raw ADC code (default: signed 14-bit)
+    bits[13:0] raw ADC code (unsigned 14-bit)
 
 Subcommands
 -----------
@@ -64,6 +64,7 @@ from collections import deque
 import numpy as np
 
 # --- Stream / sample format (must match adc_c2h_axis_bridge.v) ---
+AXIS_BYTES_PER_BEAT = 16  # 128-bit AXI-Stream beat width (XDMA)
 SAMPLE_BYTES = 2
 SAMPLES_PER_BEAT = 8
 PKT_BEATS = 512
@@ -73,7 +74,6 @@ SAMPLES_PER_PACKET = PACKET_BYTES // SAMPLE_BYTES
 CHANNEL_ID_MASK = 0x8000
 OFA_MASK = 0x4000
 SAMPLE_MASK = 0x3FFF
-SAMPLE_BITS = 14
 DEFAULT_ADC_CH_LIST = [0, 1]
 VALID_ADC_CHANNELS = frozenset({0, 1})
 
@@ -123,6 +123,57 @@ def write_exact(fd, data):
         sent += n
 
 
+def align_down(nbytes, align=AXIS_BYTES_PER_BEAT):
+    """Round nbytes down to a multiple of align (required for AXIS DMA)."""
+    return nbytes - (nbytes % align)
+
+
+def loopback_transfer(tx, h2c_path, c2h_path, timeout_s=5.0):
+    """
+    Exercise H2C_0 -> C2H_0 loopback with concurrent read and write.
+
+    Starts C2H read in a background thread, then writes H2C so the FPGA
+    can forward data. Returns (tx, rx).
+    """
+    if len(tx) % AXIS_BYTES_PER_BEAT:
+        raise ValueError(
+            f"H2C payload must be a multiple of {AXIS_BYTES_PER_BEAT} bytes"
+        )
+    nbytes = len(tx)
+    err = []
+    rx_box = []
+
+    def reader():
+        try:
+            c2h_fd = os.open(c2h_path, os.O_RDONLY)
+            try:
+                rx_box.append(read_exact(c2h_fd, nbytes))
+            finally:
+                os.close(c2h_fd)
+        except BaseException as exc:  # noqa: BLE001 — surface to main thread
+            err.append(exc)
+
+    t = threading.Thread(target=reader, name="c2h-reader", daemon=True)
+    t.start()
+    # Give the C2H descriptor a moment to arm before H2C push
+    time.sleep(0.05)
+    try:
+        h2c_fd = os.open(h2c_path, os.O_WRONLY)
+        try:
+            write_exact(h2c_fd, tx)
+        finally:
+            os.close(h2c_fd)
+    except BaseException:
+        t.join(timeout=timeout_s)
+        raise
+    t.join(timeout=timeout_s + 1.0)
+    if err:
+        raise err[0]
+    if not rx_box:
+        raise TimeoutError("C2H reader did not complete")
+    return tx, rx_box[0]
+
+
 class UserBar:
     """Memory-mapped access to /dev/xdmaN_user (XDMA AXI-Lite master window)."""
 
@@ -161,18 +212,12 @@ class UserBar:
         self.write_u32(addr, value)
 
 
-def decode_samples(raw_bytes, signed):
+def decode_samples(raw_bytes):
     """Decode a raw byte buffer of 16-bit words into (channel, ofa, value)."""
     words = np.frombuffer(raw_bytes, dtype="<u2")
     channel = ((words & CHANNEL_ID_MASK) >> 15).astype(np.uint8)
     ofa = ((words & OFA_MASK) >> 14).astype(np.uint8)
-    value = (words & SAMPLE_MASK).astype(np.int32)
-    if signed:
-        sign_bit = 1 << (SAMPLE_BITS - 1)
-        value = np.where(value & sign_bit, value - (1 << SAMPLE_BITS), value)
-        value = value.astype(np.int16)
-    else:
-        value = value.astype(np.uint16)
+    value = (words & SAMPLE_MASK).astype(np.uint16)
     return channel, ofa, value
 
 
@@ -209,10 +254,15 @@ def filter_samples_by_channels(channel, ofa, value, adc_ch_list):
 def cmd_loopback(args):
     h2c_path = args.h2c or default_device(args.xdma_index, 0, "h2c")
     c2h_path = args.c2h or default_device(args.xdma_index, 0, "c2h")
-    size = args.size
+    size = align_down(args.size)
+    if size <= 0:
+        raise ValueError(f"size must be >= {AXIS_BYTES_PER_BEAT}")
+    if size != args.size:
+        print(f"Note: size rounded down to {size} bytes "
+              f"(multiple of {AXIS_BYTES_PER_BEAT})")
 
     print(f"Loopback test: write {size} bytes to {h2c_path}, "
-          f"read {size} bytes back from {c2h_path}")
+          f"read {size} bytes back from {c2h_path} (concurrent threads)")
 
     ok_count = 0
     fail_count = 0
@@ -221,20 +271,18 @@ def cmd_loopback(args):
             struct.pack("<I", i) * (size // 4 + 1), dtype=np.uint8
         )[:size].copy()
         pattern ^= np.arange(size, dtype=np.uint8)
+        tx = pattern.tobytes()
 
-        h2c_fd = os.open(h2c_path, os.O_WRONLY)
         try:
-            write_exact(h2c_fd, pattern.tobytes())
-        finally:
-            os.close(h2c_fd)
+            _, readback = loopback_transfer(
+                tx, h2c_path, c2h_path, timeout_s=args.timeout
+            )
+        except (EOFError, TimeoutError, OSError) as exc:
+            fail_count += 1
+            print(f"  iter {i}: FAIL ({exc})")
+            continue
 
-        c2h_fd = os.open(c2h_path, os.O_RDONLY)
-        try:
-            readback = read_exact(c2h_fd, size)
-        finally:
-            os.close(c2h_fd)
-
-        if readback == pattern.tobytes():
+        if readback == tx:
             ok_count += 1
             print(f"  iter {i}: PASS ({size} bytes match)")
         else:
@@ -269,7 +317,7 @@ def cmd_print(args):
     try:
         while args.num_packets == 0 or packets_read < args.num_packets:
             raw = read_exact(fd, packet_bytes)
-            channel, ofa, value = decode_samples(raw, signed=args.signed)
+            channel, ofa, value = decode_samples(raw)
             channel, ofa, value = filter_samples_by_channels(
                 channel, ofa, value, args.adc_ch_list
             )
@@ -305,11 +353,10 @@ def cmd_print(args):
 class StreamReader(threading.Thread):
     """Background reader for C2H_1 ADC packets."""
 
-    def __init__(self, path, packet_bytes, signed, max_queue=8):
+    def __init__(self, path, packet_bytes, max_queue=8):
         super().__init__(daemon=True)
         self.path = path
         self.packet_bytes = packet_bytes
-        self.signed = signed
         self.queue = deque(maxlen=max_queue)
         self.lock = threading.Lock()
         self.stop_event = threading.Event()
@@ -324,7 +371,7 @@ class StreamReader(threading.Thread):
         try:
             while not self.stop_event.is_set():
                 raw = read_exact(fd, self.packet_bytes)
-                decoded = decode_samples(raw, signed=self.signed)
+                decoded = decode_samples(raw)
                 with self.lock:
                     self.queue.append(decoded)
         except EOFError as e:
@@ -353,7 +400,7 @@ def cmd_plot(args):
     print(f"Plotting ADC samples from {c2h_path} "
           f"(rolling window: {window} samples/channel, channels={ch_names})")
 
-    reader = StreamReader(c2h_path, args.packet_bytes, signed=args.signed)
+    reader = StreamReader(c2h_path, args.packet_bytes)
     reader.start()
     time.sleep(0.2)
     if reader.error is not None:
@@ -369,8 +416,7 @@ def cmd_plot(args):
             [], [], label=f"Channel {channel_name(ch)}", linewidth=0.8, linestyle="dashed"
         )
     ax.set_xlabel("Sample index (rolling window)")
-    ylabel = "ADC code (signed)" if args.signed else "ADC code (unsigned)"
-    ax.set_ylabel(ylabel)
+    ax.set_ylabel("ADC code (unsigned)")
     ax.set_title(f"Live ADC stream: {c2h_path}")
     ax.legend(loc="upper right")
     ax.grid(True, alpha=0.3)
@@ -484,6 +530,10 @@ def build_parser():
         "--iterations", type=int, default=5,
         help="Number of write/read/compare iterations (default: 5)",
     )
+    p_loop.add_argument(
+        "--timeout", type=float, default=5.0,
+        help="I/O timeout in seconds per iteration (default: 5.0)",
+    )
     p_loop.set_defaults(func=cmd_loopback)
 
     p_print = sub.add_parser(
@@ -502,15 +552,6 @@ def build_parser():
     p_print.add_argument(
         "--max-print", type=int, default=64,
         help="Max samples to print per packet, 0 = print all (default: 64)",
-    )
-    p_print.add_argument(
-        "--signed", action="store_true", default=True,
-        help="Interpret the 14-bit ADC code as two's-complement signed "
-             "(default: True)",
-    )
-    p_print.add_argument(
-        "--unsigned", dest="signed", action="store_false",
-        help="Interpret the 14-bit ADC code as unsigned",
     )
     p_print.set_defaults(func=cmd_print)
 
@@ -531,15 +572,6 @@ def build_parser():
     p_plot.add_argument(
         "--refresh-ms", type=int, default=100,
         help="Plot refresh interval in ms (default: 100)",
-    )
-    p_plot.add_argument(
-        "--signed", action="store_true", default=True,
-        help="Interpret the 14-bit ADC code as two's-complement signed "
-             "(default: True)",
-    )
-    p_plot.add_argument(
-        "--unsigned", dest="signed", action="store_false",
-        help="Interpret the 14-bit ADC code as unsigned",
     )
     p_plot.set_defaults(func=cmd_plot)
 
