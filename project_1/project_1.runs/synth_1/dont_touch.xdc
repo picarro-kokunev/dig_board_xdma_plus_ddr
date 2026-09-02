@@ -98,6 +98,27 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_m00e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
+# IP: bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_system_ila_0_0 || ORIG_REF_NAME==design_1_system_ila_0_0} -quiet] -quiet
+
+# Block Designs: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/bd_f60c.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f60c || ORIG_REF_NAME==bd_f60c} -quiet] -quiet
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f60c_ila_lib_0 || ORIG_REF_NAME==bd_f60c_ila_lib_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_system_ila_1_0/design_1_system_ila_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_system_ila_1_0 || ORIG_REF_NAME==design_1_system_ila_1_0} -quiet] -quiet
+
+# Block Designs: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/bd_365d.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_365d || ORIG_REF_NAME==bd_365d} -quiet] -quiet
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_0/bd_365d_ila_lib_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_365d_ila_lib_0 || ORIG_REF_NAME==bd_365d_ila_lib_0} -quiet] -quiet
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_1/bd_365d_g_inst_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_365d_g_inst_0 || ORIG_REF_NAME==bd_365d_g_inst_0} -quiet] -quiet
+
 # XDC: ip/adc_sample_fifo/adc_sample_fifo_2/adc_sample_fifo.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==adc_sample_fifo || ORIG_REF_NAME==adc_sample_fifo} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -180,5 +201,29 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_smc_0 || ORIG_REF_NAME==design_1_axi_smc_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f60c_ila_lib_0 || ORIG_REF_NAME==bd_f60c_ila_lib_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f60c_ila_lib_0 || ORIG_REF_NAME==bd_f60c_ila_lib_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/bd_f60c_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_365d_ila_lib_0 || ORIG_REF_NAME==bd_365d_ila_lib_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_365d_ila_lib_0 || ORIG_REF_NAME==bd_365d_ila_lib_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_0/bd_365d_ila_lib_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/bd_365d_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/design_1_system_ila_1_0_ooc.xdc
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc

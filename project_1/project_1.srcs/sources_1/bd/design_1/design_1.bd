@@ -24,7 +24,9 @@
         "ilvector_logic_0": ""
       },
       "axi_gpio_0": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "system_ila_0": "",
+      "system_ila_1": ""
     },
     "interface_ports": {
       "pcie_clk": {
@@ -858,6 +860,52 @@
             }
           }
         }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "ip_revision": "22",
+        "xci_name": "design_1_system_ila_0_0",
+        "xci_path": "ip/design_1_system_ila_0_0/design_1_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          }
+        }
+      },
+      "system_ila_1": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "ip_revision": "22",
+        "xci_name": "design_1_system_ila_1_0",
+        "xci_path": "ip/design_1_system_ila_1_0/design_1_system_ila_1_0.xci",
+        "inst_hier_path": "system_ila_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_SLOT_0_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "interface_ports": {
+          "SLOT_0_AXIS": {
+            "mode": "Monitor",
+            "monitor_type": "SlaveType",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -876,7 +924,8 @@
       "adc_c2h_bridge_0_m_axis": {
         "interface_ports": [
           "adc_c2h_bridge_0/m_axis",
-          "xdma_0/S_AXIS_C2H_1"
+          "xdma_0/S_AXIS_C2H_1",
+          "system_ila_1/SLOT_0_AXIS"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -908,13 +957,15 @@
       "adc_clk_0": {
         "ports": [
           "adc_ctrl_0/adc_clk",
-          "adc_clk_0"
+          "adc_clk_0",
+          "system_ila_0/clk"
         ]
       },
       "adc_ctrl_0_data": {
         "ports": [
           "adc_ctrl_0/data",
-          "adc_c2h_bridge_0/sample_data"
+          "adc_c2h_bridge_0/sample_data",
+          "system_ila_0/probe0"
         ]
       },
       "adc_data_a_0": {
@@ -960,7 +1011,8 @@
           "xdma_0/axi_aresetn",
           "axi_gpio_0/s_axi_aresetn",
           "axi_smc/aresetn",
-          "adc_c2h_bridge_0/m_axis_aresetn"
+          "adc_c2h_bridge_0/m_axis_aresetn",
+          "system_ila_1/resetn"
         ]
       },
       "ilvector_logic_0_Res1": {
@@ -994,7 +1046,8 @@
           "xdma_0/axi_aclk",
           "axi_smc/aclk",
           "axi_gpio_0/s_axi_aclk",
-          "adc_c2h_bridge_0/m_axis_aclk"
+          "adc_c2h_bridge_0/m_axis_aclk",
+          "system_ila_1/clk"
         ]
       },
       "xdma_0_user_lnk_up": {

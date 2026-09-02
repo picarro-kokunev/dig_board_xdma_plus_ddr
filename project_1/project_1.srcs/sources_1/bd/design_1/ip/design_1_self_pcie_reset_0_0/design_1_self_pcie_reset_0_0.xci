@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_self_pcie_reset_0_0",
-    "cell_name": "hier_0/self_pcie_reset_0",
+    "cell_name": "pcie_reset_block_0/self_pcie_reset_0",
     "component_reference": "xilinx.com:module_ref:self_pcie_reset:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_self_pcie_reset_0_0",
@@ -65,5 +65,5 @@
       }
     }
   },
-  "checksum": "a8925630"
+  "checksum": "c4ed121a"
 }

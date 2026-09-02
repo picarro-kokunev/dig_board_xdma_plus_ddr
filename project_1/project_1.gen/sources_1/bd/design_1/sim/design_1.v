@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Mon Aug 31 11:51:01 2026
+//Date        : Tue Sep  1 14:06:45 2026
 //Host        : emerald running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc_clk_0,
     adc_data_a_0,
@@ -41,11 +41,11 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_N" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk, CAN_DEBUG false, FREQ_HZ 200000000" *) input sys_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk CLK_P" *) input sys_clk_clk_p;
 
-  wire [127:0]adc_c2h_bridge_0_m_axis_TDATA;
-  wire [15:0]adc_c2h_bridge_0_m_axis_TKEEP;
-  wire adc_c2h_bridge_0_m_axis_TLAST;
-  wire adc_c2h_bridge_0_m_axis_TREADY;
-  wire adc_c2h_bridge_0_m_axis_TVALID;
+  (* CONN_BUS_INFO = "adc_c2h_bridge_0_m_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [127:0]adc_c2h_bridge_0_m_axis_TDATA;
+  (* CONN_BUS_INFO = "adc_c2h_bridge_0_m_axis xilinx.com:interface:axis:1.0 None TKEEP" *) (* DONT_TOUCH *) wire [15:0]adc_c2h_bridge_0_m_axis_TKEEP;
+  (* CONN_BUS_INFO = "adc_c2h_bridge_0_m_axis xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire adc_c2h_bridge_0_m_axis_TLAST;
+  (* CONN_BUS_INFO = "adc_c2h_bridge_0_m_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire adc_c2h_bridge_0_m_axis_TREADY;
+  (* CONN_BUS_INFO = "adc_c2h_bridge_0_m_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire adc_c2h_bridge_0_m_axis_TVALID;
   wire adc_clk_0;
   wire [15:0]adc_ctrl_0_data;
   wire [13:0]adc_data_a_0;
@@ -203,6 +203,17 @@ module design_1
        (.BUFG_I(util_ds_buf_0_IBUF_OUT),
         .Res(ilvector_logic_0_Res1),
         .pcie_reset_n(pcie_reset_n));
+  design_1_system_ila_0_0 system_ila_0
+       (.clk(adc_clk_0),
+        .probe0(adc_ctrl_0_data));
+  design_1_system_ila_1_0 system_ila_1
+       (.SLOT_0_AXIS_tdata(adc_c2h_bridge_0_m_axis_TDATA),
+        .SLOT_0_AXIS_tkeep(adc_c2h_bridge_0_m_axis_TKEEP),
+        .SLOT_0_AXIS_tlast(adc_c2h_bridge_0_m_axis_TLAST),
+        .SLOT_0_AXIS_tready(adc_c2h_bridge_0_m_axis_TREADY),
+        .SLOT_0_AXIS_tvalid(adc_c2h_bridge_0_m_axis_TVALID),
+        .clk(xdma_0_axi_aclk),
+        .resetn(ilvector_logic_0_Res));
   design_1_util_ds_buf_0_0 util_ds_buf_0
        (.IBUF_DS_N(pcie_clk_clk_n),
         .IBUF_DS_P(pcie_clk_clk_p),

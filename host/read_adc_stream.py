@@ -46,7 +46,8 @@ Examples
 --------
   python3 read_adc_stream.py loopback
   python3 read_adc_stream.py print --num-packets 4
-  python3 read_adc_stream.py plot --window-samples 4096
+  python3 read_adc_stream.py print --adc-ch-list 0
+  python3 read_adc_stream.py plot --window-samples 4096 --adc-ch-list 0,1
   python3 read_adc_stream.py led on
   python3 read_adc_stream.py led read
 """
@@ -73,6 +74,8 @@ CHANNEL_ID_MASK = 0x8000
 OFA_MASK = 0x4000
 SAMPLE_MASK = 0x3FFF
 SAMPLE_BITS = 14
+DEFAULT_ADC_CH_LIST = [0, 1]
+VALID_ADC_CHANNELS = frozenset({0, 1})
 
 # --- PL register map (must match design_1 Address Editor / axi_gpio_0) ---
 USER_BAR_BYTES = 64 * 1024
@@ -173,6 +176,32 @@ def decode_samples(raw_bytes, signed):
     return channel, ofa, value
 
 
+def parse_adc_ch_list(value):
+    """Parse comma-separated ADC channel ids for argparse (0=A, 1=B)."""
+    if isinstance(value, list):
+        ch_list = [int(ch) for ch in value]
+    else:
+        ch_list = [int(part.strip()) for part in str(value).split(",") if part.strip()]
+    if not ch_list:
+        raise argparse.ArgumentTypeError("adc_ch_list must list at least one channel")
+    invalid = [ch for ch in ch_list if ch not in VALID_ADC_CHANNELS]
+    if invalid:
+        raise argparse.ArgumentTypeError(
+            f"invalid adc channel id(s) {invalid}; valid values are 0 (A) and 1 (B)"
+        )
+    return ch_list
+
+
+def channel_name(ch_id):
+    return "A" if ch_id == 0 else "B"
+
+
+def filter_samples_by_channels(channel, ofa, value, adc_ch_list):
+    """Keep only samples whose adc_id is listed in adc_ch_list."""
+    mask = np.isin(channel, np.asarray(adc_ch_list, dtype=channel.dtype))
+    return channel[mask], ofa[mask], value[mask]
+
+
 # ---------------------------------------------------------------------------
 # Subcommand: loopback
 # ---------------------------------------------------------------------------
@@ -227,10 +256,12 @@ def cmd_loopback(args):
 def cmd_print(args):
     c2h_path = args.c2h or default_device(args.xdma_index, 1, "c2h")
     packet_bytes = args.packet_bytes
+    ch_names = ",".join(channel_name(ch) for ch in args.adc_ch_list)
 
     print(f"Reading ADC samples from {c2h_path} "
           f"({packet_bytes} bytes/packet = "
-          f"{packet_bytes // SAMPLE_BYTES} samples/packet)")
+          f"{packet_bytes // SAMPLE_BYTES} samples/packet, "
+          f"channels={ch_names})")
 
     fd = os.open(c2h_path, os.O_RDONLY)
     total_samples = 0
@@ -239,14 +270,18 @@ def cmd_print(args):
         while args.num_packets == 0 or packets_read < args.num_packets:
             raw = read_exact(fd, packet_bytes)
             channel, ofa, value = decode_samples(raw, signed=args.signed)
+            channel, ofa, value = filter_samples_by_channels(
+                channel, ofa, value, args.adc_ch_list
+            )
             packets_read += 1
 
             n = len(value) if args.max_print == 0 else min(len(value), args.max_print)
             for k in range(n):
-                ch = "B" if channel[k] else "A"
+                ch = channel_name(channel[k])
                 flag = " OFA" if ofa[k] else ""
                 print(f"pkt={packets_read:6d} idx={k:5d} ch={ch} "
-                      f"value={value[k]:6d}{flag}")
+                    # print in hex to match the FPGA output
+                      f"value=0x{value[k]:04x}{flag}")
 
             total_samples += len(value)
             if args.max_print == 0:
@@ -313,9 +348,10 @@ def cmd_plot(args):
 
     c2h_path = args.c2h or default_device(args.xdma_index, 1, "c2h")
     window = args.window_samples
+    ch_names = ",".join(channel_name(ch) for ch in args.adc_ch_list)
 
     print(f"Plotting ADC samples from {c2h_path} "
-          f"(rolling window: {window} samples/channel)")
+          f"(rolling window: {window} samples/channel, channels={ch_names})")
 
     reader = StreamReader(c2h_path, args.packet_bytes, signed=args.signed)
     reader.start()
@@ -324,12 +360,14 @@ def cmd_plot(args):
         print(f"Failed to open/read {c2h_path}: {reader.error}", file=sys.stderr)
         return 1
 
-    buf_a = deque(maxlen=window)
-    buf_b = deque(maxlen=window)
+    bufs = {ch: deque(maxlen=window) for ch in args.adc_ch_list}
 
     fig, ax = plt.subplots()
-    (line_a,) = ax.plot([], [], label="Channel A", linewidth=0.8)
-    (line_b,) = ax.plot([], [], label="Channel B", linewidth=0.8)
+    lines = {}
+    for ch in args.adc_ch_list:
+        (lines[ch],) = ax.plot(
+            [], [], label=f"Channel {channel_name(ch)}", linewidth=0.8, linestyle="dashed"
+        )
     ax.set_xlabel("Sample index (rolling window)")
     ylabel = "ADC code (signed)" if args.signed else "ADC code (unsigned)"
     ax.set_ylabel(ylabel)
@@ -339,19 +377,25 @@ def cmd_plot(args):
 
     def update(_frame):
         for channel, _ofa, value in reader.pop_all():
-            is_a = channel == 0
-            is_b = ~is_a
-            buf_a.extend(value[is_a].tolist())
-            buf_b.extend(value[is_b].tolist())
+            channel, _ofa, value = filter_samples_by_channels(
+                channel, _ofa, value, args.adc_ch_list
+            )
+            for ch in args.adc_ch_list:
+                mask = channel == ch
+                bufs[ch].extend(value[mask].tolist())
 
-        if buf_a:
-            line_a.set_data(range(len(buf_a)), list(buf_a))
-        if buf_b:
-            line_b.set_data(range(len(buf_b)), list(buf_b))
+        plotted = []
+        all_vals = []
+        max_len = 1
+        for ch in args.adc_ch_list:
+            if bufs[ch]:
+                lines[ch].set_data(range(len(bufs[ch])), list(bufs[ch]))
+                plotted.append(lines[ch])
+                all_vals.extend(bufs[ch])
+                max_len = max(max_len, len(bufs[ch]))
 
-        all_vals = list(buf_a) + list(buf_b)
         if all_vals:
-            ax.set_xlim(0, max(len(buf_a), len(buf_b), 1))
+            ax.set_xlim(0, max_len)
             lo, hi = min(all_vals), max(all_vals)
             pad = max(1, int(0.05 * (hi - lo + 1)))
             ax.set_ylim(lo - pad, hi + pad)
@@ -360,7 +404,7 @@ def cmd_plot(args):
             print(f"\nStream ended: {reader.error}", file=sys.stderr)
             plt.close(fig)
 
-        return line_a, line_b
+        return plotted
 
     anim = FuncAnimation(fig, update, interval=args.refresh_ms, blit=False)
     try:
@@ -417,6 +461,14 @@ def build_parser():
         "--xdma-index", type=int, default=0,
         help="XDMA device index N in /dev/xdmaN_* (default: 0)",
     )
+    adc_parent = argparse.ArgumentParser(add_help=False)
+    adc_parent.add_argument(
+        "--adc-ch-list", dest="adc_ch_list", type=parse_adc_ch_list,
+        default=DEFAULT_ADC_CH_LIST,
+        metavar="IDS",
+        help="Comma-separated ADC channel ids to display: 0=A, 1=B "
+             f"(default: {','.join(str(ch) for ch in DEFAULT_ADC_CH_LIST)})",
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_loop = sub.add_parser(
@@ -435,7 +487,8 @@ def build_parser():
     p_loop.set_defaults(func=cmd_loopback)
 
     p_print = sub.add_parser(
-        "print", help="Print decoded ADC samples from C2H channel 1 to stdout."
+        "print", help="Print decoded ADC samples from C2H channel 1 to stdout.",
+        parents=[adc_parent],
     )
     p_print.add_argument("--c2h", help="Override C2H channel-1 device path")
     p_print.add_argument(
@@ -462,7 +515,8 @@ def build_parser():
     p_print.set_defaults(func=cmd_print)
 
     p_plot = sub.add_parser(
-        "plot", help="Live-plot decoded ADC samples from C2H channel 1."
+        "plot", help="Live-plot decoded ADC samples from C2H channel 1.",
+        parents=[adc_parent],
     )
     p_plot.add_argument("--c2h", help="Override C2H channel-1 device path")
     p_plot.add_argument(

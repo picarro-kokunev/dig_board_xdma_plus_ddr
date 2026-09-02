@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="291"></ZoomStartTime>
+      <ZoomEndTime time="686"></ZoomEndTime>
+      <Cursor1Time time="531"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="523"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="1" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="group" fp_name="group30">
+      <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i2:s0)_(adc_c2h_bridge_0_m_axis)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i2:s0)_(adc_c2h_bridge_0_m_axis)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group31">
+         <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i2:s0)_(adc_c2h_bridge_0_m_axis)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i2:s0)_(adc_c2h_bridge_0_m_axis)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tvalid">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tready">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
+            <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tlast">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
+            <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[127:0]</obj_property>
+            <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus272">
+            <obj_property name="label">raw_a_3</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[125]">
+               <obj_property name="ElementShortName">[125]</obj_property>
+               <obj_property name="ObjectShortName">[125]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[124]">
+               <obj_property name="ElementShortName">[124]</obj_property>
+               <obj_property name="ObjectShortName">[124]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[123]">
+               <obj_property name="ElementShortName">[123]</obj_property>
+               <obj_property name="ObjectShortName">[123]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[122]">
+               <obj_property name="ElementShortName">[122]</obj_property>
+               <obj_property name="ObjectShortName">[122]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[121]">
+               <obj_property name="ElementShortName">[121]</obj_property>
+               <obj_property name="ObjectShortName">[121]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[120]">
+               <obj_property name="ElementShortName">[120]</obj_property>
+               <obj_property name="ObjectShortName">[120]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[119]">
+               <obj_property name="ElementShortName">[119]</obj_property>
+               <obj_property name="ObjectShortName">[119]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[118]">
+               <obj_property name="ElementShortName">[118]</obj_property>
+               <obj_property name="ObjectShortName">[118]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[117]">
+               <obj_property name="ElementShortName">[117]</obj_property>
+               <obj_property name="ObjectShortName">[117]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[116]">
+               <obj_property name="ElementShortName">[116]</obj_property>
+               <obj_property name="ObjectShortName">[116]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[115]">
+               <obj_property name="ElementShortName">[115]</obj_property>
+               <obj_property name="ObjectShortName">[115]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[114]">
+               <obj_property name="ElementShortName">[114]</obj_property>
+               <obj_property name="ObjectShortName">[114]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[113]">
+               <obj_property name="ElementShortName">[113]</obj_property>
+               <obj_property name="ObjectShortName">[113]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[112]">
+               <obj_property name="ElementShortName">[112]</obj_property>
+               <obj_property name="ObjectShortName">[112]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus257">
+            <obj_property name="label">raw_b_3</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[109]">
+               <obj_property name="ElementShortName">[109]</obj_property>
+               <obj_property name="ObjectShortName">[109]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[108]">
+               <obj_property name="ElementShortName">[108]</obj_property>
+               <obj_property name="ObjectShortName">[108]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[107]">
+               <obj_property name="ElementShortName">[107]</obj_property>
+               <obj_property name="ObjectShortName">[107]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[106]">
+               <obj_property name="ElementShortName">[106]</obj_property>
+               <obj_property name="ObjectShortName">[106]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[105]">
+               <obj_property name="ElementShortName">[105]</obj_property>
+               <obj_property name="ObjectShortName">[105]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[104]">
+               <obj_property name="ElementShortName">[104]</obj_property>
+               <obj_property name="ObjectShortName">[104]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[103]">
+               <obj_property name="ElementShortName">[103]</obj_property>
+               <obj_property name="ObjectShortName">[103]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[102]">
+               <obj_property name="ElementShortName">[102]</obj_property>
+               <obj_property name="ObjectShortName">[102]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[101]">
+               <obj_property name="ElementShortName">[101]</obj_property>
+               <obj_property name="ObjectShortName">[101]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[100]">
+               <obj_property name="ElementShortName">[100]</obj_property>
+               <obj_property name="ObjectShortName">[100]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[99]">
+               <obj_property name="ElementShortName">[99]</obj_property>
+               <obj_property name="ObjectShortName">[99]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[98]">
+               <obj_property name="ElementShortName">[98]</obj_property>
+               <obj_property name="ObjectShortName">[98]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[97]">
+               <obj_property name="ElementShortName">[97]</obj_property>
+               <obj_property name="ObjectShortName">[97]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[96]">
+               <obj_property name="ElementShortName">[96]</obj_property>
+               <obj_property name="ObjectShortName">[96]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus242">
+            <obj_property name="label">raw_a_1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[61]">
+               <obj_property name="ElementShortName">[61]</obj_property>
+               <obj_property name="ObjectShortName">[61]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[60]">
+               <obj_property name="ElementShortName">[60]</obj_property>
+               <obj_property name="ObjectShortName">[60]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[59]">
+               <obj_property name="ElementShortName">[59]</obj_property>
+               <obj_property name="ObjectShortName">[59]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[58]">
+               <obj_property name="ElementShortName">[58]</obj_property>
+               <obj_property name="ObjectShortName">[58]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[57]">
+               <obj_property name="ElementShortName">[57]</obj_property>
+               <obj_property name="ObjectShortName">[57]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[56]">
+               <obj_property name="ElementShortName">[56]</obj_property>
+               <obj_property name="ObjectShortName">[56]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[55]">
+               <obj_property name="ElementShortName">[55]</obj_property>
+               <obj_property name="ObjectShortName">[55]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[54]">
+               <obj_property name="ElementShortName">[54]</obj_property>
+               <obj_property name="ObjectShortName">[54]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[53]">
+               <obj_property name="ElementShortName">[53]</obj_property>
+               <obj_property name="ObjectShortName">[53]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[52]">
+               <obj_property name="ElementShortName">[52]</obj_property>
+               <obj_property name="ObjectShortName">[52]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[51]">
+               <obj_property name="ElementShortName">[51]</obj_property>
+               <obj_property name="ObjectShortName">[51]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[50]">
+               <obj_property name="ElementShortName">[50]</obj_property>
+               <obj_property name="ObjectShortName">[50]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[49]">
+               <obj_property name="ElementShortName">[49]</obj_property>
+               <obj_property name="ObjectShortName">[49]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[48]">
+               <obj_property name="ElementShortName">[48]</obj_property>
+               <obj_property name="ObjectShortName">[48]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus227">
+            <obj_property name="label">raw_b_1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[45]">
+               <obj_property name="ElementShortName">[45]</obj_property>
+               <obj_property name="ObjectShortName">[45]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[44]">
+               <obj_property name="ElementShortName">[44]</obj_property>
+               <obj_property name="ObjectShortName">[44]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[43]">
+               <obj_property name="ElementShortName">[43]</obj_property>
+               <obj_property name="ObjectShortName">[43]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[42]">
+               <obj_property name="ElementShortName">[42]</obj_property>
+               <obj_property name="ObjectShortName">[42]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[41]">
+               <obj_property name="ElementShortName">[41]</obj_property>
+               <obj_property name="ObjectShortName">[41]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[40]">
+               <obj_property name="ElementShortName">[40]</obj_property>
+               <obj_property name="ObjectShortName">[40]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[39]">
+               <obj_property name="ElementShortName">[39]</obj_property>
+               <obj_property name="ObjectShortName">[39]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[38]">
+               <obj_property name="ElementShortName">[38]</obj_property>
+               <obj_property name="ObjectShortName">[38]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[37]">
+               <obj_property name="ElementShortName">[37]</obj_property>
+               <obj_property name="ObjectShortName">[37]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[36]">
+               <obj_property name="ElementShortName">[36]</obj_property>
+               <obj_property name="ObjectShortName">[36]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[35]">
+               <obj_property name="ElementShortName">[35]</obj_property>
+               <obj_property name="ObjectShortName">[35]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[34]">
+               <obj_property name="ElementShortName">[34]</obj_property>
+               <obj_property name="ObjectShortName">[34]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[33]">
+               <obj_property name="ElementShortName">[33]</obj_property>
+               <obj_property name="ObjectShortName">[33]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[32]">
+               <obj_property name="ElementShortName">[32]</obj_property>
+               <obj_property name="ObjectShortName">[32]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus212">
+            <obj_property name="label">raw_a_0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[29]">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[28]">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[27]">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[26]">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[25]">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[24]">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[23]">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[22]">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[21]">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[20]">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[19]">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[18]">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[17]">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[16]">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus196">
+            <obj_property name="label">raw_b_0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[13]">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[12]">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[11]">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[10]">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[9]">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[8]">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[7]">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[6]">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[5]">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[4]">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[3]">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[2]">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[1]">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[0]">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tkeep">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tkeep[15:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tkeep[15:0]</obj_property>
+            <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>
