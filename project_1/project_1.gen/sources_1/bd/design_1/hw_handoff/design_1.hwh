@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep  1 14:06:47 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep  3 12:24:38 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -232,8 +232,8 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="adc_ctrl_0_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="sample_data"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="probe0"/>
+            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="sample_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_wiz_0_locked">
@@ -11000,16 +11000,16 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="system_ila_1" PORT="clk"/>
+            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="m_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xdma_0_axi_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
-            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="m_axis_aresetn"/>
             <CONNECTION INSTANCE="system_ila_1" PORT="resetn"/>
+            <CONNECTION INSTANCE="adc_c2h_bridge_0" PORT="m_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="cfg_current_speed_o" RIGHT="0" SIGIS="undef"/>

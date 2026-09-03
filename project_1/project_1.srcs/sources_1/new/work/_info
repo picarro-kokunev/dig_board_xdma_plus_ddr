@@ -108,108 +108,226 @@ Z3 d/home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.
 T_opt
 !i145 1
 !i144 0
-Z4 !s110 1784683554
+!s110 1784683554
 VLLA[LCa8bSNmzoe2EWn`W1
 04 14 4 work adc_ad_ltc22xx fast 0
 04 8 4 work adc_ctrl fast 0
-Z5 04 11 4 work adc_ctrl_tb fast 0
+Z4 04 11 4 work adc_ctrl_tb fast 0
 =17-7cc255eca0fa-6a601c22-1d2d8-3ec5b1
 R1
-Z6 !s12f OEM100
-Z7 !s12b OEM100
+Z5 !s12f OEM100
+Z6 !s12b OEM100
 !s124 OEM10U5 
-Z8 !s135 nogc
+Z7 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
-Z9 tCvgOpt 0
+Z8 tCvgOpt 0
 n@_opt
-Z10 OL;O;2025.2;82
+Z9 OL;O;2025.2;82
+R3
 T_opt1
 !i145 1
 !i144 0
 !s110 1784676800
 VCoEZ[Ka4d;3J1JPVnfd`H3
-R5
+R4
 =1-7cc255eca0fa-6a6001c0-4facd-3fc6cb
 R1
+R5
 R6
-R7
 !s124 OEM10U3 
-R8
+R7
 o-quiet -auto_acc_if_foreign -work work
-R9
+R8
 n@_opt1
-R10
+R9
 R3
 vadc_ad_ltc22xx
-Z11 2adc_ctrl.v|adc_ad_ltc22xx.sv|adc_ctrl_tb.sv
-Z12 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-R4
+Z10 2adc_ad_ltc22xx.sv|adc_c2h_bridge_tb.sv|adc_ctrl_tb.sv|adc_c2h_axis_bridge.v|adc_ctrl.v|adc_sample_fifo_sim.v|async_fifo.v|self_pcie_reset.v
+Z11 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z12 !s110 1788460065
 !i10b 1
 !s100 6I_[ZQ3Y_=Yjn8l=OGT7[2
 IX80ead:GllJl6B@6_m<KZ3
 S1
 R3
-w1784671068
+w1787960366
 8adc_ad_ltc22xx.sv
 Fadc_ad_ltc22xx.sv
-!i122 262
+!i122 263
 L0 5 62
 Z13 VDg1SIo80bB@j0V0VzS_@n1
 Z14 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z15 !s108 1784683554.000000
-Z16 !s107 adc_ctrl_tb.sv|adc_ad_ltc22xx.sv|adc_ctrl.v|
-Z17 !s90 -reportprogress|300|adc_ctrl.v|adc_ad_ltc22xx.sv|adc_ctrl_tb.sv|
+Z15 !s108 1788460065.000000
+!s107 self_pcie_reset.v|async_fifo.v|adc_sample_fifo_sim.v|adc_ctrl.v|adc_c2h_axis_bridge.v|adc_ctrl_tb.sv|adc_c2h_bridge_tb.sv|adc_ad_ltc22xx.sv|
+Z16 !s90 -reportprogress|300|adc_ad_ltc22xx.sv|adc_c2h_bridge_tb.sv|adc_ctrl_tb.sv|adc_c2h_axis_bridge.v|adc_ctrl.v|adc_sample_fifo_sim.v|async_fifo.v|self_pcie_reset.v|
 !i113 0
-Z18 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R9
-vadc_ctrl
-R11
-R4
+Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+vadc_c2h_axis_bridge
+R10
+R12
 !i10b 1
-!s100 ?TfX12l6J>CBdYINi<QMg1
-I_P^nVHO6A3UbY_]<JT8dN3
+!s100 ^6zhWc^nX3O:mkaOUU1U31
+IZImR`<oLGN>Ck@:VmzPYU0
 R3
-w1784682922
-8adc_ctrl.v
-Fadc_ctrl.v
-!i122 262
-L0 11 68
+w1788202043
+8adc_c2h_axis_bridge.v
+Fadc_c2h_axis_bridge.v
+!i122 263
+L0 15 133
 R13
 R14
 r1
 !s85 0
 31
 R15
+Z18 !s107 self_pcie_reset.v|async_fifo.v|adc_sample_fifo_sim.v|adc_ctrl.v|adc_c2h_axis_bridge.v|adc_ctrl_tb.sv|adc_c2h_bridge_tb.sv|adc_ad_ltc22xx.sv|
 R16
-R17
 !i113 0
-R18
-R9
-vadc_ctrl_tb
+R17
+R8
+vadc_c2h_bridge_tb
+R10
 R11
 R12
-R4
 !i10b 1
-!s100 Ql1U6iIUmJY7694W=Ce4E3
-IT1I1;;^<kM[Y0bk6FYYff0
+!s100 c9LP6Fce2^;>=ZXDkHgN00
+I<PF`m6?SM_BUWV9c[TG1A1
 S1
 R3
-w1784676765
-8adc_ctrl_tb.sv
-Fadc_ctrl_tb.sv
-!i122 262
-L0 10 151
+w1788202047
+8adc_c2h_bridge_tb.sv
+Fadc_c2h_bridge_tb.sv
+!i122 263
+L0 15 201
 R13
 R14
 r1
 !s85 0
 31
 R15
-R16
-R17
-!i113 0
 R18
-R9
+R16
+!i113 0
+R17
+R8
+vadc_ctrl
+R10
+R12
+!i10b 1
+!s100 e]:MR]?3IS7;RRXeS5Z2e0
+IX[b`_6KK;@mjRF`SIm;A:3
+R3
+w1787956844
+8adc_ctrl.v
+Fadc_ctrl.v
+!i122 263
+L0 11 57
+R13
+R14
+r1
+!s85 0
+31
+R15
+R18
+R16
+!i113 0
+R17
+R8
+vadc_ctrl_tb
+R10
+R11
+R12
+!i10b 1
+!s100 jmMA?j7Yb1C>E@U=On4zL1
+IJ9?:1_ejUMG6;GQdMUgl61
+S1
+R3
+w1787962031
+8adc_ctrl_tb.sv
+Fadc_ctrl_tb.sv
+!i122 263
+L0 10 140
+R13
+R14
+r1
+!s85 0
+31
+R15
+R18
+R16
+!i113 0
+R17
+R8
+vadc_sample_fifo
+R10
+R12
+!i10b 1
+!s100 kKZ]N?@ZQ`bK6TRP3WX702
+IhRDaGR;BDbm:52Gj:3^kA1
+R3
+w1788202164
+8adc_sample_fifo_sim.v
+Fadc_sample_fifo_sim.v
+!i122 263
+L0 59 477
+R13
+R14
+r1
+!s85 0
+31
+R15
+R18
+R16
+!i113 0
+R17
+R8
+vasync_fifo
+R10
+R12
+!i10b 1
+!s100 j=<O^jUX9ofKc[<=KadfN1
+IeDTTKj@IebVmO70I=mjGM3
+R3
+w1788029114
+8async_fifo.v
+Fasync_fifo.v
+!i122 263
+L0 4 99
+R13
+R14
+r1
+!s85 0
+31
+R15
+R18
+R16
+!i113 0
+R17
+R8
+vself_pcie_reset
+R10
+R12
+!i10b 1
+!s100 zfgDRb`1CYfV17:<l3Jii2
+I2CS^kRaDK=H?X87zcj2@73
+R3
+w1787867961
+8self_pcie_reset.v
+Fself_pcie_reset.v
+!i122 263
+L0 23 64
+R13
+R14
+r1
+!s85 0
+31
+R15
+R18
+R16
+!i113 0
+R17
+R8

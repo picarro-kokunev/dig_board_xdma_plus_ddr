@@ -1,0 +1,7 @@
+Running: xsim.dir/adc_c2h_bridge_tb_behav/xsimk -simmode gui -wdb adc_c2h_bridge_tb_behav.wdb -simrunnum 0 -socket 54455
+Design successfully loaded
+Design Loading Memory Usage: 199948 KB (Peak: 199956 KB)
+Design Loading CPU Usage: 900 ms
+Simulation completed
+Simulation Memory Usage: 294756 KB (Peak: 339216 KB)
+Simulation CPU Usage: 900 ms

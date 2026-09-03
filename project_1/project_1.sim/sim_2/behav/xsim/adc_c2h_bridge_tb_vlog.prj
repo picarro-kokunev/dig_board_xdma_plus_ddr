@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../opt/Xilinx_2/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/00fe/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "/opt/Xilinx_2/2025.2/data/xilinx_vip/include" \
+"../../../../project_1.srcs/sources_1/ip/adc_sample_fifo/adc_sample_fifo_2/sim/adc_sample_fifo.v" \
+"../../../../project_1.srcs/sources_1/new/adc_c2h_axis_bridge.v" \
+"../../../../project_1.srcs/sources_1/new/adc_ctrl.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../../../../opt/Xilinx_2/2025.2/data/rsb/busdef" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/d6c9/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/a415" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/00fe/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "/opt/Xilinx_2/2025.2/data/xilinx_vip/include" \
+"../../../../project_1.srcs/sources_1/new/adc_ad_ltc22xx.sv" \
+"../../../../project_1.srcs/sources_1/new/adc_c2h_bridge_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

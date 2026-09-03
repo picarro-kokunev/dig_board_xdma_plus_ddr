@@ -964,8 +964,8 @@
       "adc_ctrl_0_data": {
         "ports": [
           "adc_ctrl_0/data",
-          "adc_c2h_bridge_0/sample_data",
-          "system_ila_0/probe0"
+          "system_ila_0/probe0",
+          "adc_c2h_bridge_0/sample_data"
         ]
       },
       "adc_data_a_0": {
@@ -1011,8 +1011,8 @@
           "xdma_0/axi_aresetn",
           "axi_gpio_0/s_axi_aresetn",
           "axi_smc/aresetn",
-          "adc_c2h_bridge_0/m_axis_aresetn",
-          "system_ila_1/resetn"
+          "system_ila_1/resetn",
+          "adc_c2h_bridge_0/m_axis_aresetn"
         ]
       },
       "ilvector_logic_0_Res1": {
@@ -1046,8 +1046,8 @@
           "xdma_0/axi_aclk",
           "axi_smc/aclk",
           "axi_gpio_0/s_axi_aclk",
-          "adc_c2h_bridge_0/m_axis_aclk",
-          "system_ila_1/clk"
+          "system_ila_1/clk",
+          "adc_c2h_bridge_0/m_axis_aclk"
         ]
       },
       "xdma_0_user_lnk_up": {
