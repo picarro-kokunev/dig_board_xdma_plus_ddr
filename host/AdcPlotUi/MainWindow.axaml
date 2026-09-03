@@ -1,0 +1,67 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
+        mc:Ignorable="d"
+        d:DesignWidth="1100"
+        d:DesignHeight="700"
+        x:Class="AdcPlotUi.MainWindow"
+        Title="ADC Stream Plot"
+        Width="1100"
+        Height="700">
+  <DockPanel Margin="12">
+    <StackPanel DockPanel.Dock="Top" Spacing="8" Margin="0,0,0,10">
+      <TextBlock x:Name="StatusText" FontWeight="SemiBold" />
+
+      <Border Padding="10"
+              CornerRadius="6"
+              BorderBrush="#CCCCCC"
+              BorderThickness="1">
+        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+          <TextBlock Text="Channels:"
+                     VerticalAlignment="Center"
+                     Margin="0,0,8,0"
+                     FontWeight="SemiBold" />
+          <CheckBox x:Name="ChannelACheckBox"
+                    Content="Channel A (0)"
+                    IsChecked="True"
+                    Margin="0,0,16,0"
+                    VerticalAlignment="Center" />
+          <CheckBox x:Name="ChannelBCheckBox"
+                    Content="Channel B (1)"
+                    IsChecked="True"
+                    Margin="0,0,24,0"
+                    VerticalAlignment="Center" />
+
+          <TextBlock Text="Window samples:"
+                     VerticalAlignment="Center"
+                     Margin="0,0,8,0"
+                     FontWeight="SemiBold" />
+          <NumericUpDown x:Name="WindowSamplesInput"
+                         Minimum="1"
+                         Maximum="1000000"
+                         Value="4096"
+                         Width="120"
+                         Margin="0,0,24,0"
+                         ValueChanged="OnWindowSamplesChanged" />
+
+          <TextBlock Text="Refresh (ms):"
+                     VerticalAlignment="Center"
+                     Margin="0,0,8,0"
+                     FontWeight="SemiBold" />
+          <NumericUpDown x:Name="RefreshMsInput"
+                         Minimum="10"
+                         Maximum="10000"
+                         Value="100"
+                         Width="100"
+                         ValueChanged="OnRefreshMsChanged" />
+        </WrapPanel>
+      </Border>
+
+      <TextBlock x:Name="ErrorText" Foreground="IndianRed" TextWrapping="Wrap" />
+    </StackPanel>
+
+    <ScottPlot:AvaPlot x:Name="PlotView" />
+  </DockPanel>
+</Window>
