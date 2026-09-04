@@ -45,8 +45,17 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 set_property INTERNAL_VREF 0.75 [get_iobanks 34]
 set_property INTERNAL_VREF 0.75 [get_iobanks 35]
 
+# I2C connection to the EEPROM M24M01
+# SMCLK
+set_property PACKAGE_PIN R14 [get_ports iic_rtl_0_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_scl_io]
+# SMDATA
+set_property PACKAGE_PIN N13 [get_ports iic_rtl_0_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_sda_io]
+
 # Tri state unused pins 
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
 connect_debug_port dbg_hub/clk [get_nets clk]
+

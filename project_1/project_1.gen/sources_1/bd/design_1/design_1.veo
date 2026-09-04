@@ -54,10 +54,16 @@
 
 // INST_TAG     ------ Begin cut for INSTANTIATION Template ------
 design_1 your_instance_name (
+  .sys_clk_clk_n(sys_clk_clk_n), // input wire sys_clk_clk_n
+  .sys_clk_clk_p(sys_clk_clk_p), // input wire sys_clk_clk_p
   .led_green_0(led_green_0), // output wire [0:0] led_green_0
   .led_red_0(led_red_0), // output wire [0:0] led_red_0
-  .sys_clk_clk_n(sys_clk_clk_n), // input wire sys_clk_clk_n
-  .sys_clk_clk_p(sys_clk_clk_p) // input wire sys_clk_clk_p
+  .iic_rtl_0_scl_i(iic_rtl_0_scl_i), // input wire iic_rtl_0_scl_i
+  .iic_rtl_0_scl_o(iic_rtl_0_scl_o), // output wire iic_rtl_0_scl_o
+  .iic_rtl_0_scl_t(iic_rtl_0_scl_t), // output wire iic_rtl_0_scl_t
+  .iic_rtl_0_sda_i(iic_rtl_0_sda_i), // input wire iic_rtl_0_sda_i
+  .iic_rtl_0_sda_o(iic_rtl_0_sda_o), // output wire iic_rtl_0_sda_o
+  .iic_rtl_0_sda_t(iic_rtl_0_sda_t) // output wire iic_rtl_0_sda_t
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 
