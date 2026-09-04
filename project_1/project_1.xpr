@@ -202,6 +202,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_2" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_2" RelGenDir="$PGENDIR/sim_2">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/adc_ad_ltc22xx.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -243,6 +244,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_3" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_3" RelGenDir="$PGENDIR/sim_3">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/adc_ad_ltc22xx.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

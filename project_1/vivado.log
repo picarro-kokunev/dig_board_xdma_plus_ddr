@@ -3,29 +3,28 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Aug 31 11:56:58 2026
-# Process ID         : 3890691
+# Start of session at: Thu Sep  3 18:23:44 2026
+# Process ID         : 2512001
 # Current directory  : /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1
-# Command line       : vivado -mode batch -source project_1.srcs/sources_1/ip/create_adc_sample_fifo.tcl
+# Command line       : vivado -mode batch -source bd_check.tcl
 # Log file           : /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/vivado.log
 # Journal file       : /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/vivado.jou
 # Running On         : emerald
 # Platform           : Ubuntu
-# Operating System   : Ubuntu 26.04 LTS
+# Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 1080.275 MHz
+# CPU Frequency      : 1204.867 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 20
 # Host memory        : 65777 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 74367 MB
-# Available Virtual  : 60342 MB
+# Available Virtual  : 51791 MB
 #-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/kokunev/.Xilinx/Vivado/2025.2/strategies/Vivado Implementation Defaults_2.Vivado Implementation 2025.psg' discarded because strategy with same name already parsed from '/opt/Xilinx_2/2025.2/Vivado/strategies/VDI2025.psg'
-source project_1.srcs/sources_1/ip/create_adc_sample_fifo.tcl
-# set proj_dir [file normalize [file join [file dirname [info script]] ../../..]]
-# open_project [file join $proj_dir project_1.xpr]
+source bd_check.tcl
+# open_project project_1.xpr
 Scanning sources...
 Finished scanning sources
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /opt/Xilinx_2/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
@@ -131,44 +130,44 @@ It is recommended to migrate these utility IPs to inline hdl  using the command 
 More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  design_1_c_sample_valid_1_0
-# set script_dir [file dirname [file normalize [info script]]]
-# set ip_dir     $script_dir/adc_sample_fifo
-# file mkdir $ip_dir
-# create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.2 \
-#     -module_name adc_sample_fifo -dir $ip_dir
-# set_property -dict [list \
-#     CONFIG.Fifo_Implementation              {Independent_Clocks_Block_RAM} \
-#     CONFIG.Performance_Options              {First_Word_Fall_Through} \
-#     CONFIG.Input_Data_Width                 {16} \
-#     CONFIG.Input_Depth                      {2048} \
-#     CONFIG.Output_Data_Width                {16} \
-#     CONFIG.Output_Depth                     {2048} \
-#     CONFIG.Use_Embedded_Registers           {true} \
-#     CONFIG.Reset_Type                       {Asynchronous_Reset} \
-#     CONFIG.Reset_Pin                        {true} \
-#     CONFIG.Full_Flags_Reset_Value           {1} \
-#     CONFIG.Use_Dout_Reset                   {true} \
-#     CONFIG.Valid_Flag                       {false} \
-#     CONFIG.Almost_Full_Flag                 {false} \
-#     CONFIG.Almost_Empty_Flag                {false} \
-#     CONFIG.Underflow_Flag                   {false} \
-#     CONFIG.Overflow_Flag                    {false} \
-#     CONFIG.Write_Acknowledge_Flag           {false} \
-#     CONFIG.Data_Count                       {false} \
-#     CONFIG.Write_Data_Count                 {false} \
-#     CONFIG.Read_Data_Count                  {false} \
-#     CONFIG.Disable_Timing_Violations        {false} \
-#     CONFIG.synchronization_stages         {2} \
-# ] [get_ips adc_sample_fifo]
-# generate_target all [get_ips adc_sample_fifo]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'adc_sample_fifo'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'adc_sample_fifo'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'adc_sample_fifo'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'adc_sample_fifo'...
-# generate_target all [get_ips adc_sample_fifo]
-# export_ip_user_files -of_objects [get_ips adc_sample_fifo] -no_script -sync -force -quiet
-# add_files -quiet [file join $ip_dir adc_sample_fifo.xci]
-# set_property generate_synth_checkpoint false [get_files adc_sample_fifo.xci]
-# puts "INFO: adc_sample_fifo IP generated in $ip_dir"
-INFO: adc_sample_fifo IP generated in /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/ip/adc_sample_fifo
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 31 11:57:02 2026...
+# set bd [get_files design_1.bd]
+# puts "BD file: $bd"
+BD file: /home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+# if {[catch {open_bd_design $bd} err]} {
+#   puts "OPEN BD ERROR: $err"
+#   exit 1
+# }
+Reading block design file </home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_0
+Adding component instance block -- xilinx.com:ip:xdma:4.2 - xdma_0
+Adding component instance block -- xilinx.com:inline_hdl:ilvector_logic:1.0 - ilvector_logic_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:adc_ctrl:1.0 - adc_ctrl_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - c_sample_valid_1
+Adding component instance block -- xilinx.com:module_ref:adc_c2h_axis_bridge:1.0 - adc_c2h_bridge_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_1
+Adding component instance block -- xilinx.com:module_ref:self_pcie_reset:1.0 - self_pcie_reset_0
+Adding component instance block -- xilinx.com:inline_hdl:ilvector_logic:1.0 - ilvector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_1
+Adding component instance block -- xilinx.com:ip:axi_iic:2.1 - axi_iic_0
+Successfully read diagram <design_1> from block design file </home/kokunev/data/git_root/dig/dig_board_pcie_plus_adc/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1287] Associated interface by name SLOT_0_AXI not found for clock port /clk
+# if {[catch {validate_bd_design} err]} {
+#   puts "VALIDATE ERROR: $err"
+# } else {
+#   puts "VALIDATE OK"
+# }
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+VALIDATE OK
+# if {[catch {generate_target all $bd} err]} {
+#   puts "GENERATE ERROR: $err"
+# } else {
+#   puts "GENERATE OK"
+# }
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'design_1' - hence not re-generating.
+GENERATE OK
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  3 18:23:53 2026...

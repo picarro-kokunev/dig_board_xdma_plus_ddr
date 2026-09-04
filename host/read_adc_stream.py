@@ -17,6 +17,7 @@ Stream DMA (bulk ADC data)
 Register / GPIO access (PL control)
   /dev/xdma<N>_user                        -> XDMA AXI-Lite master BAR (64 KiB)
       offset 0x0000: axi_gpio_0 (1-bit output -> board led_red_0)
+      offset 0x0400: axi_iic_0 (400 kHz I2C master -> board EEPROM M24M01)
 
   /dev/xdma<N>_control                     -> XDMA IP internal registers (unused here)
 
@@ -41,6 +42,7 @@ Subcommands
   print      Decode and print samples from C2H_1
   plot       Live matplotlib plot of C2H_1 samples
   led        Read or drive led_red_0 through axi_gpio_0 (/dev/xdmaN_user)
+  eeprom     Read or write the on-board M24M01 I2C EEPROM via axi_iic_0
 
 Examples
 --------
@@ -50,6 +52,8 @@ Examples
   python3 read_adc_stream.py plot --window-samples 4096 --adc-ch-list 0,1
   python3 read_adc_stream.py led on
   python3 read_adc_stream.py led read
+  python3 read_adc_stream.py eeprom read --offset 0 --length 16
+  python3 read_adc_stream.py eeprom write --offset 0 --data 48656c6c6f
 """
 
 import argparse
@@ -77,12 +81,39 @@ SAMPLE_MASK = 0x3FFF
 DEFAULT_ADC_CH_LIST = [0, 1]
 VALID_ADC_CHANNELS = frozenset({0, 1})
 
-# --- PL register map (must match design_1 Address Editor / axi_gpio_0) ---
+# --- PL register map (must match design_1 Address Editor) ---
 USER_BAR_BYTES = 64 * 1024
 GPIO_BASE = 0x0000_0000
 GPIO_DATA_OFFSET = 0x00
 GPIO_TRI_OFFSET = 0x04
 GPIO_LED_BIT = 0
+
+# axi_iic_0 @ 0x400 (M24M01 EEPROM on iic_rtl_0, see io.xdc)
+IIC_BASE = 0x0000_0400
+IIC_CR = 0x100
+IIC_SR = 0x104
+IIC_TX_FIFO = 0x108
+IIC_RX_FIFO = 0x10C
+
+IIC_CR_EN = 0x01
+IIC_CR_TX_FIFO_RESET = 0x02
+IIC_CR_MSMS = 0x04
+IIC_CR_TX = 0x08
+IIC_CR_TXAK = 0x10
+
+IIC_SR_BB = 0x04
+IIC_SR_RX_FIFO_EMPTY = 0x40
+IIC_SR_TX_FIFO_EMPTY = 0x80
+
+IIC_TX_FIFO_START = 1 << 8
+IIC_TX_FIFO_STOP = 1 << 9
+
+# M24M01: 1 Mbit (128 KiB), 17-bit address, 256-byte page writes
+EEPROM_SLAVE_ADDR = 0x50
+EEPROM_SIZE_BYTES = 128 * 1024
+EEPROM_PAGE_SIZE = 256
+EEPROM_WRITE_CYCLE_S = 0.005
+IIC_TIMEOUT_S = 1.0
 
 
 def default_device(xdma_index, channel, direction):
@@ -210,6 +241,192 @@ class UserBar:
         else:
             value &= ~(1 << GPIO_LED_BIT)
         self.write_u32(addr, value)
+
+
+class AxiIic:
+    """Driver for Xilinx axi_iic mapped in the XDMA user BAR."""
+
+    def __init__(self, bar, base=IIC_BASE):
+        self._bar = bar
+        self._base = base
+
+    def _reg(self, offset):
+        return self._base + offset
+
+    def _read_cr(self):
+        return self._bar.read_u32(self._reg(IIC_CR))
+
+    def _write_cr(self, value):
+        self._bar.write_u32(self._reg(IIC_CR), value)
+
+    def _read_sr(self):
+        return self._bar.read_u32(self._reg(IIC_SR))
+
+    def _tx_fifo(self, value):
+        self._bar.write_u32(self._reg(IIC_TX_FIFO), value)
+
+    def _rx_fifo(self):
+        return self._bar.read_u32(self._reg(IIC_RX_FIFO)) & 0xFF
+
+    def _wait_bus_idle(self, timeout=IIC_TIMEOUT_S):
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            sr = self._read_sr()
+            if not (sr & IIC_SR_BB) and (sr & IIC_SR_TX_FIFO_EMPTY):
+                return
+            time.sleep(50e-6)
+        raise TimeoutError("I2C bus did not become idle")
+
+    def _wait_rx_not_empty(self, timeout=IIC_TIMEOUT_S):
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            if not (self._read_sr() & IIC_SR_RX_FIFO_EMPTY):
+                return
+            time.sleep(50e-6)
+        raise TimeoutError("I2C receive timeout")
+
+    def _init_master_tx(self):
+        cr = IIC_CR_EN | IIC_CR_MSMS | IIC_CR_TX
+        self._write_cr(cr | IIC_CR_TX_FIFO_RESET)
+        self._write_cr(cr)
+
+    def _write_bytes(self, payload, start_on_first=True, stop_on_last=True):
+        """Master-transmit payload bytes (each is a full I2C byte on the wire)."""
+        if not payload:
+            raise ValueError("I2C write payload is empty")
+        self._init_master_tx()
+        for idx, byte_val in enumerate(payload):
+            word = byte_val & 0xFF
+            if idx == 0 and start_on_first:
+                word |= IIC_TX_FIFO_START
+            if idx == len(payload) - 1 and stop_on_last:
+                word |= IIC_TX_FIFO_STOP
+            self._tx_fifo(word)
+        self._wait_bus_idle()
+
+    def write(self, slave_7bit, mem_addr, data):
+        """Write data to an I2C slave starting at mem_addr (16-bit EEPROM address)."""
+        addr_hi = (mem_addr >> 8) & 0xFF
+        addr_lo = mem_addr & 0xFF
+        payload = [(slave_7bit << 1) & 0xFE, addr_hi, addr_lo] + list(data)
+        self._write_bytes(payload)
+
+    def read(self, slave_7bit, mem_addr, length):
+        """Read length bytes from an I2C slave starting at mem_addr."""
+        if length <= 0:
+            return b""
+        addr_hi = (mem_addr >> 8) & 0xFF
+        addr_lo = mem_addr & 0xFF
+        setup = [(slave_7bit << 1) & 0xFE, addr_hi, addr_lo]
+
+        # Phase 1: write the memory address, repeated START on the last byte.
+        self._init_master_tx()
+        for idx, byte_val in enumerate(setup):
+            word = byte_val & 0xFF
+            if idx == 0:
+                word |= IIC_TX_FIFO_START
+            if idx == len(setup) - 1:
+                word |= IIC_TX_FIFO_START
+            self._tx_fifo(word)
+
+        # Phase 2: master receive.
+        cr = IIC_CR_EN | IIC_CR_MSMS
+        if length == 1:
+            cr |= IIC_CR_TXAK
+        self._write_cr(cr)
+
+        read_addr = ((slave_7bit << 1) | 1) & 0xFF
+        self._tx_fifo(read_addr | IIC_TX_FIFO_START)
+
+        for idx in range(length):
+            if length > 1 and idx == length - 1:
+                self._write_cr(self._read_cr() | IIC_CR_TXAK)
+            word = 0
+            if idx == length - 1:
+                word |= IIC_TX_FIFO_STOP
+            self._tx_fifo(word)
+
+        out = bytearray()
+        for _ in range(length):
+            self._wait_rx_not_empty()
+            out.append(self._rx_fifo())
+        self._wait_bus_idle()
+        return bytes(out)
+
+
+class M24M01Eeprom:
+    """M24M01 (128 KiB) EEPROM on the board I2C bus."""
+
+    def __init__(self, iic, slave_addr=EEPROM_SLAVE_ADDR):
+        self._iic = iic
+        self._base_slave = slave_addr & 0xFE
+
+    def read(self, offset, length):
+        self._check_range(offset, length)
+        out = bytearray()
+        pos = 0
+        while pos < length:
+            slave, mem_addr = self._resolve_offset(offset + pos)
+            chunk = min(length - pos, 0x10000 - mem_addr)
+            out.extend(self._iic.read(slave, mem_addr, chunk))
+            pos += chunk
+        return bytes(out)
+
+    def write(self, offset, data):
+        self._check_range(offset, len(data))
+        pos = 0
+        while pos < len(data):
+            slave, mem_addr = self._resolve_offset(offset + pos)
+            bank_remaining = 0x10000 - mem_addr
+            page_off = mem_addr & (EEPROM_PAGE_SIZE - 1)
+            chunk = min(len(data) - pos, EEPROM_PAGE_SIZE - page_off, bank_remaining)
+            self._iic.write(slave, mem_addr, data[pos:pos + chunk])
+            pos += chunk
+            time.sleep(EEPROM_WRITE_CYCLE_S)
+
+    def _resolve_offset(self, offset):
+        """Map a 17-bit EEPROM offset to slave address (A16) and 16-bit mem addr."""
+        a16 = (offset >> 16) & 1
+        slave = self._base_slave | a16
+        mem_addr = offset & 0xFFFF
+        return slave, mem_addr
+
+    @staticmethod
+    def _check_range(offset, length):
+        if offset < 0 or length < 0:
+            raise ValueError("offset and length must be non-negative")
+        if offset + length > EEPROM_SIZE_BYTES:
+            raise ValueError(
+                f"EEPROM range 0x{offset:x}+0x{length:x} exceeds "
+                f"0x{EEPROM_SIZE_BYTES:x} bytes"
+            )
+
+
+def parse_hex_bytes(value):
+    """Parse a hex string (optional 0x prefix, optional spaces) into bytes."""
+    text = value.strip().lower()
+    if text.startswith("0x"):
+        text = text[2:]
+    text = "".join(text.split())
+    if not text:
+        raise argparse.ArgumentTypeError("empty hex data")
+    if len(text) % 2:
+        raise argparse.ArgumentTypeError("hex data must have an even number of digits")
+    try:
+        return bytes.fromhex(text)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(f"invalid hex data: {exc}") from exc
+
+
+def format_hex_dump(data, base_offset=0, bytes_per_line=16):
+    """Return a classic hex dump string for data."""
+    lines = []
+    for start in range(0, len(data), bytes_per_line):
+        chunk = data[start:start + bytes_per_line]
+        hex_part = " ".join(f"{b:02x}" for b in chunk)
+        ascii_part = "".join(chr(b) if 32 <= b < 127 else "." for b in chunk)
+        lines.append(f"{base_offset + start:08x}  {hex_part:<{bytes_per_line * 3 - 1}}  {ascii_part}")
+    return "\n".join(lines)
 
 
 def decode_samples(raw_bytes):
@@ -494,6 +711,42 @@ def cmd_led(args):
 
 
 # ---------------------------------------------------------------------------
+# Subcommand: eeprom (axi_iic_0 -> M24M01 via /dev/xdmaN_user)
+# ---------------------------------------------------------------------------
+
+def cmd_eeprom(args):
+    user_path = args.user or default_user_device(args.xdma_index)
+
+    with UserBar(user_path) as bar:
+        eeprom = M24M01Eeprom(AxiIic(bar), slave_addr=args.slave_addr)
+
+        if args.eeprom_cmd == "read":
+            data = eeprom.read(args.offset, args.length)
+            slave, _ = eeprom._resolve_offset(args.offset)
+            print(f"{user_path}: EEPROM read @ 0x{args.offset:05x} "
+                  f"({len(data)} bytes, slave=0x{slave:02x})")
+            print(format_hex_dump(data, base_offset=args.offset))
+            return 0
+
+        if args.data is not None and args.file is not None:
+            raise ValueError("use only one of --data or --file")
+
+        if args.data is not None:
+            payload = args.data
+        elif args.file is not None:
+            with open(args.file, "rb") as fh:
+                payload = fh.read()
+        else:
+            raise ValueError("eeprom write requires --data or --file")
+
+        eeprom.write(args.offset, payload)
+        slave, _ = eeprom._resolve_offset(args.offset)
+        print(f"{user_path}: EEPROM wrote {len(payload)} byte(s) "
+              f"@ 0x{args.offset:05x} (slave=0x{slave:02x})")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -587,6 +840,49 @@ def build_parser():
         help="LED action: on, off, toggle, or read current state",
     )
     p_led.set_defaults(func=cmd_led)
+
+    p_eeprom = sub.add_parser(
+        "eeprom",
+        help="Read or write the on-board M24M01 EEPROM via axi_iic_0.",
+    )
+    p_eeprom.add_argument(
+        "--user", help="Override user BAR device path (default: /dev/xdmaN_user)",
+    )
+    p_eeprom.add_argument(
+        "--slave-addr", type=lambda x: int(x, 0), default=EEPROM_SLAVE_ADDR,
+        help=f"Base 7-bit I2C slave address for A16=0 (default: 0x{EEPROM_SLAVE_ADDR:02x}; "
+             f"upper 64 KiB uses base|1)",
+    )
+    p_eeprom_sub = p_eeprom.add_subparsers(dest="eeprom_cmd", required=True)
+
+    p_eeprom_read = p_eeprom_sub.add_parser(
+        "read", help="Read bytes from EEPROM and print a hex dump.",
+    )
+    p_eeprom_read.add_argument(
+        "--offset", type=lambda x: int(x, 0), default=0,
+        help="Start EEPROM address (default: 0)",
+    )
+    p_eeprom_read.add_argument(
+        "--length", type=int, default=16,
+        help="Number of bytes to read (default: 16)",
+    )
+    p_eeprom_read.set_defaults(func=cmd_eeprom)
+
+    p_eeprom_write = p_eeprom_sub.add_parser(
+        "write", help="Write bytes to EEPROM.",
+    )
+    p_eeprom_write.add_argument(
+        "--offset", type=lambda x: int(x, 0), default=0,
+        help="Start EEPROM address (default: 0)",
+    )
+    p_eeprom_write.add_argument(
+        "--data", type=parse_hex_bytes,
+        help="Hex payload to write, e.g. 48656c6c6f or 0x48 65 6c 6c 6f",
+    )
+    p_eeprom_write.add_argument(
+        "--file", help="Binary file whose contents are written at --offset",
+    )
+    p_eeprom_write.set_defaults(func=cmd_eeprom)
 
     return parser
 

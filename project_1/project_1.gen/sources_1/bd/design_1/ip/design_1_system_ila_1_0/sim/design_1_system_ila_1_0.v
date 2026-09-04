@@ -55,11 +55,18 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_system_ila_1_0 (
   clk,
+  probe0,
   SLOT_0_AXIS_tdata,
   SLOT_0_AXIS_tkeep,
   SLOT_0_AXIS_tlast,
   SLOT_0_AXIS_tvalid,
   SLOT_0_AXIS_tready,
+  SLOT_1_IIC_scl_i,
+  SLOT_1_IIC_scl_o,
+  SLOT_1_IIC_scl_t,
+  SLOT_1_IIC_sda_i,
+  SLOT_1_IIC_sda_o,
+  SLOT_1_IIC_sda_t,
   resetn
 );
 
@@ -67,6 +74,7 @@ module design_1_system_ila_1_0 (
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_xdma_0_0_axi_aclk, ASSOCIATED_BUSIF SLOT_0_AXIS, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
 input wire clk;
+input wire [0 : 0] probe0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TDATA" *)
 (* X_INTERFACE_MODE = "monitor slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_0_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 125000000, PHASE 0.0, CLK_DOMAIN design_1_xdma_0_0_axi_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
@@ -79,18 +87,38 @@ input wire SLOT_0_AXIS_tlast;
 input wire SLOT_0_AXIS_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TREADY" *)
 input wire SLOT_0_AXIS_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_I" *)
+(* X_INTERFACE_MODE = "monitor slave" *)
+input wire SLOT_1_IIC_scl_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_O" *)
+input wire SLOT_1_IIC_scl_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_T" *)
+input wire SLOT_1_IIC_scl_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_I" *)
+input wire SLOT_1_IIC_sda_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_O" *)
+input wire SLOT_1_IIC_sda_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_T" *)
+input wire SLOT_1_IIC_sda_t;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.resetn RST" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 input wire resetn;
 
-  bd_365d inst (
+  bd_365d_0 inst (
     .clk(clk),
+    .probe0(probe0),
     .SLOT_0_AXIS_tdata(SLOT_0_AXIS_tdata),
     .SLOT_0_AXIS_tkeep(SLOT_0_AXIS_tkeep),
     .SLOT_0_AXIS_tlast(SLOT_0_AXIS_tlast),
     .SLOT_0_AXIS_tvalid(SLOT_0_AXIS_tvalid),
     .SLOT_0_AXIS_tready(SLOT_0_AXIS_tready),
+    .SLOT_1_IIC_scl_i(SLOT_1_IIC_scl_i),
+    .SLOT_1_IIC_scl_o(SLOT_1_IIC_scl_o),
+    .SLOT_1_IIC_scl_t(SLOT_1_IIC_scl_t),
+    .SLOT_1_IIC_sda_i(SLOT_1_IIC_sda_i),
+    .SLOT_1_IIC_sda_o(SLOT_1_IIC_sda_o),
+    .SLOT_1_IIC_sda_t(SLOT_1_IIC_sda_t),
     .resetn(resetn)
   );
 endmodule

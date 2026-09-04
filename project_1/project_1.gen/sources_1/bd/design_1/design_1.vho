@@ -61,6 +61,12 @@ COMPONENT design_1
     pcie_mgt_0_txp : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     sys_clk_clk_n : IN STD_LOGIC;
     sys_clk_clk_p : IN STD_LOGIC;
+    iic_rtl_0_scl_i : IN STD_LOGIC;
+    iic_rtl_0_scl_o : OUT STD_LOGIC;
+    iic_rtl_0_scl_t : OUT STD_LOGIC;
+    iic_rtl_0_sda_i : IN STD_LOGIC;
+    iic_rtl_0_sda_o : OUT STD_LOGIC;
+    iic_rtl_0_sda_t : OUT STD_LOGIC;
     pcie_reset_n : IN STD_LOGIC;
     led_green_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     led_red_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -85,6 +91,12 @@ your_instance_name : design_1
     pcie_mgt_0_txp => pcie_mgt_0_txp,
     sys_clk_clk_n => sys_clk_clk_n,
     sys_clk_clk_p => sys_clk_clk_p,
+    iic_rtl_0_scl_i => iic_rtl_0_scl_i,
+    iic_rtl_0_scl_o => iic_rtl_0_scl_o,
+    iic_rtl_0_scl_t => iic_rtl_0_scl_t,
+    iic_rtl_0_sda_i => iic_rtl_0_sda_i,
+    iic_rtl_0_sda_o => iic_rtl_0_sda_o,
+    iic_rtl_0_sda_t => iic_rtl_0_sda_t,
     pcie_reset_n => pcie_reset_n,
     led_green_0 => led_green_0,
     led_red_0 => led_red_0,

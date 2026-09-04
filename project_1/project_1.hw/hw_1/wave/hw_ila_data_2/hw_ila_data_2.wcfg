@@ -9,15 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="291"></ZoomStartTime>
-      <ZoomEndTime time="686"></ZoomEndTime>
-      <Cursor1Time time="531"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="400"></ZoomEndTime>
+      <Cursor1Time time="316"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="523"></NameColumnWidth>
-      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+      <NameColumnWidth column_width="362"></NameColumnWidth>
+      <ValueColumnWidth column_width="123"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
+   <WVObjectSize size="7" />
    <wave_markers>
    </wave_markers>
    <wvobject type="group" fp_name="group30">
@@ -26,10 +26,9 @@
       <obj_property name="Detail_Data">Interface_(i2:s0)_(adc_c2h_bridge_0_m_axis)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i2:s0)_(adc_c2h_bridge_0_m_axis)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group31">
          <obj_property name="label">slot_0 : adc_c2h_bridge_0_m_axis : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -39,7 +38,6 @@
          <obj_property name="CustomSignalColor">Purple</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/net_slot_0_axis_tvalid">
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/net_slot_0_axis_tvalid</obj_property>
@@ -443,5 +441,47 @@
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
       </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_i</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_scl_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_o</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_scl_o</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_t">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_scl_t</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_scl_t</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_i</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_sda_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_o</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_sda_o</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_t">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_1/inst/SLOT_1_IIC_sda_t</obj_property>
+      <obj_property name="ObjectShortName">SLOT_1_IIC_sda_t</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>

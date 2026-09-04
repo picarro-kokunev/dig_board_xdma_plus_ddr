@@ -70,6 +70,18 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire sys_clk_clk_p,
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire iic_rtl_0_scl_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire iic_rtl_0_scl_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire iic_rtl_0_scl_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire iic_rtl_0_sda_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire iic_rtl_0_sda_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire iic_rtl_0_sda_t,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire pcie_reset_n,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] led_green_0,
@@ -92,6 +104,12 @@ module design_1_sv (
     .pcie_mgt_0_txp(pcie_mgt_0_txp),
     .sys_clk_clk_n(sys_clk_clk_n),
     .sys_clk_clk_p(sys_clk_clk_p),
+    .iic_rtl_0_scl_i(iic_rtl_0_scl_i),
+    .iic_rtl_0_scl_o(iic_rtl_0_scl_o),
+    .iic_rtl_0_scl_t(iic_rtl_0_scl_t),
+    .iic_rtl_0_sda_i(iic_rtl_0_sda_i),
+    .iic_rtl_0_sda_o(iic_rtl_0_sda_o),
+    .iic_rtl_0_sda_t(iic_rtl_0_sda_t),
     .pcie_reset_n(pcie_reset_n),
     .led_green_0(led_green_0),
     .led_red_0(led_red_0),

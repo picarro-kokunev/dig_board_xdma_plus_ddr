@@ -86,5 +86,18 @@ set_property PACKAGE_PIN D11 [get_ports {pcie_mgt_0_rxp[1]}]
 set_property INTERNAL_VREF 0.75 [get_iobanks 34]
 set_property INTERNAL_VREF 0.75 [get_iobanks 35]
 
+# I2C connection to the EEPROM M24M01
+# SMCLK
+set_property PACKAGE_PIN R14 [get_ports iic_rtl_0_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_scl_io]
+# SMDATA
+set_property PACKAGE_PIN N13 [get_ports iic_rtl_0_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_sda_io]
+
 
 set_false_path -from [get_pins design_1_i/pcie_reset_block_0/self_pcie_reset_0/inst/pcie_reset_reg_reg/C]
+
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]
