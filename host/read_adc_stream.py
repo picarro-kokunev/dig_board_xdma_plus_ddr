@@ -42,6 +42,7 @@ Subcommands
   print      Decode and print samples from C2H_1
   plot       Live matplotlib plot of C2H_1 samples
   led        Read or drive led_red_0 through axi_gpio_0 (/dev/xdmaN_user)
+  i2c        Initialize axi_iic_0 and dump CR/SR/ISR (debug)
   eeprom     Read or write the on-board M24M01 I2C EEPROM via axi_iic_0
 
 Examples
@@ -52,6 +53,7 @@ Examples
   python3 read_adc_stream.py plot --window-samples 4096 --adc-ch-list 0,1
   python3 read_adc_stream.py led on
   python3 read_adc_stream.py led read
+  python3 read_adc_stream.py i2c
   python3 read_adc_stream.py eeprom read --offset 0 --length 16
   python3 read_adc_stream.py eeprom write --offset 0 --data 48656c6c6f
 """
@@ -92,14 +94,14 @@ GPIO_LED_BIT = 0
 IIC_BASE = 0x0000_0400
 IIC_CR = 0x100
 IIC_SR = 0x104
+IIC_ISR = 0x020
 IIC_TX_FIFO = 0x108
 IIC_RX_FIFO = 0x10C
+IIC_RX_FIFO_PIRQ = 0x120
 
 IIC_CR_EN = 0x01
 IIC_CR_TX_FIFO_RESET = 0x02
 IIC_CR_MSMS = 0x04
-IIC_CR_TX = 0x08
-IIC_CR_TXAK = 0x10
 
 IIC_SR_BB = 0x04
 IIC_SR_RX_FIFO_EMPTY = 0x40
@@ -107,6 +109,9 @@ IIC_SR_TX_FIFO_EMPTY = 0x80
 
 IIC_TX_FIFO_START = 1 << 8
 IIC_TX_FIFO_STOP = 1 << 9
+
+# Dynamic master receive byte count is limited to 8 bits in TX_FIFO[7:0].
+IIC_MAX_READ_BYTES = 255
 
 # M24M01: 1 Mbit (128 KiB), 17-bit address, 256-byte page writes
 EEPROM_SLAVE_ADDR = 0x50
@@ -244,17 +249,21 @@ class UserBar:
 
 
 class AxiIic:
-    """Driver for Xilinx axi_iic mapped in the XDMA user BAR."""
+    """Driver for Xilinx axi_iic using PG090 Dynamic Controller Logic Flow."""
 
     def __init__(self, bar, base=IIC_BASE):
         self._bar = bar
         self._base = base
+        self._initialized = False
 
     def _reg(self, offset):
         return self._base + offset
 
     def _read_cr(self):
         return self._bar.read_u32(self._reg(IIC_CR))
+
+    def _read_isr(self):
+        return self._bar.read_u32(self._reg(IIC_ISR))
 
     def _write_cr(self, value):
         self._bar.write_u32(self._reg(IIC_CR), value)
@@ -268,14 +277,73 @@ class AxiIic:
     def _rx_fifo(self):
         return self._bar.read_u32(self._reg(IIC_RX_FIFO)) & 0xFF
 
-    def _wait_bus_idle(self, timeout=IIC_TIMEOUT_S):
+    @staticmethod
+    def _sr_ready(sr):
+        return (
+            not (sr & IIC_SR_BB)
+            and (sr & IIC_SR_TX_FIFO_EMPTY)
+            and (sr & IIC_SR_RX_FIFO_EMPTY)
+        )
+
+    @staticmethod
+    def _describe_sr(sr):
+        parts = []
+        if sr & IIC_SR_BB:
+            parts.append("BB(bus busy)")
+        if not (sr & IIC_SR_TX_FIFO_EMPTY):
+            parts.append("TX_FIFO not empty")
+        if not (sr & IIC_SR_RX_FIFO_EMPTY):
+            parts.append("RX_FIFO not empty")
+        if not parts:
+            parts.append("ready")
+        return f"SR=0x{sr:02x} [{', '.join(parts)}]"
+
+    def _wait_bus_ready(self, timeout=IIC_TIMEOUT_S):
+        """Wait until bus is idle and both FIFOs are empty (PG090 pre-transfer check)."""
         deadline = time.monotonic() + timeout
+        last_sr = 0
         while time.monotonic() < deadline:
-            sr = self._read_sr()
-            if not (sr & IIC_SR_BB) and (sr & IIC_SR_TX_FIFO_EMPTY):
+            last_sr = self._read_sr()
+            if self._sr_ready(last_sr):
                 return
             time.sleep(50e-6)
-        raise TimeoutError("I2C bus did not become idle")
+        raise TimeoutError(
+            "I2C bus/FIFOs not ready: "
+            f"{self._describe_sr(last_sr)} CR=0x{self._read_cr():02x} "
+            f"ISR=0x{self._read_isr():02x}"
+        )
+
+    def _drain_rx_fifo(self):
+        while not (self._read_sr() & IIC_SR_RX_FIFO_EMPTY):
+            self._rx_fifo()
+
+    def _recover_controller(self):
+        """
+        Clear a stuck master session left by an aborted transfer.
+
+        PG090: clearing CR.MSMS generates STOP and releases the bus.
+        """
+        self._write_cr(0)
+        time.sleep(10e-6)
+        self._write_cr(IIC_CR_EN | IIC_CR_TX_FIFO_RESET)
+        self._write_cr(IIC_CR_EN)
+        self._drain_rx_fifo()
+        if self._read_cr() & IIC_CR_MSMS:
+            self._write_cr(IIC_CR_EN)
+        time.sleep(10e-6)
+
+    def _wait_bus_idle(self, timeout=IIC_TIMEOUT_S):
+        deadline = time.monotonic() + timeout
+        last_sr = 0
+        while time.monotonic() < deadline:
+            last_sr = self._read_sr()
+            if not (last_sr & IIC_SR_BB) and (last_sr & IIC_SR_TX_FIFO_EMPTY):
+                return
+            time.sleep(50e-6)
+        raise TimeoutError(
+            "I2C bus did not become idle: "
+            f"{self._describe_sr(last_sr)} CR=0x{self._read_cr():02x}"
+        )
 
     def _wait_rx_not_empty(self, timeout=IIC_TIMEOUT_S):
         deadline = time.monotonic() + timeout
@@ -285,66 +353,84 @@ class AxiIic:
             time.sleep(50e-6)
         raise TimeoutError("I2C receive timeout")
 
-    def _init_master_tx(self):
-        cr = IIC_CR_EN | IIC_CR_MSMS | IIC_CR_TX
-        self._write_cr(cr | IIC_CR_TX_FIFO_RESET)
-        self._write_cr(cr)
+    def _prepare(self):
+        """
+        PG090 Dynamic Controller initialization / pre-transfer setup:
+          1. RX_FIFO_PIRQ = 0x0F (once)
+          2. Reset TX FIFO
+          3. Enable controller (EN=1), release TX FIFO reset
+          4. Check FIFOs empty and bus not busy (after EN=1)
+        """
+        if not self._initialized:
+            self._bar.write_u32(self._reg(IIC_RX_FIFO_PIRQ), 0x0F)
+            self._initialized = True
 
-    def _write_bytes(self, payload, start_on_first=True, stop_on_last=True):
-        """Master-transmit payload bytes (each is a full I2C byte on the wire)."""
+        self._write_cr(IIC_CR_EN | IIC_CR_TX_FIFO_RESET)
+        self._write_cr(IIC_CR_EN)
+        time.sleep(10e-6)
+
+        if not self._sr_ready(self._read_sr()):
+            self._recover_controller()
+
+        self._wait_bus_ready()
+
+    @staticmethod
+    def _i2c_addr_byte(slave_7bit, read=False):
+        addr = (slave_7bit << 1) & 0xFE
+        if read:
+            addr |= 0x01
+        return addr & 0xFF
+
+    def _write_payload(self, payload):
+        """
+        PG090 dynamic master write:
+          START + first byte, middle bytes plain, STOP + last byte.
+        """
         if not payload:
             raise ValueError("I2C write payload is empty")
-        self._init_master_tx()
-        for idx, byte_val in enumerate(payload):
-            word = byte_val & 0xFF
-            if idx == 0 and start_on_first:
-                word |= IIC_TX_FIFO_START
-            if idx == len(payload) - 1 and stop_on_last:
-                word |= IIC_TX_FIFO_STOP
-            self._tx_fifo(word)
+        self._prepare()
+        self._tx_fifo(IIC_TX_FIFO_START | (payload[0] & 0xFF))
+        for byte_val in payload[1:-1]:
+            self._tx_fifo(byte_val & 0xFF)
+        self._tx_fifo(IIC_TX_FIFO_STOP | (payload[-1] & 0xFF))
         self._wait_bus_idle()
 
     def write(self, slave_7bit, mem_addr, data):
         """Write data to an I2C slave starting at mem_addr (16-bit EEPROM address)."""
         addr_hi = (mem_addr >> 8) & 0xFF
         addr_lo = mem_addr & 0xFF
-        payload = [(slave_7bit << 1) & 0xFE, addr_hi, addr_lo] + list(data)
-        self._write_bytes(payload)
+        payload = [self._i2c_addr_byte(slave_7bit, read=False), addr_hi, addr_lo]
+        payload.extend(data)
+        self._write_payload(payload)
 
     def read(self, slave_7bit, mem_addr, length):
-        """Read length bytes from an I2C slave starting at mem_addr."""
+        """
+        PG090 EEPROM random-read sequence (dynamic mode):
+          1. START + write address
+          2. EEPROM internal address byte(s)
+          3. START + read address (repeated start when MSMS=1)
+          4. STOP + receive byte count
+          5. Read RX FIFO until count bytes received
+        """
         if length <= 0:
             return b""
+        if length > IIC_MAX_READ_BYTES:
+            raise ValueError(
+                f"I2C read length {length} exceeds dynamic-mode limit "
+                f"of {IIC_MAX_READ_BYTES} bytes per transfer"
+            )
+
+        write_addr = self._i2c_addr_byte(slave_7bit, read=False)
+        read_addr = self._i2c_addr_byte(slave_7bit, read=True)
         addr_hi = (mem_addr >> 8) & 0xFF
         addr_lo = mem_addr & 0xFF
-        setup = [(slave_7bit << 1) & 0xFE, addr_hi, addr_lo]
 
-        # Phase 1: write the memory address, repeated START on the last byte.
-        self._init_master_tx()
-        for idx, byte_val in enumerate(setup):
-            word = byte_val & 0xFF
-            if idx == 0:
-                word |= IIC_TX_FIFO_START
-            if idx == len(setup) - 1:
-                word |= IIC_TX_FIFO_START
-            self._tx_fifo(word)
-
-        # Phase 2: master receive.
-        cr = IIC_CR_EN | IIC_CR_MSMS
-        if length == 1:
-            cr |= IIC_CR_TXAK
-        self._write_cr(cr)
-
-        read_addr = ((slave_7bit << 1) | 1) & 0xFF
-        self._tx_fifo(read_addr | IIC_TX_FIFO_START)
-
-        for idx in range(length):
-            if length > 1 and idx == length - 1:
-                self._write_cr(self._read_cr() | IIC_CR_TXAK)
-            word = 0
-            if idx == length - 1:
-                word |= IIC_TX_FIFO_STOP
-            self._tx_fifo(word)
+        self._prepare()
+        self._tx_fifo(IIC_TX_FIFO_START | write_addr)
+        self._tx_fifo(addr_hi)
+        self._tx_fifo(addr_lo)
+        self._tx_fifo(IIC_TX_FIFO_START | read_addr)
+        self._tx_fifo(IIC_TX_FIFO_STOP | (length & 0xFF))
 
         out = bytearray()
         for _ in range(length):
@@ -367,7 +453,7 @@ class M24M01Eeprom:
         pos = 0
         while pos < length:
             slave, mem_addr = self._resolve_offset(offset + pos)
-            chunk = min(length - pos, 0x10000 - mem_addr)
+            chunk = min(length - pos, 0x10000 - mem_addr, IIC_MAX_READ_BYTES)
             out.extend(self._iic.read(slave, mem_addr, chunk))
             pos += chunk
         return bytes(out)
@@ -711,6 +797,35 @@ def cmd_led(args):
 
 
 # ---------------------------------------------------------------------------
+# Subcommand: i2c (axi_iic_0 debug via /dev/xdmaN_user)
+# ---------------------------------------------------------------------------
+
+def cmd_i2c(args):
+    user_path = args.user or default_user_device(args.xdma_index)
+
+    with UserBar(user_path) as bar:
+        iic = AxiIic(bar)
+
+        def dump_state(label):
+            cr = iic._read_cr()
+            sr = iic._read_sr()
+            isr = iic._read_isr()
+            print(f"{label}")
+            print(f"  CR  @ 0x{iic._reg(IIC_CR):04x} = 0x{cr:08x}  EN={bool(cr & IIC_CR_EN)} "
+                  f"MSMS={bool(cr & IIC_CR_MSMS)} TX_RST={bool(cr & IIC_CR_TX_FIFO_RESET)}")
+            print(f"  SR  @ 0x{iic._reg(IIC_SR):04x} = 0x{sr:08x}  {AxiIic._describe_sr(sr)}")
+            print(f"  ISR @ 0x{iic._reg(IIC_ISR):04x} = 0x{isr:08x}")
+
+        print(f"{user_path}: axi_iic_0 @ 0x{IIC_BASE:04x} (user BAR register window)")
+        dump_state("before init:")
+        iic._prepare()
+        dump_state("after init:")
+        print(f"  RX_FIFO_PIRQ @ 0x{iic._reg(IIC_RX_FIFO_PIRQ):04x} = "
+              f"0x{bar.read_u32(iic._reg(IIC_RX_FIFO_PIRQ)):08x}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # Subcommand: eeprom (axi_iic_0 -> M24M01 via /dev/xdmaN_user)
 # ---------------------------------------------------------------------------
 
@@ -841,6 +956,15 @@ def build_parser():
     )
     p_led.set_defaults(func=cmd_led)
 
+    p_i2c = sub.add_parser(
+        "i2c",
+        help="Initialize axi_iic_0 and print CR/SR/ISR on /dev/xdmaN_user.",
+    )
+    p_i2c.add_argument(
+        "--user", help="Override user BAR device path (default: /dev/xdmaN_user)",
+    )
+    p_i2c.set_defaults(func=cmd_i2c)
+
     p_eeprom = sub.add_parser(
         "eeprom",
         help="Read or write the on-board M24M01 EEPROM via axi_iic_0.",
@@ -902,6 +1026,9 @@ def main(argv=None):
               f"Hint: check the FPGA is programmed, the xdma driver is "
               f"loaded, and --xdma-index matches your device.",
               file=sys.stderr)
+        return 1
+    except TimeoutError as e:
+        print(f"I2C error: {e}", file=sys.stderr)
         return 1
 
 
