@@ -47,11 +47,20 @@ set_property INTERNAL_VREF 0.75 [get_iobanks 35]
 
 # I2C connection to the EEPROM M24M01
 # SMCLK
-set_property PACKAGE_PIN R14 [get_ports iic_rtl_0_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_scl_io]
+set_property PACKAGE_PIN R14 [get_ports iic_pcie_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_pcie_scl_io]
 # SMDATA
-set_property PACKAGE_PIN N13 [get_ports iic_rtl_0_sda_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_rtl_0_sda_io]
+set_property PACKAGE_PIN N13 [get_ports iic_pcie_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_pcie_sda_io]
+
+# I2C connection to the common bus I2C_SCL, connecting to power/current sencor ina260 
+# CLK
+set_property PACKAGE_PIN AB21 [get_ports iic_a_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_a_scl_io]
+# DATA
+set_property PACKAGE_PIN AB22 [get_ports iic_a_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_a_sda_io]
+
 
 # Tri state unused pins 
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]

@@ -58,11 +58,8 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
-set_param tcl.collectionResultDisplayLimit 0
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 6
-set_msg_config -id {HDL-1065} -limit 10000
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-73078-emerald/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -122,6 +119,12 @@ set_property used_in_implementation false [get_files -all /home/kokunev/data/git
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_36/bd_6e42_m01awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_37/bd_6e42_m01wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_38/bd_6e42_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_40/bd_6e42_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_41/bd_6e42_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_42/bd_6e42_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_43/bd_6e42_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_44/bd_6e42_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_45/bd_6e42_m02bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
@@ -135,6 +138,8 @@ set_property used_in_implementation false [get_files -all /home/kokunev/data/git
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

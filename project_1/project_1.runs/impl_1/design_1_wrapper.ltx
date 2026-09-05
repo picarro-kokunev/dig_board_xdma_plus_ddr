@@ -132,6 +132,102 @@
                                         "isBus": false
                                     }
                                 ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_scl_i",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_scl_o",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_scl_t",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_sda_i",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_sda_o",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/SLOT_1_IIC_sda_t",
+                                        "isBus": false
+                                    }
+                                ]
                             }
                         ],
                         "bus_interfaces": [
@@ -190,6 +286,67 @@
                                         "physical_pin": {
                                             "id": 5,
                                             "name": "probe5",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SLOT_1_IIC",
+                                "vlnv": "xilinx.com:interface:iic:1.0",
+                                "connectedBus": "axi_iic_1_IIC",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "SCL_I",
+                                        "physical_pin": {
+                                            "id": 6,
+                                            "name": "probe6",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "SCL_O",
+                                        "physical_pin": {
+                                            "id": 7,
+                                            "name": "probe7",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "SCL_T",
+                                        "physical_pin": {
+                                            "id": 8,
+                                            "name": "probe8",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "SDA_I",
+                                        "physical_pin": {
+                                            "id": 9,
+                                            "name": "probe9",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "SDA_O",
+                                        "physical_pin": {
+                                            "id": 10,
+                                            "name": "probe10",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "SDA_T",
+                                        "physical_pin": {
+                                            "id": 11,
+                                            "name": "probe11",
                                             "leftBit": 0,
                                             "width": 1
                                         }

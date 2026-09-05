@@ -10,7 +10,7 @@
       "component_parameters": {
         "C_EN_TIME_TAG": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_TIME_TAG_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "C_SLOT": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_15_TYPE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_14_TYPE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_13_TYPE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -3754,7 +3754,7 @@
         "EN_BRAM_DRC": [ { "value": "TRUE", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ALL_PROBE_SAME_MU": [ { "value": "TRUE", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ALL_PROBE_SAME_MU_CNT": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_NUM_MONITOR_SLOTS": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_NUM_MONITOR_SLOTS": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_0_AXI_ARUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_0_AXI_RUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_0_AXI_AWUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -3782,7 +3782,7 @@
         "C_SLOT_1_AXIS_TUSER_WIDTH": [ { "value": "AUTO", "value_permission": "bd_and_user", "resolve_type": "user", "usage": "all" } ],
         "C_SLOT_1_AXIS_TDEST_WIDTH": [ { "value": "AUTO", "value_permission": "bd_and_user", "resolve_type": "user", "usage": "all" } ],
         "C_SLOT_0_INTF_TYPE": [ { "value": "xilinx.com:interface:iic_rtl:1.0", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "C_SLOT_1_INTF_TYPE": [ { "value": "xilinx.com:interface:aximm_rtl:1.0", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_1_INTF_TYPE": [ { "value": "xilinx.com:interface:iic_rtl:1.0", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "C_SLOT_2_INTF_TYPE": [ { "value": "xilinx.com:interface:aximm_rtl:1.0", "resolve_type": "user", "usage": "all" } ],
         "C_SLOT_3_INTF_TYPE": [ { "value": "xilinx.com:interface:aximm_rtl:1.0", "resolve_type": "user", "usage": "all" } ],
         "C_SLOT_4_INTF_TYPE": [ { "value": "xilinx.com:interface:aximm_rtl:1.0", "resolve_type": "user", "usage": "all" } ],
@@ -4014,7 +4014,13 @@
         "SLOT_0_IIC_scl_t": [ { "direction": "in", "driver_value": "0" } ],
         "SLOT_0_IIC_sda_i": [ { "direction": "in", "driver_value": "0" } ],
         "SLOT_0_IIC_sda_o": [ { "direction": "in", "driver_value": "0" } ],
-        "SLOT_0_IIC_sda_t": [ { "direction": "in", "driver_value": "0" } ]
+        "SLOT_0_IIC_sda_t": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_scl_i": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_scl_o": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_scl_t": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_sda_i": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_sda_o": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_IIC_sda_t": [ { "direction": "in", "driver_value": "0" } ]
       },
       "interfaces": {
         "CLK.clk": {
@@ -4026,7 +4032,7 @@
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "design_1_clk_wiz_0_0_clk_out1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
-            "ASSOCIATED_BUSIF": [ { "value": "SLOT_0_AXI", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "SLOT_1_AXI", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "ASSOCIATED_RESET": [ { "value": "resetn", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_static_object": false } ]
@@ -4048,9 +4054,23 @@
             "SDA_O": [ { "physical_name": "SLOT_0_IIC_sda_o" } ],
             "SDA_T": [ { "physical_name": "SLOT_0_IIC_sda_t" } ]
           }
+        },
+        "SLOT_1_IIC": {
+          "vlnv": "xilinx.com:interface:iic:1.0",
+          "abstraction_type": "xilinx.com:interface:iic_rtl:1.0",
+          "mode": "monitor",
+          "monitor_type": "slave",
+          "port_maps": {
+            "SCL_I": [ { "physical_name": "SLOT_1_IIC_scl_i" } ],
+            "SCL_O": [ { "physical_name": "SLOT_1_IIC_scl_o" } ],
+            "SCL_T": [ { "physical_name": "SLOT_1_IIC_scl_t" } ],
+            "SDA_I": [ { "physical_name": "SLOT_1_IIC_sda_i" } ],
+            "SDA_O": [ { "physical_name": "SLOT_1_IIC_sda_o" } ],
+            "SDA_T": [ { "physical_name": "SLOT_1_IIC_sda_t" } ]
+          }
         }
       }
     }
   },
-  "checksum": "683cddb4"
+  "checksum": "be261451"
 }

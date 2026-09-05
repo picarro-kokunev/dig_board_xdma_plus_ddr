@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Fri Sep  4 14:37:04 2026
+  **** Start of session at: Sat Sep  5 15:51:02 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -29,9 +29,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3211931
+INFO: [Synth 8-7075] Helper process launched with PID 143562
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.539 ; gain = 483.844 ; free physical = 8746 ; free virtual = 51172
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2261.293 ; gain = 483.211 ; free physical = 51918 ; free virtual = 64122
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0568/hdl/verilog/xsdbm_v3_0_5_bs_core_ext.vh:30]
 INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0568/hdl/verilog/xsdbm_v3_0_5_bs_core_ext.vh:32]
@@ -135,7 +135,7 @@ INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wir
 INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/0568/hdl/verilog/xsdbm_v3_0_5_bs_core_vec.vh:277]
 INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:29]
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/synth/design_1_axi_gpio_0_1.vhd:84]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -369,12 +369,33 @@ INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (0#1) [/
 INFO: [Synth 8-256] done synthesizing module 'iic' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:6163]
 INFO: [Synth 8-256] done synthesizing module 'axi_iic' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:6862]
 INFO: [Synth 8-256] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/synth/design_1_axi_iic_0_0.vhd:91]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:149]
-WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:149]
-WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:149]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:205]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:205]
+WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:205]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_1_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/synth/design_1_axi_iic_1_0.vhd:91]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_DISABLE_SETUP_VIOLATION_CHECK bound to: 0 - type: integer 
+	Parameter C_STATIC_TIMING_REG_WIDTH bound to: 0 - type: integer 
+	Parameter C_TIMING_REG_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+INFO: [Synth 8-3491] module 'axi_iic' declared at '/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:6788' bound to instance 'U0' of component 'axi_iic' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/synth/design_1_axi_iic_1_0.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_iic_1_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/synth/design_1_axi_iic_1_0.vhd:91]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_1_0' is unconnected for instance 'axi_iic_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:231]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_1_0' is unconnected for instance 'axi_iic_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:231]
+WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'design_1_axi_iic_1_0' has 27 connections declared, but only 25 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:231]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/synth/design_1_axi_smc_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1I4I8XN' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1170]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1I4I8XN' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1524]
 INFO: [Synth 8-638] synthesizing module 'bd_6e42_psr_aclk_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/synth/bd_6e42_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -418,19 +439,19 @@ INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset_v5_0_17_upcnt_n' (0
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
 INFO: [Synth 8-256] done synthesizing module 'bd_6e42_psr_aclk_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/synth/bd_6e42_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1207]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1207]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1207]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1207]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_6e42_psr_aclk_0' has 10 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1207]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1I4I8XN' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1170]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_GKPSV4' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1458]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1567]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1567]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1567]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_6e42_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1567]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_6e42_psr_aclk_0' has 10 connections declared, but only 6 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1567]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1I4I8XN' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1524]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_GKPSV4' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1818]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00e_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_32/synth/bd_6e42_m00e_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/opt/Xilinx_2/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/opt/Xilinx_2/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m00e_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_32/synth/bd_6e42_m00e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_GKPSV4' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1458]
-INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_TU42FG' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1700]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_GKPSV4' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1818]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_TU42FG' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2060]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00arn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_27/synth/bd_6e42_m00arn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m00arn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_27/synth/bd_6e42_m00arn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00awn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_29/synth/bd_6e42_m00awn_0.sv:53]
@@ -441,14 +462,14 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00rn_0' [/home/kokunev/data/g
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m00rn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_28/synth/bd_6e42_m00rn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00wn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_30/synth/bd_6e42_m00wn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m00wn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_30/synth/bd_6e42_m00wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_TU42FG' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1700]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_TU42FG' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2060]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m00s2a_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_26/synth/bd_6e42_m00s2a_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m00s2a_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_26/synth/bd_6e42_m00s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_CDBWKG' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1942]
+INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_CDBWKG' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2302]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01e_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_39/synth/bd_6e42_m01e_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m01e_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_39/synth/bd_6e42_m01e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_CDBWKG' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1942]
-INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1WEIQT6' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2184]
+INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_CDBWKG' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2302]
+INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1WEIQT6' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2544]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01arn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_34/synth/bd_6e42_m01arn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m01arn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_34/synth/bd_6e42_m01arn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01awn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_36/synth/bd_6e42_m01awn_0.sv:53]
@@ -459,20 +480,38 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01rn_0' [/home/kokunev/data/g
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m01rn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_35/synth/bd_6e42_m01rn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01wn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_37/synth/bd_6e42_m01wn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m01wn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_37/synth/bd_6e42_m01wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1WEIQT6' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2184]
+INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1WEIQT6' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2544]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m01s2a_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_33/synth/bd_6e42_m01s2a_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m01s2a_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_33/synth/bd_6e42_m01s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm02_exit_pipeline_imp_631RDS' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2786]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02e_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_46/synth/bd_6e42_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02e_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_46/synth/bd_6e42_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_exit_pipeline_imp_631RDS' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2786]
+INFO: [Synth 8-6157] synthesizing module 'm02_nodes_imp_12JFUN5' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3028]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02arn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_41/synth/bd_6e42_m02arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02arn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_41/synth/bd_6e42_m02arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02awn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_43/synth/bd_6e42_m02awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02awn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_43/synth/bd_6e42_m02awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02bn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_45/synth/bd_6e42_m02bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02bn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_45/synth/bd_6e42_m02bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02rn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_42/synth/bd_6e42_m02rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02rn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_42/synth/bd_6e42_m02rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02wn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_44/synth/bd_6e42_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02wn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_44/synth/bd_6e42_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_nodes_imp_12JFUN5' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3028]
+INFO: [Synth 8-6157] synthesizing module 'bd_6e42_m02s2a_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_40/synth/bd_6e42_m02s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_m02s2a_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_40/synth/bd_6e42_m02s2a_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_s00a2s_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_20/synth/bd_6e42_s00a2s_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_s00a2s_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_20/synth/bd_6e42_s00a2s_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1F7QC0Z' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2426]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1F7QC0Z' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3270]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_s00mmu_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_17/synth/bd_6e42_s00mmu_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_s00mmu_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_17/synth/bd_6e42_s00mmu_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_s00sic_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_19/synth/bd_6e42_s00sic_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_s00sic_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_19/synth/bd_6e42_s00sic_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_s00tr_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_18/synth/bd_6e42_s00tr_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_s00tr_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_18/synth/bd_6e42_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1F7QC0Z' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2426]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1C1TU9L' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2998]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1F7QC0Z' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3270]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1C1TU9L' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3842]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_sarn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_21/synth/bd_6e42_sarn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_sarn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_21/synth/bd_6e42_sarn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_sawn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_23/synth/bd_6e42_sawn_0.sv:53]
@@ -483,8 +522,8 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_srn_0' [/home/kokunev/data/git
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_srn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_22/synth/bd_6e42_srn_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_swn_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_24/synth/bd_6e42_swn_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_swn_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_24/synth/bd_6e42_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1C1TU9L' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:2998]
-INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1J69X7X' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3240]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1C1TU9L' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3842]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1J69X7X' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:4084]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_arinsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_2/synth/bd_6e42_arinsw_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_arinsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_2/synth/bd_6e42_arinsw_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_aroutsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_7/synth/bd_6e42_aroutsw_0.sv:53]
@@ -497,7 +536,7 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_binsw_0' [/home/kokunev/data/g
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_binsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_6/synth/bd_6e42_binsw_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_boutsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_11/synth/bd_6e42_boutsw_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_boutsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_11/synth/bd_6e42_boutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'i_nodes_imp_TU4PH' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1216]
+INFO: [Synth 8-6157] synthesizing module 'i_nodes_imp_TU4PH' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1576]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_arni_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_12/synth/bd_6e42_arni_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_arni_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_12/synth/bd_6e42_arni_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_awni_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_14/synth/bd_6e42_awni_0.sv:53]
@@ -508,7 +547,7 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_rni_0' [/home/kokunev/data/git
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_rni_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_13/synth/bd_6e42_rni_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_wni_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_15/synth/bd_6e42_wni_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_wni_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_15/synth/bd_6e42_wni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'i_nodes_imp_TU4PH' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1216]
+INFO: [Synth 8-6155] done synthesizing module 'i_nodes_imp_TU4PH' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1576]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_rinsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_3/synth/bd_6e42_rinsw_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_rinsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_3/synth/bd_6e42_rinsw_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_routsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_8/synth/bd_6e42_routsw_0.sv:53]
@@ -517,19 +556,22 @@ INFO: [Synth 8-6157] synthesizing module 'bd_6e42_winsw_0' [/home/kokunev/data/g
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_winsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_5/synth/bd_6e42_winsw_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_6e42_woutsw_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_10/synth/bd_6e42_woutsw_0.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42_woutsw_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_10/synth/bd_6e42_woutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_1J69X7X' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:3240]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_1J69X7X' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:4084]
 INFO: [Synth 8-6155] done synthesizing module 'bd_6e42' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/synth/design_1_axi_smc_2.v:53]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:175]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:175]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:175]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:175]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 77 connections declared, but only 73 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:175]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 96 connections declared, but only 90 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:257]
+INFO: [Synth 8-6157] synthesizing module 'blinker_hier_0_imp_N7ET4B' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_1' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_1/synth/design_1_c_counter_binary_0_1.vhd:66]
 	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
 	Parameter C_VERBOSITY bound to: 0 - type: integer 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
-	Parameter C_WIDTH bound to: 25 - type: integer 
+	Parameter C_WIDTH bound to: 26 - type: integer 
 	Parameter C_HAS_CE bound to: 0 - type: integer 
 	Parameter C_HAS_SCLR bound to: 0 - type: integer 
 	Parameter C_RESTRICT_COUNT bound to: 0 - type: integer 
@@ -550,6 +592,7 @@ INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_1' [/home/k
 	Parameter C_HAS_SINIT bound to: 0 - type: integer 
 INFO: [Synth 8-3491] module 'c_counter_binary_v12_0_22' declared at '/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/782b/hdl/c_counter_binary_v12_0_vh_rfs.vhd:4289' bound to instance 'U0' of component 'c_counter_binary_v12_0_22' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_1/synth/design_1_c_counter_binary_0_1.vhd:125]
 INFO: [Synth 8-256] done synthesizing module 'design_1_c_counter_binary_0_1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_1/synth/design_1_c_counter_binary_0_1.vhd:66]
+INFO: [Synth 8-6155] done synthesizing module 'blinker_hier_0_imp_N7ET4B' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:65]
 INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:65]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82819]
@@ -582,11 +625,11 @@ INFO: [Synth 8-7071] port 'sl_iport0' of module 'jtag_axi_v1_2_23_jtag_axi' is u
 INFO: [Synth 8-7071] port 'sl_oport0' of module 'jtag_axi_v1_2_23_jtag_axi' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_jtag_axi_0_0/synth/design_1_jtag_axi_0_0.v:194]
 INFO: [Synth 8-7023] instance 'inst' of module 'jtag_axi_v1_2_23_jtag_axi' has 41 connections declared, but only 39 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_jtag_axi_0_0/synth/design_1_jtag_axi_0_0.v:194]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_jtag_axi_0_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_jtag_axi_0_0/synth/design_1_jtag_axi_0_0.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:300]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:398]
 INFO: [Synth 8-6157] synthesizing module 'design_1_system_ila_0_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:252]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:271]
 INFO: [Synth 8-6157] synthesizing module 'bd_f60c' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:10]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:35]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_f60c_ila_lib_0' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:48]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:3131]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (0#1) [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:3131]
@@ -596,17 +639,17 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [/opt/Xilinx_2/2025.2/Vivado/
 INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165484]
 INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165423]
 INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (0#1) [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165423]
-INFO: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
-INFO: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_19_ila' has 1033 connections declared, but only 1027 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3219]
+INFO: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_19_ila' is unconnected for instance 'inst' [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
+INFO: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_19_ila' has 1033 connections declared, but only 1027 given [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:3231]
 INFO: [Synth 8-6155] done synthesizing module 'bd_f60c_ila_lib_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:48]
 INFO: [Synth 8-6155] done synthesizing module 'bd_f60c' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_system_ila_0_0' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:29]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/opt/Xilinx_2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
@@ -616,12 +659,18 @@ INFO: [Synth 8-6014] Unused sequential element ro_a_reg was removed.  [/home/kok
 INFO: [Synth 8-6014] Unused sequential element sda_cout_reg_d1_reg was removed.  [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:3610]
 INFO: [Synth 8-6014] Unused sequential element gen_stop_and_scl_hi_reg was removed.  [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:3831]
 INFO: [Synth 8-6014] Unused sequential element dynamic_MSMS_d_reg was removed.  [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ipshared/67c0/hdl/axi_iic_v2_1_vh_rfs.vhd:5228]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1I4I8XN does not have driver. [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1190]
-INFO: [Synth 8-3848] Net sl_iport0 in module/entity bd_f60c_ila_lib_0 does not have driver. [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:108]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:252]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:35]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1I4I8XN does not have driver. [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/bd_6e42.v:1548]
+INFO: [Synth 8-3848] Net sl_iport0 in module/entity bd_f60c_ila_lib_0 does not have driver. [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/synth/bd_f60c_ila_lib_0.v:120]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/synth/design_1_system_ila_0_0.v:271]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/bd_f60c.v:53]
 WARNING: [Synth 8-7129] Port SEL_I[0] in module ltlib_v1_0_3_generic_mux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[12] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[11] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[10] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[9] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[8] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[7] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA_I[6] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA_I[5] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA_I[4] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
@@ -643,11 +692,34 @@ WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_gen_v8_4_12_blk_me
 WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_gen_v8_4_12_blk_mem_output_block__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DOUTA[8] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DOUTA[7] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DOUTA[6] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DOUTA[5] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DOUTA[4] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[8] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[7] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[6] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[5] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[4] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[3] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[2] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA[3] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA[2] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DOUTA[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
@@ -658,11 +730,6 @@ WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_v8_4_12_blk_mem_gen_prim
 WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
@@ -672,7 +739,9 @@ WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_12_blk_mem
 WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_v8_4_12_blk_mem_gen_prim_wrapper__parameterized4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RSTA[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEA[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RSTB[0] in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[1] in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_12_blk_mem_gen_generic_cstr__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RSTA in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
@@ -681,6 +750,12 @@ WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_12_blk_mem_input_
 WARNING: [Synth 8-7129] Port RSTB in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[12] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[11] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[10] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[9] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
@@ -688,53 +763,21 @@ WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_v8_4_12_blk_mem_input
 WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_12_blk_mem_input_block__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AClk in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWID[3] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWID[2] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWID[1] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[31] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[30] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[29] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[28] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[27] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[26] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[25] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[24] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[23] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[22] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[21] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[20] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[19] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[18] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[17] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[16] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[15] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[14] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[13] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[12] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[11] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[10] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[9] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWADDR[8] in module blk_mem_gen_v8_4_12_synth__parameterized1 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2965.922 ; gain = 1190.227 ; free physical = 8227 ; free virtual = 50658
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2971.676 ; gain = 1193.594 ; free physical = 51247 ; free virtual = 63458
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2965.922 ; gain = 1190.227 ; free physical = 8227 ; free virtual = 50658
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2971.676 ; gain = 1193.594 ; free physical = 51246 ; free virtual = 63457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2965.922 ; gain = 1190.227 ; free physical = 8227 ; free virtual = 50658
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2971.676 ; gain = 1193.594 ; free physical = 51246 ; free virtual = 63457
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.64 . Memory (MB): peak = 2965.922 ; gain = 0.000 ; free physical = 8229 ; free virtual = 50660
-INFO: [Netlist 29-17] Analyzing 226 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 2971.676 ; gain = 0.000 ; free physical = 51279 ; free virtual = 63490
+INFO: [Netlist 29-17] Analyzing 310 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -760,6 +803,8 @@ Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/proj
 Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_board.xdc] for cell 'design_1_i/axi_iic_1/U0'
+Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_board.xdc] for cell 'design_1_i/axi_iic_1/U0'
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.srcs/constrs_1/new/io.xdc]
 Finished Parsing XDC File [/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.srcs/constrs_1/new/io.xdc]
@@ -775,38 +820,38 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx_2/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 58 XPM XDC files have been applied to the design.
+INFO: [Project 1-1714] 71 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3005.941 ; gain = 0.000 ; free physical = 8238 ; free virtual = 50669
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3011.695 ; gain = 0.000 ; free physical = 51254 ; free virtual = 63465
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 85 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 52 instances
-  CFGLUT5 => SRLC32E: 10 instances
-  FDR => FDRE: 3 instances
-  FDRSE => FDRSE (FDRE, LUT4, VCC): 5 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  MUXCY_L => MUXCY: 12 instances
+  A total of 141 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 80 instances
+  CFGLUT5 => SRLC32E: 16 instances
+  FDR => FDRE: 6 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 10 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  MUXCY_L => MUXCY: 24 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3005.977 ; gain = 0.000 ; free physical = 8238 ; free virtual = 50668
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3011.730 ; gain = 0.000 ; free physical = 51253 ; free virtual = 63464
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3005.977 ; gain = 1230.281 ; free physical = 8327 ; free virtual = 50756
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3011.730 ; gain = 1233.648 ; free physical = 51296 ; free virtual = 63507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8327 ; free virtual = 50756
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3019.699 ; gain = 1241.617 ; free physical = 51296 ; free virtual = 63507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8328 ; free virtual = 50757
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3019.699 ; gain = 1241.617 ; free physical = 51295 ; free virtual = 63507
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment__parameterized0'
@@ -831,6 +876,12 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized4'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized5'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized6'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized7'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized8'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized9'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized10'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized11'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_5_reg_p2s__parameterized12'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ltlib_v1_0_3_generic_memrd'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1049,6 +1100,60 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized7'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized8'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized9'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized10'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized11'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'xsdbs_v1_0_5_reg_p2s__parameterized12'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
               RESET_ADDR |                          0000001 |                          0000001
             REQUEST_READ |                          0000010 |                          0000010
            WAIT_READ_ACK |                          0000100 |                          0000100
@@ -1058,7 +1163,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'ltlib_v1_0_3_generic_memrd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8325 ; free virtual = 50760
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 3019.699 ; gain = 1241.617 ; free physical = 51346 ; free virtual = 63561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1085,25 +1190,25 @@ WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FD
 WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_6e42.
 INFO: [Synth 8-3332] Sequential element (axi_bridge_u/read_axi_full_u/FSM_onehot_state_reg[3]) is unused and will be removed from module jtag_axi_v1_2_23_jtag_axi.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8163 ; free virtual = 50674
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51042 ; free virtual = 63565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8202 ; free virtual = 50713
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51041 ; free virtual = 63553
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8157 ; free virtual = 50668
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51032 ; free virtual = 63544
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8168 ; free virtual = 50679
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51030 ; free virtual = 63546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1222,37 +1327,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/opt/Xilinx_2/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:379]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8175 ; free virtual = 50686
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51032 ; free virtual = 63548
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8175 ; free virtual = 50686
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 51032 ; free virtual = 63548
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 50955 ; free virtual = 63473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 50954 ; free virtual = 63472
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 50957 ; free virtual = 63475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 50957 ; free virtual = 63475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1269,67 +1374,68 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |CARRY4     |    65|
-|3     |CFGLUT5    |    62|
-|4     |LUT1       |   184|
-|5     |LUT2       |   432|
-|6     |LUT3       |   423|
-|7     |LUT4       |   504|
-|8     |LUT5       |   403|
-|9     |LUT6       |  1457|
+|2     |CARRY4     |    88|
+|3     |CFGLUT5    |    96|
+|4     |LUT1       |   226|
+|5     |LUT2       |   508|
+|6     |LUT3       |   525|
+|7     |LUT4       |   692|
+|8     |LUT5       |   482|
+|9     |LUT6       |  1742|
 |10    |MMCME2_ADV |     1|
-|11    |MUXCY      |    72|
-|12    |MUXCY_L    |     9|
-|13    |MUXF7      |   267|
+|11    |MUXCY      |    73|
+|12    |MUXCY_L    |    18|
+|13    |MUXF7      |   274|
 |14    |MUXF8      |   128|
 |15    |RAM64M     |   704|
-|16    |RAMB36E1   |     7|
-|19    |SRL16      |     1|
-|20    |SRL16E     |    36|
-|21    |SRLC16E    |     2|
-|22    |SRLC32E    |    17|
-|23    |XORCY      |    37|
-|24    |FDCE       |   135|
-|25    |FDR        |     3|
-|26    |FDRE       |  4241|
-|27    |FDSE       |   104|
-|28    |IBUFDS     |     1|
-|29    |IOBUF      |     2|
-|30    |OBUF       |     2|
+|16    |RAMB18E1   |     1|
+|17    |RAMB36E1   |     7|
+|20    |SRL16      |     1|
+|21    |SRL16E     |    60|
+|22    |SRLC16E    |     2|
+|23    |SRLC32E    |    17|
+|24    |XORCY      |    50|
+|25    |FDCE       |   168|
+|26    |FDR        |     6|
+|27    |FDRE       |  4900|
+|28    |FDSE       |   161|
+|29    |IBUFDS     |     1|
+|30    |IOBUF      |     4|
+|31    |OBUF       |     2|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.945 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.723 ; gain = 1273.641 ; free physical = 50958 ; free virtual = 63476
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 17256 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 3013.945 ; gain = 1198.195 ; free physical = 8177 ; free virtual = 50688
-Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 3013.953 ; gain = 1238.250 ; free physical = 8177 ; free virtual = 50688
+Synthesis finished with 0 errors, 0 critical warnings and 17638 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 3051.723 ; gain = 1233.586 ; free physical = 50959 ; free virtual = 63477
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3051.730 ; gain = 1273.641 ; free physical = 50960 ; free virtual = 63478
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3013.953 ; gain = 0.000 ; free physical = 8347 ; free virtual = 50862
-INFO: [Netlist 29-17] Analyzing 1359 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3051.730 ; gain = 0.000 ; free physical = 51122 ; free virtual = 63640
+INFO: [Netlist 29-17] Analyzing 1452 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: design_1_i/jtag_axi_0 UUID: 53e5f1c3-10b9-52d3-bb10-986c3375587a 
 INFO: [Chipscope 16-324] Core: design_1_i/system_ila_0/inst/ila_lib UUID: cd4c83c8-23a6-596d-99ad-09be1335c6b0 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3069.973 ; gain = 0.000 ; free physical = 8171 ; free virtual = 50684
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3107.750 ; gain = 0.000 ; free physical = 51124 ; free virtual = 63642
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 798 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 26 instances
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 52 instances
-  CFGLUT5 => SRLC32E: 10 instances
-  FDR => FDRE: 3 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  A total of 840 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 29 instances
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 80 instances
+  CFGLUT5 => SRLC32E: 16 instances
+  FDR => FDRE: 6 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
   RAM64M => RAM64M (RAMD64E(x4)): 704 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: 33c3f51
+Synth Design complete | Checksum: 5ff916c3
 INFO: [Common 17-83] Releasing license: Synthesis
-561 Infos, 222 Warnings, 0 Critical Warnings and 0 Errors encountered.
+596 Infos, 227 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 3070.008 ; gain = 1454.133 ; free physical = 8161 ; free virtual = 50674
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2313.302; main = 2088.350; forked = 256.286
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4009.820; main = 3069.977; forked = 995.871
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3093.984 ; gain = 0.000 ; free physical = 8161 ; free virtual = 50676
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 3107.785 ; gain = 1494.438 ; free physical = 51124 ; free virtual = 63642
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2439.472; main = 2220.012; forked = 283.152
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4047.598; main = 3107.754; forked = 995.871
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3131.762 ; gain = 0.000 ; free physical = 51122 ; free virtual = 63641
 INFO: [Common 17-1381] The checkpoint '/home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 14:38:18 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  5 15:52:20 2026...

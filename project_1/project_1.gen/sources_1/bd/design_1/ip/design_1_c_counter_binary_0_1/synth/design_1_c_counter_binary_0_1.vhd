@@ -59,7 +59,7 @@ USE c_counter_binary_v12_0_22.c_counter_binary_v12_0_22;
 ENTITY design_1_c_counter_binary_0_1 IS
   PORT (
     CLK : IN STD_LOGIC;
-    Q : OUT STD_LOGIC_VECTOR(24 DOWNTO 0)
+    Q : OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
   );
 END design_1_c_counter_binary_0_1;
 
@@ -99,9 +99,9 @@ ARCHITECTURE design_1_c_counter_binary_0_1_arch OF design_1_c_counter_binary_0_1
       SINIT : IN STD_LOGIC;
       UP : IN STD_LOGIC;
       LOAD : IN STD_LOGIC;
-      L : IN STD_LOGIC_VECTOR(24 DOWNTO 0);
+      L : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
       THRESH0 : OUT STD_LOGIC;
-      Q : OUT STD_LOGIC_VECTOR(24 DOWNTO 0)
+      Q : OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
     );
   END COMPONENT c_counter_binary_v12_0_22;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -109,7 +109,7 @@ ARCHITECTURE design_1_c_counter_binary_0_1_arch OF design_1_c_counter_binary_0_1
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_c_counter_binary_0_1_arch : ARCHITECTURE IS "design_1_c_counter_binary_0_1,c_counter_binary_v12_0_22,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_c_counter_binary_0_1_arch: ARCHITECTURE IS "design_1_c_counter_binary_0_1,c_counter_binary_v12_0_22,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=c_counter_binary,x_ipVersion=12.0,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_IMPLEMENTATION=0,C_VERBOSITY=0,C_XDEVICEFAMILY=artix7,C_WIDTH=25,C_HAS_CE=0,C_HAS_SCLR=0,C_RESTRICT_COUNT=0,C_COUNT_TO=1,C_COUNT_BY=1,C_COUNT_MODE=0,C_THRESH0_VALUE=1,C_CE_OVERRIDES_SYNC=0,C_HAS_THRESH0=0,C_HAS_LOAD=0,C_LOAD_LOW=0,C_LATENCY=1,C_FB_LATENCY=0,C_AINIT_VAL=0," & 
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_c_counter_binary_0_1_arch: ARCHITECTURE IS "design_1_c_counter_binary_0_1,c_counter_binary_v12_0_22,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=c_counter_binary,x_ipVersion=12.0,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_IMPLEMENTATION=0,C_VERBOSITY=0,C_XDEVICEFAMILY=artix7,C_WIDTH=26,C_HAS_CE=0,C_HAS_SCLR=0,C_RESTRICT_COUNT=0,C_COUNT_TO=1,C_COUNT_BY=1,C_COUNT_MODE=0,C_THRESH0_VALUE=1,C_CE_OVERRIDES_SYNC=0,C_HAS_THRESH0=0,C_HAS_LOAD=0,C_LOAD_LOW=0,C_LATENCY=1,C_FB_LATENCY=0,C_AINIT_VAL=0," & 
 "C_SINIT_VAL=0,C_SCLR_OVERRIDES_SSET=1,C_HAS_SSET=0,C_HAS_SINIT=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
@@ -119,15 +119,15 @@ ARCHITECTURE design_1_c_counter_binary_0_1_arch OF design_1_c_counter_binary_0_1
   ATTRIBUTE X_INTERFACE_PARAMETER OF CLK: SIGNAL IS "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF q_intf:thresh0_intf:l_intf:load_intf:up_intf:sinit_intf:sset_intf, ASSOCIATED_RESET SCLR, ASSOCIATED_CLKEN CE, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF Q: SIGNAL IS "xilinx.com:signal:data:1.0 q_intf DATA";
   ATTRIBUTE X_INTERFACE_MODE OF Q: SIGNAL IS "master q_intf";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF Q: SIGNAL IS "XIL_INTERFACENAME q_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 25} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}" & 
-"} value false}}}} DATA_WIDTH 25}";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF Q: SIGNAL IS "XIL_INTERFACENAME q_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 26} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}" & 
+"} value false}}}} DATA_WIDTH 26}";
 BEGIN
   U0 : c_counter_binary_v12_0_22
     GENERIC MAP (
       C_IMPLEMENTATION => 0,
       C_VERBOSITY => 0,
       C_XDEVICEFAMILY => "artix7",
-      C_WIDTH => 25,
+      C_WIDTH => 26,
       C_HAS_CE => 0,
       C_HAS_SCLR => 0,
       C_RESTRICT_COUNT => 0,
@@ -155,7 +155,7 @@ BEGIN
       SINIT => '0',
       UP => '1',
       LOAD => '0',
-      L => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 25)),
+      L => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 26)),
       Q => Q
     );
 END design_1_c_counter_binary_0_1_arch;

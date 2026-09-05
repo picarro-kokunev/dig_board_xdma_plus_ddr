@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep  4 14:37:02 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep  5 15:42:17 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="bd_f60c" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -34,6 +34,36 @@
         <CONNECTION INSTANCE="ila_lib" PORT="probe5"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_scl_i" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_scl_o" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_scl_t" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_sda_i" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_sda_o" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe10"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_1_IIC_sda_t" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe11"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_lib" PORT="clk"/>
@@ -50,6 +80,16 @@
         <PORTMAP LOGICAL="SDA_I" PHYSICAL="SLOT_0_IIC_sda_i"/>
         <PORTMAP LOGICAL="SDA_O" PHYSICAL="SLOT_0_IIC_sda_o"/>
         <PORTMAP LOGICAL="SDA_T" PHYSICAL="SLOT_0_IIC_sda_t"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="__NOC__" NAME="SLOT_1_IIC" TYPE="MONITOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="SCL_I" PHYSICAL="SLOT_1_IIC_scl_i"/>
+        <PORTMAP LOGICAL="SCL_O" PHYSICAL="SLOT_1_IIC_scl_o"/>
+        <PORTMAP LOGICAL="SCL_T" PHYSICAL="SLOT_1_IIC_scl_t"/>
+        <PORTMAP LOGICAL="SDA_I" PHYSICAL="SLOT_1_IIC_sda_i"/>
+        <PORTMAP LOGICAL="SDA_O" PHYSICAL="SLOT_1_IIC_sda_o"/>
+        <PORTMAP LOGICAL="SDA_T" PHYSICAL="SLOT_1_IIC_sda_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -87,7 +127,7 @@
         <PARAMETER NAME="C_MU_TYPE" VALUE="0"/>
         <PARAMETER NAME="C_NEXT_SLAVE" VALUE="0"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="6"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="12"/>
         <PARAMETER NAME="C_PIPE_IFACE" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_MU_CNT" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_TYPE" VALUE="0"/>
@@ -3228,6 +3268,36 @@
         <PORT DIR="I" LEFT="0" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_0_IIC_sda_t">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="SLOT_0_IIC_sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe9" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe10" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe11" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_1_IIC_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_1_IIC_sda_t"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

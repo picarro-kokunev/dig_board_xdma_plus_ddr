@@ -9,7 +9,8 @@ JTAG AXI master: jtag_axi_0 -> axi_smc -> PL peripherals (xsdb JTAG2AXI target).
 
 Register access (via JTAG memory read/write)
     offset 0x0000: axi_gpio_0 (1-bit output -> board led_green_0)
-    offset 0x0400: axi_iic_0 (I2C master -> board EEPROM M24M01 on iic_rtl_0)
+    offset 0x0400: axi_iic_0 (I2C master -> M24M01 EEPROM on iic_rtl_0)
+    offset 0x0800: axi_iic_1 (I2C master -> INA260 on iic_rtl_1)
 
 Board status LEDs
   led_green_0  Host-controllable via axi_gpio_0 bit[0] (JTAG AXI @ 0x0)
@@ -21,7 +22,7 @@ loopback/print/plot ADC commands over PCIe.
 Prerequisites
 -------------
 Source the Xilinx Python environment before running, for example:
-  source /opt/Xilinx/2025.2/Vitis/cli/examples/customer_python_utils/setup_vitis_env.sh
+  source /opt/Xilinx_2/2025.2/Vitis/cli/examples/customer_python_utils/setup_vitis_env.sh
 
 Ensure hw_server is running and the FPGA is programmed with design_1.
 
@@ -30,6 +31,7 @@ Subcommands
   led        Read or drive led_green_0 through axi_gpio_0
   i2c        Dump axi_iic_0 status registers (debug)
   eeprom     Read or write the on-board M24M01 I2C EEPROM via axi_iic_0
+  ina260     Read INA260 current/voltage/power and ID via axi_iic_1 @ 0x800
 
 Examples
 --------
@@ -37,6 +39,8 @@ Examples
   python3 access_fpga.py led read
   python3 access_fpga.py eeprom read --offset 0 --length 16
   python3 access_fpga.py eeprom write --offset 0 --data 48656c6c6f
+  python3 access_fpga.py ina260 current
+  python3 access_fpga.py ina260 mfg-id
 """
 
 import argparse
@@ -57,7 +61,9 @@ GPIO_DATA_OFFSET = 0x00
 GPIO_LED_BIT = 0
 
 # axi_iic_0 @ 0x400 (M24M01 EEPROM on iic_rtl_0, see io.xdc)
-IIC_BASE = 0x0000_0400
+IIC_EEPROM_BASE = 0x0000_0400
+# axi_iic_1 @ 0x800 (INA260 on iic_rtl_1)
+IIC_INA260_BASE = 0x0000_0800
 IIC_CR = 0x100
 IIC_SR = 0x104
 IIC_ISR = 0x020
@@ -85,6 +91,19 @@ EEPROM_SIZE_BYTES = 128 * 1024
 EEPROM_PAGE_SIZE = 256
 EEPROM_WRITE_CYCLE_S = 0.005
 IIC_TIMEOUT_S = 1.0
+
+# INA260 @ 0x40 (16-bit register pointer, MSB-first data; see SBOS656C)
+INA260_SLAVE_ADDR = 0x40
+INA260_REG_CURRENT = 0x01
+INA260_REG_BUS_VOLTAGE = 0x02
+INA260_REG_POWER = 0x03
+INA260_REG_MFG_ID = 0xFE
+INA260_REG_DIE_ID = 0xFF
+INA260_CURRENT_LSB_A = 0.00125   # 1.25 mA per LSB
+INA260_VOLTAGE_LSB_V = 0.00125   # 1.25 mV per LSB
+INA260_POWER_LSB_W = 0.01        # 10 mW per LSB
+INA260_MFG_ID_EXPECTED = 0x5449  # "TI" in ASCII
+INA260_DIE_ID_EXPECTED = 0x2270
 
 DEFAULT_JTAG_TARGET_FILTER = "name =~ JTAG2AXI"
 
@@ -148,7 +167,7 @@ class JtagAxiBar:
 class AxiIic:
     """Driver for Xilinx axi_iic using PG090 Dynamic Controller Logic Flow."""
 
-    def __init__(self, bar, base=IIC_BASE):
+    def __init__(self, bar, base=IIC_EEPROM_BASE):
         self._bar = bar
         self._base = base
         self._initialized = False
@@ -335,6 +354,38 @@ class AxiIic:
         self._wait_bus_idle()
         return bytes(out)
 
+    def read_reg8_ptr(self, slave_7bit, reg_addr, length):
+        """
+        Read from an I2C device that uses an 8-bit register pointer (INA260, etc.).
+
+        PG090 dynamic sequence:
+          START + write address, register pointer,
+          START + read address, STOP + byte count, read RX FIFO.
+        """
+        if length <= 0:
+            return b""
+        if length > IIC_MAX_READ_BYTES:
+            raise ValueError(
+                f"I2C read length {length} exceeds dynamic-mode limit "
+                f"of {IIC_MAX_READ_BYTES} bytes per transfer"
+            )
+
+        write_addr = self._i2c_addr_byte(slave_7bit, read=False)
+        read_addr = self._i2c_addr_byte(slave_7bit, read=True)
+
+        self._prepare()
+        self._tx_fifo(IIC_TX_FIFO_START | write_addr)
+        self._tx_fifo(reg_addr & 0xFF)
+        self._tx_fifo(IIC_TX_FIFO_START | read_addr)
+        self._tx_fifo(IIC_TX_FIFO_STOP | (length & 0xFF))
+
+        out = bytearray()
+        for _ in range(length):
+            self._wait_rx_not_empty()
+            out.append(self._rx_fifo())
+        self._wait_bus_idle()
+        return bytes(out)
+
 
 class M24M01Eeprom:
     """M24M01 (128 KiB) EEPROM on the board I2C bus."""
@@ -381,6 +432,51 @@ class M24M01Eeprom:
                 f"EEPROM range 0x{offset:x}+0x{length:x} exceeds "
                 f"0x{EEPROM_SIZE_BYTES:x} bytes"
             )
+
+
+class Ina260:
+    """TI INA260 digital current/power monitor (SBOS656C)."""
+
+    def __init__(self, iic, slave_addr=INA260_SLAVE_ADDR):
+        self._iic = iic
+        self._slave = slave_addr & 0x7F
+
+    def _read_u16_be(self, reg_addr):
+        data = self._iic.read_reg8_ptr(self._slave, reg_addr, 2)
+        return (data[0] << 8) | data[1]
+
+    @staticmethod
+    def _to_signed16(raw):
+        if raw & 0x8000:
+            return raw - 0x10000
+        return raw
+
+    def read_current_a(self):
+        """Return shunt current in amperes (register 01h, 1.25 mA/LSB, two's complement)."""
+        raw = self._read_u16_be(INA260_REG_CURRENT)
+        return self._to_signed16(raw) * INA260_CURRENT_LSB_A
+
+    def read_voltage_v(self):
+        """Return bus voltage in volts (register 02h, 1.25 mV/LSB)."""
+        raw = self._read_u16_be(INA260_REG_BUS_VOLTAGE)
+        return raw * INA260_VOLTAGE_LSB_V
+
+    def read_power_w(self):
+        """Return load power in watts (register 03h, 10 mW/LSB)."""
+        raw = self._read_u16_be(INA260_REG_POWER)
+        return raw * INA260_POWER_LSB_W
+
+    def read_manufacturer_id(self):
+        """Return Manufacturer ID register (FEh), expected 0x5449 ('TI')."""
+        return self._read_u16_be(INA260_REG_MFG_ID)
+
+    def read_die_id(self):
+        """Return Die ID register (FFh), expected 0x2270."""
+        return self._read_u16_be(INA260_REG_DIE_ID)
+
+    @staticmethod
+    def _id_to_ascii(value):
+        return bytes([(value >> 8) & 0xFF, value & 0xFF]).decode("ascii", errors="replace")
 
 
 def parse_hex_bytes(value):
@@ -441,7 +537,7 @@ def cmd_led(args):
 
 def cmd_i2c(args):
     with JtagAxiBar(args.jtag_target) as bar:
-        iic = AxiIic(bar)
+        iic = AxiIic(bar, base=IIC_EEPROM_BASE)
 
         def dump_state(label):
             cr = iic._read_cr()
@@ -453,7 +549,7 @@ def cmd_i2c(args):
             print(f"  SR  @ 0x{iic._reg(IIC_SR):04x} = 0x{sr:08x}  {AxiIic._describe_sr(sr)}")
             print(f"  ISR @ 0x{iic._reg(IIC_ISR):04x} = 0x{isr:08x}")
 
-        print(f"axi_iic_0 @ 0x{IIC_BASE:04x} (JTAG AXI register window)")
+        print(f"axi_iic_0 @ 0x{IIC_EEPROM_BASE:04x} (JTAG AXI register window)")
         dump_state("before init:")
         iic._prepare()
         dump_state("after init:")
@@ -464,7 +560,7 @@ def cmd_i2c(args):
 
 def cmd_eeprom(args):
     with JtagAxiBar(args.jtag_target) as bar:
-        eeprom = M24M01Eeprom(AxiIic(bar), slave_addr=args.slave_addr)
+        eeprom = M24M01Eeprom(AxiIic(bar, base=IIC_EEPROM_BASE), slave_addr=args.slave_addr)
 
         if args.eeprom_cmd == "read":
             data = eeprom.read(args.offset, args.length)
@@ -494,6 +590,57 @@ def cmd_eeprom(args):
             f"@ 0x{args.offset:05x} (slave=0x{slave:02x})"
         )
     return 0
+
+
+def cmd_ina260(args):
+    with JtagAxiBar(args.jtag_target) as bar:
+        ina = Ina260(AxiIic(bar, base=IIC_INA260_BASE), slave_addr=args.slave_addr)
+        prefix = (
+            f"JTAG AXI: axi_iic_1 @ 0x{IIC_INA260_BASE:04x}, "
+            f"INA260 slave=0x{args.slave_addr:02x}"
+        )
+
+        if args.ina260_cmd == "current":
+            raw = ina._read_u16_be(INA260_REG_CURRENT)
+            amps = Ina260._to_signed16(raw) * INA260_CURRENT_LSB_A
+            print(f"{prefix}: current = {amps:.6f} A  (raw=0x{raw:04x})")
+            return 0
+
+        if args.ina260_cmd == "voltage":
+            raw = ina._read_u16_be(INA260_REG_BUS_VOLTAGE)
+            volts = raw * INA260_VOLTAGE_LSB_V
+            print(f"{prefix}: voltage = {volts:.6f} V  (raw=0x{raw:04x})")
+            return 0
+
+        if args.ina260_cmd == "power":
+            raw = ina._read_u16_be(INA260_REG_POWER)
+            watts = raw * INA260_POWER_LSB_W
+            print(f"{prefix}: power = {watts:.6f} W  (raw=0x{raw:04x})")
+            return 0
+
+        if args.ina260_cmd == "mfg-id":
+            mfg_id = ina.read_manufacturer_id()
+            ascii_id = Ina260._id_to_ascii(mfg_id)
+            ok = "OK" if mfg_id == INA260_MFG_ID_EXPECTED else "unexpected"
+            print(
+                f"{prefix}: manufacturer ID = 0x{mfg_id:04x} "
+                f"({ascii_id!r}, {ok}; expected 0x{INA260_MFG_ID_EXPECTED:04x})"
+            )
+            return 0
+
+        if args.ina260_cmd == "die-id":
+            die_id = ina.read_die_id()
+            device_id = (die_id >> 4) & 0xFFF
+            rev_id = die_id & 0xF
+            ok = "OK" if die_id == INA260_DIE_ID_EXPECTED else "unexpected"
+            print(
+                f"{prefix}: die ID = 0x{die_id:04x} "
+                f"(device=0x{device_id:03x}, rev={rev_id}, {ok}; "
+                f"expected 0x{INA260_DIE_ID_EXPECTED:04x})"
+            )
+            return 0
+
+    raise RuntimeError(f"unknown ina260 subcommand: {args.ina260_cmd}")
 
 
 def build_parser():
@@ -580,6 +727,48 @@ def build_parser():
     )
     p_eeprom_write.set_defaults(func=cmd_eeprom)
 
+    p_ina260 = sub.add_parser(
+        "ina260",
+        help="Read INA260 current/voltage/power and ID via axi_iic_1 @ 0x800.",
+    )
+    p_ina260.add_argument(
+        "--slave-addr",
+        type=lambda x: int(x, 0),
+        default=INA260_SLAVE_ADDR,
+        help=f"7-bit I2C slave address (default: 0x{INA260_SLAVE_ADDR:02x})",
+    )
+    p_ina260_sub = p_ina260.add_subparsers(dest="ina260_cmd", required=True)
+
+    p_ina260_current = p_ina260_sub.add_parser(
+        "current",
+        help="Read shunt current (register 01h) in amperes.",
+    )
+    p_ina260_current.set_defaults(func=cmd_ina260)
+
+    p_ina260_voltage = p_ina260_sub.add_parser(
+        "voltage",
+        help="Read bus voltage (register 02h) in volts.",
+    )
+    p_ina260_voltage.set_defaults(func=cmd_ina260)
+
+    p_ina260_power = p_ina260_sub.add_parser(
+        "power",
+        help="Read calculated power (register 03h) in watts.",
+    )
+    p_ina260_power.set_defaults(func=cmd_ina260)
+
+    p_ina260_mfg = p_ina260_sub.add_parser(
+        "mfg-id",
+        help="Read Manufacturer ID register (FEh).",
+    )
+    p_ina260_mfg.set_defaults(func=cmd_ina260)
+
+    p_ina260_die = p_ina260_sub.add_parser(
+        "die-id",
+        help="Read Die ID register (FFh).",
+    )
+    p_ina260_die.set_defaults(func=cmd_ina260)
+
     return parser
 
 
@@ -597,7 +786,10 @@ def main(argv=None):
         return 1
     try:
         return args.func(args)
-    except (TimeoutError, OSError, RuntimeError) as exc:
+    except TimeoutError as exc:
+        print(f"I2C error: {exc}", file=sys.stderr)
+        return 1
+    except (OSError, RuntimeError) as exc:
         print(
             f"JTAG/AXI error: {exc}\n"
             "Hint: ensure hw_server is running, the FPGA is programmed with "

@@ -60,12 +60,18 @@ module design_1_system_ila_0_0 (
   SLOT_0_IIC_scl_t,
   SLOT_0_IIC_sda_i,
   SLOT_0_IIC_sda_o,
-  SLOT_0_IIC_sda_t
+  SLOT_0_IIC_sda_t,
+  SLOT_1_IIC_scl_i,
+  SLOT_1_IIC_scl_o,
+  SLOT_1_IIC_scl_t,
+  SLOT_1_IIC_sda_i,
+  SLOT_1_IIC_sda_o,
+  SLOT_1_IIC_sda_t
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF SLOT_1_AXI, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
 input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SCL_I" *)
 (* X_INTERFACE_MODE = "monitor slave" *)
@@ -80,6 +86,19 @@ input wire SLOT_0_IIC_sda_i;
 input wire SLOT_0_IIC_sda_o;
 (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SDA_T" *)
 input wire SLOT_0_IIC_sda_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_I" *)
+(* X_INTERFACE_MODE = "monitor slave" *)
+input wire SLOT_1_IIC_scl_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_O" *)
+input wire SLOT_1_IIC_scl_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_T" *)
+input wire SLOT_1_IIC_scl_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_I" *)
+input wire SLOT_1_IIC_sda_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_O" *)
+input wire SLOT_1_IIC_sda_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_T" *)
+input wire SLOT_1_IIC_sda_t;
 
   bd_f60c inst (
     .clk(clk),
@@ -88,6 +107,12 @@ input wire SLOT_0_IIC_sda_t;
     .SLOT_0_IIC_scl_t(SLOT_0_IIC_scl_t),
     .SLOT_0_IIC_sda_i(SLOT_0_IIC_sda_i),
     .SLOT_0_IIC_sda_o(SLOT_0_IIC_sda_o),
-    .SLOT_0_IIC_sda_t(SLOT_0_IIC_sda_t)
+    .SLOT_0_IIC_sda_t(SLOT_0_IIC_sda_t),
+    .SLOT_1_IIC_scl_i(SLOT_1_IIC_scl_i),
+    .SLOT_1_IIC_scl_o(SLOT_1_IIC_scl_o),
+    .SLOT_1_IIC_scl_t(SLOT_1_IIC_scl_t),
+    .SLOT_1_IIC_sda_i(SLOT_1_IIC_sda_i),
+    .SLOT_1_IIC_sda_o(SLOT_1_IIC_sda_o),
+    .SLOT_1_IIC_sda_t(SLOT_1_IIC_sda_t)
   );
 endmodule

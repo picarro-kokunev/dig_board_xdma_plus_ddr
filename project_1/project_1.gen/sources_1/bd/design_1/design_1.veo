@@ -56,14 +56,20 @@
 design_1 your_instance_name (
   .sys_clk_clk_n(sys_clk_clk_n), // input wire sys_clk_clk_n
   .sys_clk_clk_p(sys_clk_clk_p), // input wire sys_clk_clk_p
+  .iic_pcie_scl_i(iic_pcie_scl_i), // input wire iic_pcie_scl_i
+  .iic_pcie_scl_o(iic_pcie_scl_o), // output wire iic_pcie_scl_o
+  .iic_pcie_scl_t(iic_pcie_scl_t), // output wire iic_pcie_scl_t
+  .iic_pcie_sda_i(iic_pcie_sda_i), // input wire iic_pcie_sda_i
+  .iic_pcie_sda_o(iic_pcie_sda_o), // output wire iic_pcie_sda_o
+  .iic_pcie_sda_t(iic_pcie_sda_t), // output wire iic_pcie_sda_t
   .led_green_0(led_green_0), // output wire [0:0] led_green_0
   .led_red_0(led_red_0), // output wire [0:0] led_red_0
-  .iic_rtl_0_scl_i(iic_rtl_0_scl_i), // input wire iic_rtl_0_scl_i
-  .iic_rtl_0_scl_o(iic_rtl_0_scl_o), // output wire iic_rtl_0_scl_o
-  .iic_rtl_0_scl_t(iic_rtl_0_scl_t), // output wire iic_rtl_0_scl_t
-  .iic_rtl_0_sda_i(iic_rtl_0_sda_i), // input wire iic_rtl_0_sda_i
-  .iic_rtl_0_sda_o(iic_rtl_0_sda_o), // output wire iic_rtl_0_sda_o
-  .iic_rtl_0_sda_t(iic_rtl_0_sda_t) // output wire iic_rtl_0_sda_t
+  .iic_a_scl_i(iic_a_scl_i), // input wire iic_a_scl_i
+  .iic_a_scl_o(iic_a_scl_o), // output wire iic_a_scl_o
+  .iic_a_scl_t(iic_a_scl_t), // output wire iic_a_scl_t
+  .iic_a_sda_i(iic_a_sda_i), // input wire iic_a_sda_i
+  .iic_a_sda_o(iic_a_sda_o), // output wire iic_a_sda_o
+  .iic_a_sda_t(iic_a_sda_t) // output wire iic_a_sda_t
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

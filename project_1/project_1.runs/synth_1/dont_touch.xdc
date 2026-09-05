@@ -138,6 +138,27 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_39/bd_6e42_m01e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_40/bd_6e42_m02s2a_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_41/bd_6e42_m02arn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_42/bd_6e42_m02rn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_43/bd_6e42_m02awn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_44/bd_6e42_m02wn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_45/bd_6e42_m02bn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_46/bd_6e42_m02e_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
 # IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
 
@@ -152,6 +173,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f60c || 
 
 # IP: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f60c_ila_lib_0 || ORIG_REF_NAME==bd_f60c_ila_lib_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_iic_1_0 || ORIG_REF_NAME==design_1_axi_iic_1_0} -quiet] -quiet
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_jtag_axi_0_0/constraints/jtag_axi.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_jtag_axi_0_0 || ORIG_REF_NAME==design_1_jtag_axi_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
@@ -230,6 +254,18 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_38/bd_6e42_m01bn_0_ooc.xdc
 
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_40/bd_6e42_m02s2a_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_41/bd_6e42_m02arn_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_42/bd_6e42_m02rn_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_43/bd_6e42_m02awn_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_44/bd_6e42_m02wn_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_45/bd_6e42_m02bn_0_ooc.xdc
+
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/smartconnect.xdc
@@ -259,5 +295,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_iic_1_0 || ORIG_REF_NAME==design_1_axi_iic_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0_ooc.xdc
 
 # XDC: /home/kokunev/data/git_root/dig/dig_board_blink/project_1/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc

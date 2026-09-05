@@ -55,14 +55,20 @@ COMPONENT design_1
   PORT (
     sys_clk_clk_n : IN STD_LOGIC;
     sys_clk_clk_p : IN STD_LOGIC;
+    iic_pcie_scl_i : IN STD_LOGIC;
+    iic_pcie_scl_o : OUT STD_LOGIC;
+    iic_pcie_scl_t : OUT STD_LOGIC;
+    iic_pcie_sda_i : IN STD_LOGIC;
+    iic_pcie_sda_o : OUT STD_LOGIC;
+    iic_pcie_sda_t : OUT STD_LOGIC;
     led_green_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     led_red_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    iic_rtl_0_scl_i : IN STD_LOGIC;
-    iic_rtl_0_scl_o : OUT STD_LOGIC;
-    iic_rtl_0_scl_t : OUT STD_LOGIC;
-    iic_rtl_0_sda_i : IN STD_LOGIC;
-    iic_rtl_0_sda_o : OUT STD_LOGIC;
-    iic_rtl_0_sda_t : OUT STD_LOGIC
+    iic_a_scl_i : IN STD_LOGIC;
+    iic_a_scl_o : OUT STD_LOGIC;
+    iic_a_scl_t : OUT STD_LOGIC;
+    iic_a_sda_i : IN STD_LOGIC;
+    iic_a_sda_o : OUT STD_LOGIC;
+    iic_a_sda_t : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -75,14 +81,20 @@ your_instance_name : design_1
   PORT MAP (
     sys_clk_clk_n => sys_clk_clk_n,
     sys_clk_clk_p => sys_clk_clk_p,
+    iic_pcie_scl_i => iic_pcie_scl_i,
+    iic_pcie_scl_o => iic_pcie_scl_o,
+    iic_pcie_scl_t => iic_pcie_scl_t,
+    iic_pcie_sda_i => iic_pcie_sda_i,
+    iic_pcie_sda_o => iic_pcie_sda_o,
+    iic_pcie_sda_t => iic_pcie_sda_t,
     led_green_0 => led_green_0,
     led_red_0 => led_red_0,
-    iic_rtl_0_scl_i => iic_rtl_0_scl_i,
-    iic_rtl_0_scl_o => iic_rtl_0_scl_o,
-    iic_rtl_0_scl_t => iic_rtl_0_scl_t,
-    iic_rtl_0_sda_i => iic_rtl_0_sda_i,
-    iic_rtl_0_sda_o => iic_rtl_0_sda_o,
-    iic_rtl_0_sda_t => iic_rtl_0_sda_t
+    iic_a_scl_i => iic_a_scl_i,
+    iic_a_scl_o => iic_a_scl_o,
+    iic_a_scl_t => iic_a_scl_t,
+    iic_a_sda_i => iic_a_sda_i,
+    iic_a_sda_o => iic_a_sda_o,
+    iic_a_sda_t => iic_a_sda_t
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

@@ -15,6 +15,12 @@ module bd_f60c
     SLOT_0_IIC_sda_i,
     SLOT_0_IIC_sda_o,
     SLOT_0_IIC_sda_t,
+    SLOT_1_IIC_scl_i,
+    SLOT_1_IIC_scl_o,
+    SLOT_1_IIC_scl_t,
+    SLOT_1_IIC_sda_i,
+    SLOT_1_IIC_sda_o,
+    SLOT_1_IIC_sda_t,
     clk);
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SCL_I" *) (* X_INTERFACE_MODE = "Monitor SlaveType" *) input SLOT_0_IIC_scl_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SCL_O" *) input SLOT_0_IIC_scl_o;
@@ -22,7 +28,13 @@ module bd_f60c
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SDA_I" *) input SLOT_0_IIC_sda_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SDA_O" *) input SLOT_0_IIC_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_0_IIC SDA_T" *) input SLOT_0_IIC_sda_t;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_I" *) (* X_INTERFACE_MODE = "Monitor SlaveType" *) input SLOT_1_IIC_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_O" *) input SLOT_1_IIC_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SCL_T" *) input SLOT_1_IIC_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_I" *) input SLOT_1_IIC_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_O" *) input SLOT_1_IIC_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 SLOT_1_IIC SDA_T" *) input SLOT_1_IIC_sda_t;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_1_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
 
   wire SLOT_0_IIC_scl_i;
   wire SLOT_0_IIC_scl_o;
@@ -30,14 +42,26 @@ module bd_f60c
   wire SLOT_0_IIC_sda_i;
   wire SLOT_0_IIC_sda_o;
   wire SLOT_0_IIC_sda_t;
+  wire SLOT_1_IIC_scl_i;
+  wire SLOT_1_IIC_scl_o;
+  wire SLOT_1_IIC_scl_t;
+  wire SLOT_1_IIC_sda_i;
+  wire SLOT_1_IIC_sda_o;
+  wire SLOT_1_IIC_sda_t;
   wire clk;
 
   bd_f60c_ila_lib_0 ila_lib
        (.clk(clk),
         .probe0(SLOT_0_IIC_scl_i),
         .probe1(SLOT_0_IIC_scl_o),
+        .probe10(SLOT_1_IIC_sda_o),
+        .probe11(SLOT_1_IIC_sda_t),
         .probe2(SLOT_0_IIC_scl_t),
         .probe3(SLOT_0_IIC_sda_i),
         .probe4(SLOT_0_IIC_sda_o),
-        .probe5(SLOT_0_IIC_sda_t));
+        .probe5(SLOT_0_IIC_sda_t),
+        .probe6(SLOT_1_IIC_scl_i),
+        .probe7(SLOT_1_IIC_scl_o),
+        .probe8(SLOT_1_IIC_scl_t),
+        .probe9(SLOT_1_IIC_sda_i));
 endmodule

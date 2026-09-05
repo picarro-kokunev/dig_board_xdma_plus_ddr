@@ -1,36 +1,38 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.72673",
-   "Default View_TopLeft":"-95,-66",
+   "Default View_ScaleFactor":"0.72242",
+   "Default View_TopLeft":"-65,-220",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port iic_rtl_0 -pg 1 -lvl 7 -x 1420 -y 380 -defaultsOSRD
-preplace portBus led_green_0 -pg 1 -lvl 7 -x 1420 -y 110 -defaultsOSRD
-preplace portBus led_red_0 -pg 1 -lvl 7 -x 1420 -y 440 -defaultsOSRD
-preplace inst jtag_axi_0 -pg 1 -lvl 3 -x 510 -y 70 -defaultsOSRD
-preplace inst c_counter_binary_0 -pg 1 -lvl 5 -x 1060 -y 440 -defaultsOSRD
-preplace inst ilslice_0 -pg 1 -lvl 6 -x 1300 -y 440 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1060 -y 100 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -x 760 -y 90 -defaultsOSRD
-preplace inst ilconstant_0 -pg 1 -lvl 1 -x 100 -y 120 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 290 -y 70 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 5 -x 1060 -y 240 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 6 -x 1300 -y 310 -defaultsOSRD
-preplace netloc axi_gpio_0_gpio_io_o 1 5 2 NJ 110 NJ
-preplace netloc c_counter_binary_0_Q 1 5 1 NJ 440
-preplace netloc ilconstant_0_dout 1 2 3 400 150 620 170 920
-preplace netloc ilconstant_0_dout1 1 1 1 180J 80n
-preplace netloc ilslice_0_Dout 1 6 1 NJ 440
-preplace netloc util_ds_buf_0_IBUF_OUT 1 2 4 410 140 610 10 910 320 N
-preplace netloc CLK_IN1_D_0_1 1 0 2 NJ 60 NJ
-preplace netloc axi_smc_M00_AXI 1 4 1 N 80
-preplace netloc jtag_axi_0_M_AXI 1 3 1 N 70
-preplace netloc axi_iic_0_IIC 1 5 2 1200 380 NJ
-preplace netloc axi_smc_M01_AXI 1 4 1 900 100n
-levelinfo -pg 1 0 100 290 510 760 1060 1300 1420
-pagesize -pg 1 -db -bbox -sgen -100 0 1580 500
+preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port iic_a -pg 1 -lvl 7 -x 1460 -y 450 -defaultsOSRD
+preplace port iic_pcie -pg 1 -lvl 7 -x 1460 -y 200 -defaultsOSRD
+preplace portBus led_green_0 -pg 1 -lvl 7 -x 1460 -y 90 -defaultsOSRD
+preplace portBus led_red_0 -pg 1 -lvl 7 -x 1460 -y 400 -defaultsOSRD
+preplace inst jtag_axi_0 -pg 1 -lvl 3 -x 510 -y 180 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1060 -y 80 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 760 -y 200 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 1 -x 100 -y 230 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 290 -y 180 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 5 -x 1060 -y 220 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 1340 -y 280 -defaultsOSRD
+preplace inst axi_iic_1 -pg 1 -lvl 5 -x 1060 -y 360 -defaultsOSRD
+preplace inst blinker_hier_0 -pg 1 -lvl 6 -x 1340 -y 400 -defaultsOSRD
+preplace netloc axi_gpio_0_gpio_io_o 1 5 2 NJ 90 NJ
+preplace netloc ilconstant_0_dout 1 2 3 400 250 620 120 920
+preplace netloc ilconstant_0_dout1 1 1 1 180J 190n
+preplace netloc ilslice_0_Dout 1 6 1 NJ 400
+preplace netloc util_ds_buf_0_IBUF_OUT 1 2 4 410 260 610 110 910 440 1240
+preplace netloc CLK_IN1_D_0_1 1 0 2 NJ 170 NJ
+preplace netloc axi_iic_0_IIC 1 5 2 1230 200 NJ
+preplace netloc axi_smc_M00_AXI 1 4 1 900 60n
+preplace netloc axi_smc_M01_AXI 1 4 1 N 200
+preplace netloc jtag_axi_0_M_AXI 1 3 1 N 180
+preplace netloc axi_smc_M02_AXI 1 4 1 900 220n
+preplace netloc axi_iic_1_IIC 1 5 2 1230 450 NJ
+levelinfo -pg 1 0 100 290 510 760 1060 1340 1460
+pagesize -pg 1 -db -bbox -sgen -100 0 2030 530
 "
 }
 {
